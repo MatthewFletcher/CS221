@@ -1,0 +1,349 @@
+Data Types:
+char: 1 byte, holds 0..255 unsigned or -128.127 signed
+short (don't bother with this)
+int: 3 bytes
+long: same as int, don't bother with because longer to type 
+long long: 8 bytes, holds a stupidly large number
+float: don't bother with, use a double
+double: 8 bytes, holds +/- 10^308
+long double: 8 bytes w 15 precision digits on PC, 16 bytes with 32 digits of precision on macs
+
+
+Conditional statements, using operators
+
+Switch statements, switch on ints only, don't forget break, add default statement if needed
+
+
+Loop statements: for, while, do, do while
+
+
+C IO
+scanf("format specs", var_list)
+gets(char *buffer)
+printf("format specs", var_list)
+
+#include <stdio.h>
+
+REVIEW C IO BECAUSE I DON'T REMEMBER IT 
+
+
+C++
+>> extraction operator
+<< insertion operator
+
+
+#include <iostream>
+
+
+Arrays
+Declaring array:
+int nums[5]; //declares array
+nums[0] = 1l //defines variable
+
+int nums[] = {1,2,3,4}; //initializes array with length of list in braces
+
+function prototypes:
+return_value function_name(data_type arg_name, etc); //names of functions will be given on programming assignments
+
+Have return value for every possible path out of a function 
+
+New Project> C++ >Win32 Console Application
+Enter Name
+Click application settings, create empty project (checkbox)
+
+
+DO NOT USE STRING OBJECTS, USE CHAR ARRAYS
+Right click project in tree, properties>C++>advanced> enter 4996 for disable specific warnings
+
+Use 2012 only for Visual Studio 
+
+
+Developing more complex programs in Cpp is a major aspect of this course
+Using abstract data types in programs (ADT is a collection of data)
+Using good software engineering technques to build programs 
+
+Computer Science: Scientific approach to computation and applications
+Software engineering: discplined approach to design and maintainence of programs managing size and complexity 
+
+
+More to software engineering than just hacking out code
+
+
+
+Characteristics of good code
+--it works
+--it can be modified without extensive time and effort
+--it is reusable
+--it is completed on time and within budget 
+
+
+Steps in Software Engineering
+1. Requirements Specification
+2. Analysis
+3. Design
+4. Implementation
+5. Testing: Verification and Validation
+Not required on test, but some engineers add it V 
+6. Delivery
+7. Maintenance
+8. Retirement
+
+
+Steps in Software Development
+1. Requirements specification
+	Determine what the software must do to satisfy the customers needs. Coleman is the customer. Make him happy. 
+	Understand the problem clearly
+	Take the customers statement of work and synthesize from it a list of requirements
+	Verify the requirements with the customer
+	Each step has its own specific related document
+	Written for the customer in terms the customer will understand 
+2. Analysis
+	Study the requirements to be sure you fully understand what the software must do
+	restate the requirements in more detailed, technical terms. 
+	1. Make sure the req's are fully understood
+	2. Identify the required IO and constraints
+	3. Specify form of input
+	4. Specify form of output 
+	5. Begin working on a test plan 
+	
+	Depending on company, you may have to write a more technical requirements document 
+
+3. Design
+	Development of a plan detailing how the software will be implemented
+	What objects needed in the application
+	How will you define the states of each object
+	What member functions will be needed to implement the behaviors of each object
+	How will the objects be interconnected together and work together to produce the solution
+
+	Top Down = Procedural programming (focuses on processes). Underline the verbs in software specs
+	Bottom Up= Object Oriented Programming (focus on data objects) underline the nouns in software specs 
+
+
+Software Design:
+	Modularity: organizing a program into logical units
+	Module: A unit of organization in a software system 
+		Groups together related data and functions
+		Has a clean UI
+		Hides details of how it works
+		Can be compiled separately
+		No one else needs to know how it works 
+		Easier to change bc UI does not change 
+		Easier to divide work on large software project
+	Software Design document contains all details of how the SW will be implemented
+	Design must be documented physically
+4. Implementation
+	Write the source code in the chosen language
+	Using the SDD as a guide code the algorithms using the chosen computer language
+	Perform code inspections
+	Add debugging statements in the code to aid in testing if needed
+	Write the final test plan 
+	Construct special testing functions as needed
+5. Testing
+	Does the program work the way it's supposed to work 
+	Testing: The process of executing a program with data sets desgined to discover errors
+	Verification: Did we build the software right
+	Validation: process of determinign the degree to which software does, in fact, produce results that satisfy the original requirements. 
+	
+6. Software Delivery:
+		Each programming assignment source code has a delivery date
+		Each programming assignment has a drop dead date (DDD) MIDNIGHT OF THAT DATE
+7. Software Maintenance
+	Bug Fixes, Upgrades
+
+
+Software life cycle (the classical approach to software dev)
+	Requirements
+	Design
+	Implementation
+	Integration
+	Testing
+	Deployment
+	Maintenance
+	
+	Problem with this method is BDUF (big design up front)
+
+
+12 Principles of Agile Software Dev
+1. Highest priority is to satisfy the customer through early and continuous delivery of software
+2. Welcome changing requirements even late in dev.
+3. Deliver working software frequently from a couple of weeks to a couple of months with a preference to the shorter timescale
+4. Buseiness people and dev must work together daily throughout the project
+5. Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done
+6. Promote sustainable development, aka keeping a constant pace indefinitely. 
+7. Working software is the primary measure of progress.
+8. The most efficient method of conveying info is face to face convo
+9. Continuous attention to technical excellence enhances agility
+10. Simplicity is essential. 
+11. The best architectures emerge from self organizing teams 
+12. At regular intervals, the team reflects on how to become more effective, then tunes and adjusts behaviour
+
+
+Kanban Method similar to trello. 
+Online application called Trello, free for use. Software management tool, lets you create digital bulletin boards. Use in CS499
+
+
+
+
+POINTERS
+A pointer is a variable that holods the address in memory of another variable 
+Memory in computer is divided into BYTES. Numbered from 0 to amount of memory in machine
+
+After declaring a variable (without assigning a value), memory location is allocated for each variable
+
+strcpy(c_array, "test"); //ONLY CORRECT WAY TO USE STRING COPY
+c_array="test"; //THIS IS A SYNTAX ERROR AND WILL BE COUNTED WRONG
+
+Use an asterisk to declare a pointer
+
+int i_var; //variable name
+int *i_ptr; //pointer for variable
+
+double d_var; //variable name
+double *d_ptr; //pointer for variable
+
+variable types for variable and pointer must be the same size
+
+When a pointer is initialized, IT IS NOT SET TO NULL in VS2012
+
+i_ptr = &i_var;  //store address of i_var in i_ptr
+d_ptr = &d_var; //store address of d_var in d_ptr
+
+c_ptr = c_array; //Because c_array represents the starting address of the array
+
+*i_ptr = 32; //Change the value in i_var to 32 (i_ptr is address of i_var)
+
+ 
+Always initialize your variables to null. Don't assume. 
+
+Create a pointer inside a function: initialize it to null right then and there
+Create a pointer in a class: initialize to null in the constructor function 
+
+Do not initialize in the header file. 
+
+
+parameters are the variables defined in the fn header, arguments are the actual values passed in the call to the function 
+
+&i_var passes address, i_ptr passes pointer
+
+
+Address operator & should be appended to data type in the function arguments
+
+Unless specified in assignment, it's up to you which type of function you want to write 
+
+
+
+Stack vs heap 
+Stack: Variables you defin e are here, local variables created here, deallocated by the OS
+
+Heap: Holds dynamically created varibles
+	holds global variables
+	You manage allocating/deallocating
+	Memory could become fragmented with use
+
+
+Using the "ptr_var = new <datatype>" creates a new variable of that type and stores it in a pointer
+
+
+Pointer to an array is identical to the name of an array
+
+
+You must deallocate the memory block whose address is stored in a pointer when you have finished using that memroy block 
+
+delete i_ptr; //Results in an address of unallocated memory
+
+
+//Pointer arithmetic
+int tab[5] {1,4,5,6,7};
+int *ptr; //Create an int pointer
+ptr = tab; //set it pointing to the first element in the array
+
+//This does the same thing
+ptr = &tab[0]; //sets pointing to the first element in the array
+
+ptr + 1 ==== &tab[1]
+*ptr ==== tab[0] ==== ptr[0]
+*(ptr+1) ==== tab[1] ==== ptr[1] //PARENTHESES REQUIRED
+
+for(int i=0; i<5; i++)
+{
+	cout  << *ptr << endl;
+	ptr++; //Increments address in pointer by the number of bytes in the size of the data type in the array
+}
+
+
+
+
+PASSING ARRAYS INTO FUNCTION 
+void Sort(int *array, int length){};
+
+OR 
+
+void Sort(int array[], int length) {}; //No number needed inside brackets, it will be ignored 
+
+
+
+STUDY POINTERS
+
+
+
+OOP
+
+Structure is the most basic of objects
+
+struct simple
+{
+	int x;
+	char ch;
+};
+
+This is creating a new data type
+DO NOT FORGET THE GOD DAMN SEMICOLON 
+
+This creates a static instance of struct simple 
+
+Access values using dot notation 
+
+Create structure and initialize in one step:
+
+simple sim1 = {comma separated values};
+
+Create an array of struct simples
+
+simple sims[5];
+
+
+
+Putting an array in a struct is NOT dynamic memory allocation  TEST
+
+ -> is pointer notation. 
+
+Google strcpy 
+
+You must use strcpy to assign a string to a char array 
+
+
+simple *sptr;
+sptr = new simple; //create a dynamic isntance of simple using the new operator
+
+delete sptr; //delete sptr to avoid memory leaks
+
+Delete pointers when you are finished with them
+
+
+
+
+
+struct complex
+{
+double d;
+char cr;
+simple *sptr; //This struct contains a pointer to an instance of simple. 
+}; 
+
+
+
+Deleting complex does not delete the struct pointed to by the pointer
+
+C or C++ syntax for freeing memory allocation will be accepted on tests 
+
+
