@@ -347,3 +347,159 @@ Deleting complex does not delete the struct pointed to by the pointer
 C or C++ syntax for freeing memory allocation will be accepted on tests 
 
 
+A Class is a block of code defining a type of object. It is a blueprint for constructing an object. 
+A Class is like a structure containing functions as well as the variables that the functions work on 
+
+
+A class definition consists of A header file, defining the interface to the class function;
+				as well as a source file defining the implementation of all the class functions. 
+
+Instantiation: creating an instance of the class
+
+
+//////////////////////////////////////////
+///SAMPLE HEADER AND Implementation FILE//
+//////////////////////////////////////////
+
+Sample Header file
+//Instead of the preprocessor directives, you can also use #pragma once
+#ifndef MYSTRING_H
+#define MYSTRING_H
+class MyString
+{
+	private: //Cannot be accessed from outside the class. Always make all variables in a class private 
+		char *theString;
+	public:
+		//Prototypes for all functions in class
+		MyString(); //Default constructor, cannot call constructor even though it is public
+			    //This is executed as soon as the class is instantiated, initializes all of the variables.
+			    //You can have as many constructors as you want, as long as they have different arguments
+			    //
+		MyString(char *str); //Overloaded constructor
+				     //
+		~MyString(); //When memory is cleared after call to class, this cleans stuff up 
+
+		void clearString();
+		void setString(char *str); //Setter
+		char *getString(); //Getter
+		int StringLength();
+		void PrintString();
+		bool StringEqual(MyString *otherString);
+		bool operator == (MyString otherString);
+		
+};
+#endif
+
+
+
+Sample Implementation file 
+
+#include "MyString.h"
+#include <string>
+#include <iostream>
+using namespace std;
+
+//Default Class Constructor
+MyString::MyString() //Every function name is the .cpp file must have this of the function is not considered as being defined as part of the class
+{
+	theString = NULL; 
+}
+
+//Class Constructor
+//Initialize String to the str argument
+MyString::MyString(char *str)
+
+{
+//Allocate memory for new string
+theString = new char[strlen(str) + 1];
+strcpy(theString, str); //Copy string argument into new memory space 
+}
+
+//Class Destructor
+MyString::~MyString
+
+{
+	delete[] theString;
+}
+
+
+//TODO REST OF FILE
+
+bool MyString::StringEqual(MyString *otherString)
+{
+	char *str = otherString->getString();
+	bool retVal = false;
+	if(strcmp(theString, str) == 0)
+		retVal = true;
+	else retVal = false; 
+	
+	//TODO FINISH
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ClassA *A = new ClassA; //Set poitner A to the instance
+ClassA A; //Create static instance of ClassA
+
+
+TEST QUESTION
+Define header file for a class. You WILL need to put in a constructor and destructor
+
+//TODO figure out wtf protected means
+
+
+
+Polymorphism: the ability of a subclass to override a function inherited 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
