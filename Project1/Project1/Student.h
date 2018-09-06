@@ -5,6 +5,10 @@
 *   
 *   This program is entirely my own work
 *******************************************************************/
+
+#include <iostream>
+
+
 #ifndef STUDENT_H
 #define STUDENT_H
 
