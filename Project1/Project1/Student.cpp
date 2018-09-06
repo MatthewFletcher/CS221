@@ -18,6 +18,13 @@ Student::Student()
 
 }
 
+//Define overloaded constructor
+Student::Student(int iID, char *mName, char *wName, char *hName)
+{
+	cout << "overloaded constructor" << endl;
+
+}
+
 
 //////////////////////////
 	//Getters and Setters
@@ -26,11 +33,20 @@ Student::Student()
 	void Student::setStudentID(int iID)
 	{	
 		cout << "ID set to " << iID << endl;
+
+		m_iStudentID = iID;
 	}
 	int Student::getStudentID()
 	{
-		//return iID;
+		return m_iStudentID;
 		//TODO figure out why this is throwing a "not declared in this scope" error
 		cout << "getter runs" << endl;
+	}
+
+
+
+	void Student::printStudentInfo()
+	{
+		cout << "Printing Student Information" << endl;
 	}
 
