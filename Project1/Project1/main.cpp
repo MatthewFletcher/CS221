@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "Student.h"
+#include <string.h>
 
 using namespace std;
 

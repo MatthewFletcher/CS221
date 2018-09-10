@@ -7,6 +7,7 @@
 *******************************************************************/
 
 #include <iostream>
+#include <string.h>
 
 
 #ifndef STUDENT_H
