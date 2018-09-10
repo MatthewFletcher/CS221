@@ -14,7 +14,7 @@ using namespace std;
 //Define Default Constructor
 Student::Student()
 {
-	cout << "Student Class constructor run" << endl;
+	cout << "Creating student class instance using default constructor" << endl;
 
 }
 
@@ -22,6 +22,8 @@ Student::Student()
 Student::Student(int iID, char *mName, char *wName, char *hName)
 {
 	cout << "overloaded constructor" << endl;
+
+
 
 }
 
@@ -45,8 +47,59 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 
 
 
+		//Get and set the student's name and wizarding family name. 
+	void Student::getName(char *mName, char *wName)
+		{
+			char mName_ptr = *mName;
+			cout << "getName" << endl;
+		}
+	void Student::setName(char *mName, char *wName)
+		{
+			
+		}
+
+	//- Get and set the student's house name. 
+	void Student::getHouse(char *hName)
+		{
+	
+		}
+	void Student::setHouse(char *hName)
+		{
+	
+		}
+
+	//Get and set a class name
+	void Student::getClass(int idx, char *className)
+		{
+	
+		}
+	void Student::setClass(int idx, char *className)
+		{
+	
+		}
+
+	//Get and Set a grade
+	void Student::setGrade(int idx, int grade)
+		{
+			
+		}
+	void Student::getGrade(int idx, int &iGrade, char &cGrade)
+		{
+			
+		}
+ //Reference function that returns a letter and number grade TODO use hogwarts grading scale
+	void Student::getGrade(int idx, int *iGrade, char *cGrade)
+		{
+	
+		}
+ //Pointer function that returns a letter and umber grade
+
+
+
 	void Student::printStudentInfo()
 	{
+	
 		cout << "Printing Student Information" << endl;
 	}
+
 

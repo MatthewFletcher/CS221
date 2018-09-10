@@ -17,6 +17,8 @@ class Student
 {
 public:
 
+	int foo;
+
 	//Default Constructor
 	Student();
 

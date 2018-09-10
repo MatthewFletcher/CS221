@@ -1,0 +1,39 @@
+=================================================================
+|            Demonstration of Programming Assignment 1          |
+| Student Record for Hogwarts School of Witchcraft and Wizardry |
+=================================================================
+
+Creating student class instance using default constructor
+Setting data in the new Student class instance.
+
+Checking data with calls to the get functions
+
+===============================================================================
+ Correctly returned the student ID: 12345
+ Correctly returned the student Name: Harry Potter
+ Correctly returned the student house: Gryffindor
+ Correctly returned the student class[0]: Introduction to Charms
+ Correctly returned the student class[1]: Introduction to Transfiguration
+ Correctly returned the student class[2]: Introduction to Potions
+ Correctly handled out of range index for class names: 
+ Correctly returned grade for class[0] using references: 97 Outstanding
+ Correctly returned grade for class[1] using references: 94 Exceeds Expectations
+ Correctly returned grade for class[1] using pointers: 94 Exceeds Expectations
+ Correctly returned grade for class[2] using pointers: 70 Poor
+===============================================================================
+
+
+Checking printing of all student information.
+
+ ID          Name        House
+12345	Harry	Potter	Gryffindor
+
+		Classes				Grade
+
+	Introduction to Charms                  97
+	Introduction to Transfiguration         94
+	Introduction to Potions                 70
+
+
+End of programming assignment 1 demonstration.
+Press any key to continue...

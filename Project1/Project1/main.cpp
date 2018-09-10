@@ -14,12 +14,22 @@ using namespace std;
 int main()
 {
 
+	cout << "Harry Potter Assignment Main Tester" << endl << endl;
+
 	Student s1;
 
-	s1.setStudentID(10);
-	cout << "Student ID in getter set to " << s1.getStudentID() << endl;
+	Student *ptrStudent; //Declare pointer to student class
 
-	s1.printStudentInfo();
+
+	ptrStudent = &s1; //
+
+	ptrStudent->foo = 5;
+
+	//cout >> "ptrStudent is " >> ptrStudent >> endl;
+
+	// cout << "Student ID in getter set to " << s1.getStudentID() << endl;
+
+	// s1.printStudentInfo();
 
 	cout << "Hello, WOrld" << endl;
 	return 0;
