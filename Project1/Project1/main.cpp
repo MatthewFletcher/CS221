@@ -25,11 +25,13 @@ int main()
 
 	ptrStudent->foo = 5;
 
+	cout << ptrStudent->foo << endl;
+
 	//cout >> "ptrStudent is " >> ptrStudent >> endl;
 
-	// cout << "Student ID in getter set to " << s1.getStudentID() << endl;
+	cout << "Student ID in getter set to " << ptrStudent->getStudentID() << endl;
 
-	// s1.printStudentInfo();
+	ptrStudent->printStudentInfo();
 
 	cout << "Hello, WOrld" << endl;
 	return 0;
