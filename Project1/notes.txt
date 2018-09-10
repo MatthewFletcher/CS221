@@ -519,3 +519,55 @@ THIS WILL BE ON THE TEST
 
 In default constructor, you are supposed to intialize all the variables to some default value.
 NOT AT ASSIGNMENT OF VARIABLE
+
+
+Software testing:
+Verification: Did we build the software right?
+Validation: Did we build the right software?
+
+
+Testing: verifying the correctness of a program 
+Debugging: The process of tracking the execution of a program and discovering the errors in it 
+
+Design for correctness
+Write test plans as you write the design
+Perform design inspections and code walkthroughs
+
+
+
+Two approaches to testing (ON TEST)
+Top down: Start from main. Mimic the actions of functions which are called by upper level functions
+Bottom up: Mimic the action of functions which are calling lower level functions
+
+Stub: Returns known outputs ("print "HEY FUCKER") to check if the function is being called
+Driver: Passes known values to selected function, reports returned values. Used to test lower level functions
+
+
+
+Five types of testing (ON TEST)
+Statement (Test lines of code as you add them)
+Unit (Test the whole function. Account for each possible path, including switches )
+Integration (Test how functions work together)
+Acceptance (Check if the function interfaces with the external requirements)
+Regression (Check you didn't break everything else)
+
+
+
+Testing process:
+What is the goal of the test?
+What inpuyts will demonstarate the goal fo the test case and the expected output?
+Modify the code as needed to runt he specific test case 
+Run the program and record the results 
+Compare the results to the expected results 
+
+
+
+Good idea for debugging
+#define DEBUG_1
+
+#ifdef DEBUG_1
+//code to be run during debug only
+#endif
+
+cout.flush (forces output to screen, empties buffer)
+
