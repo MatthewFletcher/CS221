@@ -21,14 +21,14 @@ int main()
 	Student *ptrStudent; //Declare pointer to student class
 
 
-	ptrStudent = &s1; //
+	ptrStudent = &s1; //Create variable to hold pointer to s1 instance of Student class
 
 	ptrStudent->foo = 5;
 
 	cout << ptrStudent->foo << endl;
 
-	//cout >> "ptrStudent is " >> ptrStudent >> endl;
-
+	
+	ptrStudent->setStudentID(1234);
 	cout << "Student ID in getter set to " << ptrStudent->getStudentID() << endl;
 
 	ptrStudent->printStudentInfo();
