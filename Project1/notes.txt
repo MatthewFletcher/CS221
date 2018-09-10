@@ -569,5 +569,41 @@ Good idea for debugging
 //code to be run during debug only
 #endif
 
-cout.flush (forces output to screen, empties buffer)
+cout.flush() (forces output to screen, empties buffer)
+
+String class is part of the standard template library
+
+
+The name of an array is syntactically the same as its starting address in memory 
+
+
+
+//Create a char array 
+char str[16];
+
+//Copy a value into the array
+strcpy(str, "Foobar");
+
+//Concatenate value onto end of char array
+strcat(str, "is a word");
+DO NOT DO str = "Foobar"
+you MUST do strcpy(str, "Testing");
+IF YOU DO THE str = "Foobar" thingy, 
+
+
+
+int strcmp(char *str1, char *str2)
+
+If the 2 strings are equal, return value is 0
+If first string is alphabetically after the second string, positive number returned
+If first string is alphabetically before the second string, negative number returned
+
+Other K&R String functions
+char str1[32] = "This is a test string";
+Find first occurance of a char in a string: char *cptr = strchr(str1, 's'); //cptr now holds the address of "s"
+Find first occurance of string in a string: char *cptr = strstr(str1, "is"); //returns pointer of string in a string, cptr now holds the address of "i" in the is of this 
+Find length of string:                      int //TODO
+
+
+//TODO look up strtok K&R function
 
