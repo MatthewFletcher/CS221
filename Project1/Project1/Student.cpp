@@ -98,6 +98,9 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 
 	void Student::printStudentInfo()
 	{
+		cout << " ID          Name        House" << endl;
+		//cout s1.
+
 	
 		cout << "Printing Student Information" << endl;
 	}
