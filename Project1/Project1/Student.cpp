@@ -26,6 +26,8 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 
 
 
+
+
 }
 
 
@@ -52,16 +54,42 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 	void Student::getName(char *mName, char *wName)
 		{
 			char mName_ptr = *mName;
-			cout << "getName" << endl;
+			cout << "getName is running " << endl;
 		}
 	void Student::setName(char *mName, char *wName)
-		{
+		{	
+
+			int name_array_length = 64;
+			char mName_array[name_array_length];
+			mName = mName_array;
+
+			cout << "Name Array Initializing 1" << endl;
+
+			for (int i = 0; i++ < name_array_length;)
+			{
+				mName_array[i] = 'a';
+			}
+
+
+
+			char wName_array[name_array_length];
+			wName = wName_array;
+			cout << "Name Array Initializing 2" << endl;
+			for (int i = 0; i++ < name_array_length;)
+			{
+				wName_array[i] = 'b';
+			}
+
+
+			mName = mName_array;
+			
 			
 		}
 
 	//- Get and set the student's house name. 
 	void Student::getHouse(char *hName)
 		{
+			cout << "getHouse is running " << endl;
 	
 		}
 	void Student::setHouse(char *hName)
@@ -72,7 +100,7 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 	//Get and set a class name
 	void Student::getClass(int idx, char *className)
 		{
-	
+			cout << "getClass is running " << endl;
 		}
 	void Student::setClass(int idx, char *className)
 		{
@@ -86,12 +114,12 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 		}
 	void Student::getGrade(int idx, int &iGrade, char &cGrade)
 		{
-			
+			cout << "getGrade with pointers is running " << endl;
 		}
  //Reference function that returns a letter and number grade TODO use hogwarts grading scale
 	void Student::getGrade(int idx, int *iGrade, char *cGrade)
 		{
-	
+			cout << "getGrade with reference is running " << endl;
 		}
  //Pointer function that returns a letter and umber grade
 

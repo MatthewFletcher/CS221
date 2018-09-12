@@ -32,6 +32,14 @@ int main()
 	ptrStudent->setStudentID(1234);
 	cout << "Student ID in getter set to " << ptrStudent->getStudentID() << endl;
 
+
+
+	//char mName[32];
+	//char fName[32];
+
+	//ptrStudent->setName("Foo", "Bar");
+	//cout << "Student name: " << ptrStudent->getName(mName, fName) << endl;
+
 	ptrStudent->printStudentInfo();
 
 	cout << "Hello, WOrld" << endl;
