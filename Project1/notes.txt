@@ -607,3 +607,61 @@ Find length of string:                      int //TODO
 
 //TODO look up strtok K&R function
 
+Abstract Data Types
+Lists
+Stacks
+Queues
+Trees
+Sets
+Graphs
+
+
+ADT fis a data type whos properties are specified indepndently of any particular implementation
+Domain: Set or range of data that the ADT acts on 
+Operations: All of the functions that act on the data
+Types of operations: Constructors, Transformers, observers, iterators
+
+
+
+
+What are templates
+Templates are a block of code using specific syntax that allows the compiler to generate specific code for user w different data types 
+Attempts to simplify the process of fn overloading 
+
+
+
+VECTORS
+One of the ordered containers in the STL 
+provides a dynamic array of objects
+Allows random access to members 
+Insert/remove time at the end is rapid 
+Insert/Remove at beginning or middle is proportional to vector size 
+Autoatmically resizes as needed
+
+Must use #include <vector>, and using std namespace 
+
+
+To create: vector<datatype>vIdentifier
+
+To add an item to a vector (at the end): dVec.push_back(value);
+To remove an item (from the end) dVec.pop();
+
+int dVec.size(); //Number of items in vector
+int dVec.capacity(); //Capacity before auto resizing 
+int dVec.max_size(); //Max possible size 
+bool dVec.empty(); //Returns true if vector is empty
+
+
+dVec.front() and .back() return pointers to first and last terms. 
+THIS IS CALLED AN ITERATOR
+
+vector<double>::iterator itr = dVec.begin();
+cout << *itr; //This prints the first item in the vector 
+itr++; //Increments to next item in vector 
+itr+=3; //Moves over 3 (from index 0 to index 3)
+
+
+insert(iterator, item); //Adds an item in another place other than front or back 
+erase //TODO google syntax 
+
+Swapping item locations: swap(iterator1, iterator2);
