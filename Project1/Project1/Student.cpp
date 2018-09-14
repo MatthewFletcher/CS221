@@ -44,56 +44,38 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 	int Student::getStudentID()
 	{
 		return m_iStudentID;
-		//TODO figure out why this is throwing a "not declared in this scope" error
 		cout << "getter runs" << endl;
 	}
 
 
 
 		//Get and set the student's name and wizarding family name. 
-	void Student::getName(char *mName, char *wName)
-		{
-			char mName_ptr = *mName;
-			cout << "getName is running " << endl;
-		}
 	void Student::setName(char *mName, char *wName)
 		{	
+			strcpy(m_sMagicalName, mName);
+			cout << "setName is running" << endl;
+		}
 
-			int name_array_length = 64;
-			char mName_array[name_array_length];
-			mName = mName_array;
+	void Student::getName(char *mName, char *wName)
+		{
+			strcpy(mName, m_sMagicalName);
+			cout << "setName is running" << endl;
 
-			cout << "Name Array Initializing 1" << endl;
-
-			for (int i = 0; i++ < name_array_length;)
-			{
-				mName_array[i] = 'a';
-			}
-
-
-
-			char wName_array[name_array_length];
-			wName = wName_array;
-			cout << "Name Array Initializing 2" << endl;
-			for (int i = 0; i++ < name_array_length;)
-			{
-				wName_array[i] = 'b';
-			}
-
-
-			mName = mName_array;
-			
-			
 		}
 
 	//- Get and set the student's house name. 
+	void Student::setHouse(char *hName)
+		{
+			strcpy(m_sHouse, hName);
+			cout <<  "setHouse is running " << endl;
+	
+		}
+
 	void Student::getHouse(char *hName)
 		{
 			cout << "getHouse is running " << endl;
-	
-		}
-	void Student::setHouse(char *hName)
-		{
+
+			strcpy(hName, m_sHouse);
 	
 		}
 

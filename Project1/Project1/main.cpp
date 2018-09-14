@@ -24,6 +24,9 @@ int main()
 
 	ptrStudent = &s1; //Create variable to hold pointer to s1 instance of Student class
 
+
+
+	//Testing accessing public var
 	ptrStudent->foo = 5;
 
 	cout << ptrStudent->foo << endl;
@@ -32,13 +35,24 @@ int main()
 	ptrStudent->setStudentID(1234);
 	cout << "Student ID in getter set to " << ptrStudent->getStudentID() << endl;
 
+	//Testing House Name function
+	char houseName[64];
+
+	ptrStudent->setHouse("Hufflepuff");
+	ptrStudent->getHouse(houseName);
+
+	cout << strcmp("Hufflepuff", houseName) << endl;
 
 
-	//char mName[32];
-	//char fName[32];
 
-	//ptrStudent->setName("Foo", "Bar");
-	//cout << "Student name: " << ptrStudent->getName(mName, fName) << endl;
+	char firstName[64];
+
+
+
+
+
+	char familyName[64];
+
 
 	ptrStudent->printStudentInfo();
 
