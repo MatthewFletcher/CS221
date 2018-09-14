@@ -46,12 +46,22 @@ int main()
 
 
 	char firstName[64];
-
-
-
-
-
 	char familyName[64];
+	ptrStudent->setName("Harry", "Potter");
+	ptrStudent->getName(firstName, familyName);
+
+	cout << strcmp("Harry", firstName) << " <<<< strcmp for first name "<< endl;
+	cout << strcmp("Potter", familyName) << " <<<< strcmp for first name " << endl;
+		
+
+
+
+
+
+
+
+
+	
 
 
 	ptrStudent->printStudentInfo();

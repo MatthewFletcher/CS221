@@ -53,13 +53,16 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 	void Student::setName(char *mName, char *wName)
 		{	
 			strcpy(m_sMagicalName, mName);
+			strcpy(m_sWizardFamilyName, mName);
 			cout << "setName is running" << endl;
 		}
 
 	void Student::getName(char *mName, char *wName)
 		{
 			strcpy(mName, m_sMagicalName);
-			cout << "setName is running" << endl;
+			strcpy(wName, m_sWizardFamilyName);
+
+			cout << "getName is running" << endl;
 
 		}
 
