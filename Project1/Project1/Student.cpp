@@ -16,6 +16,7 @@ using namespace std;
 Student::Student()
 {
 	cout << "Creating student class instance using default constructor" << endl;
+	
 
 }
 
@@ -83,38 +84,46 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 		}
 
 	//Get and set a class name
+	void Student::setClass(int idx, char *className)
+		{
+			cout << "setClass is running" << endl;
+			strcpy(m_sClasses[idx], className);
+		}
 	void Student::getClass(int idx, char *className)
 		{
 			cout << "getClass is running " << endl;
+			strcpy(className, m_sClasses[idx]);			
 		}
-	void Student::setClass(int idx, char *className)
-		{
-	
-		}
+
+
 
 	//Get and Set a grade
 	void Student::setGrade(int idx, int grade)
 		{
-			
+			cout << "setGrade is running"  << endl;
+			m_iGrades[idx] = grade;
 		}
+
+ //Reference function that returns a letter and number grade TODO use hogwarts grading scale
 	void Student::getGrade(int idx, int &iGrade, char &cGrade)
 		{
-			cout << "getGrade with pointers is running " << endl;
+			cout << "getGrade with pointers is running " << endl;			
 		}
- //Reference function that returns a letter and number grade TODO use hogwarts grading scale
+
+
+ //Pointer function that returns a letter and number grade
 	void Student::getGrade(int idx, int *iGrade, char *cGrade)
 		{
 			cout << "getGrade with reference is running " << endl;
 		}
- //Pointer function that returns a letter and umber grade
 
 
 
 	void Student::printStudentInfo()
 	{
-		cout << " ID          Name        House" << endl;
-		//cout s1.
-
+		cout << " ID\tName\tHouse" << endl;
+		cout << getStudentID() <<   "\t" <<  "\0" << endl;
+ 
 	
 		cout << "Printing Student Information" << endl;
 	}

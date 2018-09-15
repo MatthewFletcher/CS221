@@ -12,6 +12,14 @@
 
 using namespace std;
 
+void printHeader(string foo)
+{
+	cout << "============================\n"
+		 << "=" << foo << "=\n"
+		 << "=============================\n"
+		 <<endl; 
+}
+
 int main()
 {
 
@@ -24,35 +32,53 @@ int main()
 
 	ptrStudent = &s1; //Create variable to hold pointer to s1 instance of Student class
 
-
-
-	//Testing accessing public var
-	ptrStudent->foo = 5;
-
-	cout << ptrStudent->foo << endl;
-
 	
 	ptrStudent->setStudentID(1234);
 	cout << "Student ID in getter set to " << ptrStudent->getStudentID() << endl;
 
 	//Testing House Name function
-	char houseName[64];
+
+	cout << "=======================\n" << "setHouse, getHouse" << endl;
+
+	cout << "Declaring housename array" << endl;
+	char hName[32];
 
 	ptrStudent->setHouse("Hufflepuff");
-	ptrStudent->getHouse(houseName);
+	ptrStudent->getHouse(hName);
 
-	cout << strcmp("Hufflepuff", houseName) << endl;
+	cout << strcmp("Hufflepuff", hName) << " <<<< strcmp for house name "<< endl;
 
 
 
-	char firstName[64];
-	char familyName[64];
+
+	cout << "=======================\n" << "setName, getName" << endl;
+	char mName[64];
+	char fName[64];
 	ptrStudent->setName("Harry", "Potter");
-	ptrStudent->getName(firstName, familyName);
+	ptrStudent->getName(mName, fName);
 
-	cout << strcmp("Harry", firstName) << " <<<< strcmp for first name "<< endl;
-	cout << strcmp("Potter", familyName) << " <<<< strcmp for first name " << endl;
+	cout << strcmp("Harry", mName) << " <<<< strcmp for first name "<< endl;
+	cout << strcmp("Potter", fName) << " <<<< strcmp for last name " << endl;
 		
+
+
+	cout << "=======================\n" << "setGrade, getGrade" << endl;
+	cout << "Declaring grades array " << endl;
+	char grades[8];
+	ptrStudent->setGrade(3,100);
+
+
+
+	cout << "=======================\n" << "setClass, getClass" << endl;
+	cout << "Declaring class array" << endl;
+
+	char cName[32];
+	ptrStudent->setClass(0,"Charms");
+	ptrStudent->getClass(0, cName);
+	cout << strcmp("Charms", cName) << " <<<< strcmp for class " << endl;
+
+
+	
 
 
 
@@ -63,10 +89,12 @@ int main()
 
 	
 
-
+	cout << "=======================\n" << "printStudentInfo" << endl;
 	ptrStudent->printStudentInfo();
 
-	cout << "Hello, WOrld" << endl;
+
+	cout << "Thanks for playing, bye \n" << endl;
+
 	return 0;
 
 }
