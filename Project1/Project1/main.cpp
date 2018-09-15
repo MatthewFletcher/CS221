@@ -65,7 +65,25 @@ int main()
 	cout << "=======================\n" << "setGrade, getGrade" << endl;
 	cout << "Declaring grades array " << endl;
 	char grades[8];
-	ptrStudent->setGrade(3,100);
+
+	//ptrStudent->setGrade(0,95);
+
+
+	//Reference function version
+	int iGrade = 94;
+	char cGrade = '\0';
+	ptrStudent->getGrade(0,iGrade,cGrade);
+	cout << !(iGrade == 95) << " <<<< strcmp for Grade, digit, reference" << endl;
+	cout << !(iGrade == 'O') << " <<<< strcmp for Grade, letter, reference" << endl;
+
+	//Pointer function version
+	iGrade = 0;
+	cGrade = '\0';
+	ptrStudent->getGrade(0,&iGrade,&cGrade);
+	cout << !(iGrade == 95) << " <<<< strcmp for Grade, digit, pointer" << endl;
+	cout << !(iGrade == 'O') << " <<<< strcmp for Grade, letter, pointer" << endl;
+
+	
 
 
 
@@ -76,12 +94,6 @@ int main()
 	ptrStudent->setClass(0,"Charms");
 	ptrStudent->getClass(0, cName);
 	cout << strcmp("Charms", cName) << " <<<< strcmp for class " << endl;
-
-
-	
-
-
-
 
 
 
