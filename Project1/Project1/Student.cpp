@@ -19,8 +19,8 @@ Student::Student()
 
 	for (int i = 0; i < 8; ++i)
 	{
-		strcpy(m_sClasses[i], "");
-		m_iGrades[i] = 0;
+		strcpy(m_sClasses[i], "");  //Sets all elements of array to empty
+		m_iGrades[i] = 0;	//Sets all grades to 0 for initialization
 	}
 	
 
@@ -31,9 +31,22 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 {
 	cout << "overloaded constructor" << endl;
 
+	for (int i = 0; i < 8; ++i)
+	{
+		strcpy(m_sClasses[i], "");  //Sets all elements of array to empty
+		m_iGrades[i] = 0;	//Sets all grades to 0 for initialization
+	}
 
+	m_iStudentID = iID;
+	strcpy(m_sMagicalName, mName);
+	strcpy(m_sWizardFamilyName, wName);
+	strcpy(m_sHouse, hName);
 
-
+	cout << "ID set to " << iID << endl;
+	cout << "First name set to " << m_sMagicalName << endl;
+	cout << "Last name set to " << m_sWizardFamilyName << endl;
+	cout << "House set to " << m_sHouse << endl;
+		
 
 }
 
@@ -118,39 +131,22 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 	void Student::getGrade(int idx, int &iGrade, char &cGrade)
 		{
 			cout << "getGrade with pointers is running " << endl;
-			m_iGrades[idx] = iGrade;
+			iGrade = m_iGrades[idx];
 
-			if (iGrade < 60)
-			{
-				cGrade = 'T';
-			}
+			if (iGrade < 60)cGrade = 'T';
+			else if (iGrade <=69)cGrade = 'D';
+			else if (iGrade <=79)cGrade = 'P';
+			else if (iGrade <=89)cGrade = 'A';
+			else if (iGrade <=94)cGrade = 'E';
+			else if (iGrade <=100)cGrade = 'O';
 
-			else if (iGrade <=69)
-			{
-				cGrade = 'D';
-			}
-			else if (iGrade <=79)
-			{
-				cGrade = 'P';
-			}
-			else if (iGrade <=89)
-			{
-				cGrade = 'A';
-			}
-			else if (iGrade <=94)
-			{
-				cGrade = 'E';
-			}
-			else if (iGrade <=100)
-			{
-				cGrade = 'O';
-			}
+			cout << "Letter grade: "<<iGrade <<" is a " << cGrade << endl;
 
 
 		}
 
 
- //Pointer function that returns a letter and number grade
+ //Pointer function that returns a letter and numer grbade
 	void Student::getGrade(int idx, int *iGrade, char *cGrade)
 		{
 			cout << "getGrade with reference is running " << endl;
@@ -162,11 +158,12 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 	{
 		cout << "Printing Student Information" << endl << endl;
 		cout << " ID\tName\tHouse" << endl;
-		cout << getStudentID() <<   "\t" << endl;
+		cout << getStudentID() <<   "\t" <<  m_sMagicalName << " " << m_sWizardFamilyName << "\t" << m_sHouse << endl;
 
 		for (int i = 0; i < 8; ++i)
 		{
-			if(strlen(m_sClasses[i]) != 0) cout << m_sClasses[i]<< "\t " <<  endl;
+			if(strlen(m_sClasses[i]) != 0) cout << m_sClasses[i]<< "\t " << m_iGrades[i] 
+				<< endl;
 		}
  
 	

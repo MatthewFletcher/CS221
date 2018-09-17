@@ -27,6 +27,8 @@ int main()
 
 	Student s1;
 
+	Student *s = new Student(567, "fooing", "foostuff", "fooHouse");
+
 	Student *ptrStudent; //Declare pointer to student class
 
 
@@ -49,8 +51,6 @@ int main()
 	cout << strcmp("Hufflepuff", hName) << " <<<< strcmp for house name "<< endl;
 
 
-
-
 	cout << "=======================\n" << "setName, getName" << endl;
 	char mName[64];
 	char fName[64];
@@ -66,21 +66,20 @@ int main()
 	cout << "Declaring grades array " << endl;
 	char grades[8];
 
-	//ptrStudent->setGrade(0,95);
-
+	int iGrade = 94;
+	ptrStudent->setGrade(0, iGrade);
 
 	//Reference function version
-	int iGrade = 94;
 	char cGrade = '\0';
 	ptrStudent->getGrade(0,iGrade,cGrade);
-	cout << !(iGrade == 95) << " <<<< strcmp for Grade, digit, reference" << endl;
+	cout << !(iGrade == 94) << " <<<< strcmp for Grade, digit, reference" << endl;
 	cout << !(iGrade == 'O') << " <<<< strcmp for Grade, letter, reference" << endl;
 
 	//Pointer function version
-	iGrade = 0;
+	iGrade = 35;
 	cGrade = '\0';
-	ptrStudent->getGrade(0,&iGrade,&cGrade);
-	cout << !(iGrade == 95) << " <<<< strcmp for Grade, digit, pointer" << endl;
+	ptrStudent->getGrade(1,&iGrade,&cGrade);
+	cout << !(iGrade == 94) << " <<<< strcmp for Grade, digit, pointer" << endl;
 	cout << !(iGrade == 'O') << " <<<< strcmp for Grade, letter, pointer" << endl;
 
 	
@@ -94,6 +93,14 @@ int main()
 	ptrStudent->setClass(0,"Charms");
 	ptrStudent->getClass(0, cName);
 	cout << strcmp("Charms", cName) << " <<<< strcmp for class " << endl;
+
+
+	ptrStudent->setClass(1, "Other Magic Stuff");
+	ptrStudent-> setGrade(1, 92);
+
+	ptrStudent->setClass(5, "Trying to break stuff");
+	ptrStudent-> setGrade(5, 53);
+
 
 
 
