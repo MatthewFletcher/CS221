@@ -12,13 +12,7 @@
 
 using namespace std;
 
-void printHeader(string foo)
-{
-	cout << "============================\n"
-		 << "=" << foo << "=\n"
-		 << "=============================\n"
-		 <<endl; 
-}
+
 
 int main()
 {
@@ -64,7 +58,7 @@ int main()
 
 	cout << "=======================\n" << "setGrade, getGrade" << endl;
 	cout << "Declaring grades array " << endl;
-	char grades[8];
+	//char grades[8];
 
 	int iGrade = 94;
 	ptrStudent->setGrade(0, iGrade);
@@ -113,6 +107,10 @@ int main()
 
 
 	cout << "Thanks for playing, bye \n" << endl;
+
+	int foo;
+
+	cin >> foo;
 
 	return 0;
 
