@@ -79,11 +79,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="HogwartsSWW.cpp" />
+    <ClCompile Include="House.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HogwartsSWW.h" />
     <ClInclude Include="House.h" />
-    <ClInclude Include="Student.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

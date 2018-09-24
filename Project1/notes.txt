@@ -665,3 +665,95 @@ insert(iterator, item); //Adds an item in another place other than front or back
 erase //TODO google syntax 
 
 Swapping item locations: swap(iterator1, iterator2);
+
+
+
+
+
+Linked List 
+End of list is signified by index that will raise exception (-1, \0, etc)
+
+Advantages of linked structures:
+	More flexible 
+	Linked structures are dynamic, Arrays are static 
+	Arrays may waste memory 
+	Nodes can be rearranged in a linked structure 
+	Memory usage in linked structures is more efficient 
+Disadvantages:
+	Sequential access only 
+	Can be less efficient due to how memory is shifted around 
+
+
+Foot Shot Warnings 
+Creating dangling pointers 
+
+simple *S1, *S2; 
+S1 = new simple();
+S2 = new simple();
+S1->next = S2;
+delete S2; //Now S1 points to deallocated memory 
+
+Creating garbage w no way to do garbage collection 
+simple *S1, *S2; 
+S1 = new simple();
+S2 = new simple();
+S1 = S2; //Results in both pointers pointing at S2, no way to access the memory for S1 
+
+
+
+Dereferencing the null pointer
+simple *S1, *S2; 
+S1->next = NULL;
+S2 = S1->next;
+S2->x = 6; //S2 is now null
+
+4. Forgetting to mark the end of a list 
+simple *S1l 
+
+
+
+
+
+LISTS
+List implies a linear relationship between componenets 
+Item i has a successor and predecessor except for first and last items 
+Implementing a list as  a linked set of structs or classes 
+
+
+Lists can be sorted or unsorted. 
+Unsorted implies no particular order. 
+
+Operations on a list 
+Create a new list 
+Empty an existing list 
+Add item to the list (sorted or unsorted)
+Delete item from list 
+Find item in the list 
+Find how long the list is 
+Determine if the list is empty 
+Determine if the list is full . 
+Iterate through each item in the list. 
+
+List algorithms 
+
+
+Searching a list:
+	1. List is empty, nothing to search 
+	2. Search key is found
+	3. Search key is not found (ON PROGRAMMING ASSIGNMENT)
+
+Initialize head to null in constructor (ON PROGRAMMING ASSIGNMENT)
+
+SEARCH ALGORITHM WILL BE ON TEST 
+
+Test for temp not equal to null FIRST, then check for key matching SECOND (ON TEST, ON PROGRAMMING ASSIGNMENT)
+while((temp != NULL) && 
+
+Check to see if item was NOT found. Otherwise you will try to access a null pointer 
+See lists_09
+
+2 nodes cannot have the same key 
+
+
+On tests, the function isemtpy does not exist, use if head==null ON TEST 
+
