@@ -1,0 +1,676 @@
+11150
+Harry Potter
+Gryffindor
+5
+Defense Against the Dark Arts
+99
+Transfiguration 102
+85
+Potions 102
+70
+Care of Magical Creatures
+80
+Flying Lessons
+95
+#
+11151
+Hermione Granger
+Gryffindor
+5
+Defense Against the Dark Arts
+99
+Transfiguration 102
+95
+Potions 102
+80
+Care of Magical Creatures
+99
+Arithmancy
+95
+#
+11152
+Ron Weasley
+Gryffindor
+5
+Defense Against the Dark Arts
+85
+Transfiguration 102
+80
+Potions 102
+75
+Care of Magical Creatures
+85
+Flying Lessons
+80
+#
+11163
+Ginny Weasley
+Gryffindor
+5
+Defense Against the Dark Arts
+85
+Transfiguration 101
+80
+Potions 101
+75
+Care of Magical Creatures
+85
+Flying Lessons
+80
+#
+11144
+Fred Weasley
+Gryffindor
+5
+Defense Against the Dark Arts
+85
+Transfiguration 201
+80
+Potions 201
+70
+Care of Magical Creatures
+85
+History of Magic
+80
+#
+11143
+George Weasley
+Gryffindor
+5
+Defense Against the Dark Arts
+85
+Transfiguration 201
+80
+Potions 201
+70
+Care of Magical Creatures
+85
+History of Magic
+80
+#
+11135
+Percy Weasley
+Gryffindor
+5
+Defense Against the Dark Arts
+85
+Charms
+80
+Herbology
+70
+Ancient Runes
+85
+Astronomy
+80
+#
+11156
+Nevill Longbottom
+Gryffindor
+5
+Defense Against the Dark Arts
+85
+Transfiguration 101
+80
+Potions 101
+75
+Care of Magical Creatures
+85
+Herbology
+95
+#
+11157
+Dean Thomas
+Gryffindor
+5
+Defense Against the Dark Arts
+85
+Transfiguration 102
+85
+Potions 102
+80
+Care of Magical Creatures
+85
+Herbology
+90
+#
+11158
+Seamus Finnigan
+Gryffindor
+5
+Defense Against the Dark Arts
+80
+Transfiguration 102
+75
+Potions 102
+80
+Care of Magical Creatures
+85
+Herbology
+95
+#
+11149
+Pavarti Patil
+Gryffindor
+5
+Defense Against the Dark Arts
+99
+Transfiguration 102
+85
+Potions 102
+70
+Care of Magical Creatures
+80
+Divination
+95
+#
+11148
+Oliver Wood
+Gryffindor
+5
+Defense Against the Dark Arts
+85
+Arithmancy
+85
+Astronomy
+70
+Charms
+80
+History of Magic
+95
+#
+11147
+Angelina Johnson
+Gryffindor
+5
+Defense Against the Dark Arts
+85
+Arithmancy
+85
+Astronomy
+70
+Charms
+80
+History of Magic
+95
+#
+11146
+Lee Jordan
+Gryffindor
+5
+Defense Against the Dark Arts
+90
+Transfiguration 102
+85
+Potions 102
+80
+Care of Magical Creatures
+80
+Flying Lessons
+85
+#
+11145
+Alicia Spinnet
+Gryffindor
+5
+Defense Against the Dark Arts
+85
+Arithmancy
+85
+Astronomy
+80
+Charms
+80
+History of Magic
+95
+#
+11134
+Katie Bell
+Gryffindor
+5
+Defense Against the Dark Arts
+85
+Arithmancy
+85
+Astronomy
+70
+Charms
+80
+History of Magic
+95
+#
+11165
+Colin Creevey
+Gryffindor
+5
+Defense Against the Dark Arts
+80
+Transfiguration 101
+85
+Potions 101
+70
+Care of Magical Creatures
+80
+History of Magic
+95
+#
+22210
+Terry Boot
+Ravenclaw
+5
+Defense Against the Dark Arts
+85
+Transfiguration 102
+80
+Potions 102
+75
+Care of Magical Creatures
+85
+Flying Lessons
+80
+#
+22219
+Mandy Brocklehurst
+Ravenclaw
+5
+Defense Against the Dark Arts
+85
+Transfiguration 101
+80
+Potions 101
+75
+Care of Magical Creatures
+85
+Flying Lessons
+80
+#
+22215
+Penelope Clearwater
+Ravenclaw
+5
+Defense Against the Dark Arts
+85
+Charms
+80
+Herbology
+70
+Ancient Runes
+85
+Astronomy
+80
+#
+22220
+Cho Chang
+Ravenclaw
+5
+Defense Against the Dark Arts
+85
+Transfiguration 101
+80
+Potions 101
+75
+Care of Magical Creatures
+85
+Flying Lessons
+80
+#
+22225
+Luna Lovegood
+Ravenclaw
+5
+Defense Against the Dark Arts
+85
+Transfiguration 102
+80
+Potions 102
+75
+Care of Magical Creatures
+85
+Flying Lessons
+80
+#
+22223
+Stewart Ackerley
+Ravenclaw
+5
+Defense Against the Dark Arts
+85
+Charms
+80
+Herbology
+70
+Ancient Runes
+85
+Astronomy
+80
+#
+22228
+Eddie Carmichael
+Ravenclaw
+5
+Defense Against the Dark Arts
+85
+Transfiguration 101
+80
+Potions 101
+75
+Care of Magical Creatures
+85
+Flying Lessons
+80
+#
+22238
+Michael Corner
+Ravenclaw
+5
+Defense Against the Dark Arts
+85
+Transfiguration 101
+80
+Potions 101
+75
+Care of Magical Creatures
+85
+Herbology
+95
+#
+22237
+Roger Davies
+Ravenclaw
+5
+Defense Against the Dark Arts
+85
+Transfiguration 102
+80
+Potions 102
+75
+Care of Magical Creatures
+85
+Flying Lessons
+80
+#
+22236
+Marietta Edgecombe
+Ravenclaw
+5
+Defense Against the Dark Arts
+85
+Transfiguration 101
+80
+Potions 101
+75
+Care of Magical Creatures
+85
+Herbology
+95
+#
+22231
+Anthony Golstein
+Ravenclaw
+5
+Defense Against the Dark Arts
+85
+Transfiguration 101
+80
+Potions 101
+75
+Care of Magical Creatures
+85
+Flying Lessons
+80
+#
+22232
+Padma Patil
+Ravenclaw
+5
+Defense Against the Dark Arts
+85
+Charms
+80
+Herbology
+70
+Ancient Runes
+85
+Astronomy
+80
+#
+22233
+Orla Quirke
+Ravenclaw
+5
+Defense Against the Dark Arts
+85
+Transfiguration 102
+80
+Potions 102
+75
+Care of Magical Creatures
+85
+Flying Lessons
+80
+#
+22234
+Lisa Turpin
+Ravenclaw
+5
+Defense Against the Dark Arts
+85
+Transfiguration 101
+80
+Potions 101
+75
+Care of Magical Creatures
+85
+Flying Lessons
+80
+#
+33311
+Hanna Abbott
+Hufflepuff
+5
+Defense Against the Dark Arts
+85
+Transfiguration 101
+80
+Potions 101
+75
+Care of Magical Creatures
+85
+Herbology
+95
+#
+33319
+Susan Bones
+Hufflepuff
+5
+Defense Against the Dark Arts
+85
+Transfiguration 101
+80
+Potions 101
+75
+Care of Magical Creatures
+85
+Flying Lessons
+80
+#
+33313
+Cedric Diggery
+Hufflepuff
+5
+Defense Against the Dark Arts
+85
+Transfiguration 102
+80
+Potions 102
+75
+Care of Magical Creatures
+85
+Flying Lessons
+80
+#
+33317
+Justin Finch-Fletchley
+Hufflepuff
+5
+Defense Against the Dark Arts
+85
+Charms
+80
+Herbology
+70
+Ancient Runes
+85
+Astronomy
+80
+#
+33315
+Ernie Macmillan
+Hufflepuff
+5
+Defense Against the Dark Arts
+85
+Transfiguration 101
+80
+Potions 101
+75
+Care of Magical Creatures
+85
+Flying Lessons
+80
+#
+33314
+Zacharias Smith
+Hufflepuff
+5
+Defense Against the Dark Arts
+85
+Transfiguration 102
+80
+Potions 102
+75
+Care of Magical Creatures
+85
+Flying Lessons
+80
+#
+44419
+Draco Malfoy
+Slytherin
+5
+Defense Against the Dark Arts
+85
+Transfiguration 101
+80
+Potions 101
+75
+Care of Magical Creatures
+85
+Herbology
+95
+#
+44411
+Gregory Goyl
+Slytherin
+5
+Defense Against the Dark Arts
+75
+Transfiguration 101
+70
+Potions 101
+85
+Care of Magical Creatures
+75
+Flying Lessons
+70
+#
+44417
+Vincent Crabb
+Slytherin
+5
+Defense Against the Dark Arts
+75
+Transfiguration 101
+70
+Potions 101
+85
+Care of Magical Creatures
+75
+Herbology
+75
+#
+44413
+Millicent Bulstrode
+Slytherin
+5
+Defense Against the Dark Arts
+85
+Transfiguration 102
+80
+Potions 102
+75
+Care of Magical Creatures
+85
+Flying Lessons
+80
+#
+44415
+Blaise Zabini
+Slytherin
+5
+Defense Against the Dark Arts
+85
+Transfiguration 101
+80
+Potions 101
+75
+Care of Magical Creatures
+85
+Flying Lessons
+80
+#
+44451
+Marcus Flint
+Slytherin
+5
+Defense Against the Dark Arts
+85
+Charms
+80
+Herbology
+70
+Ancient Runes
+85
+Astronomy
+80
+#
+44453
+Terence Higgs
+Slytherin
+5
+Defense Against the Dark Arts
+85
+Transfiguration 102
+80
+Potions 102
+75
+Care of Magical Creatures
+85
+Flying Lessons
+80
+#
+44455
+Adrian Pucey
+Slytherin
+5
+Defense Against the Dark Arts
+85
+Transfiguration 101
+80
+Potions 101
+75
+Care of Magical Creatures
+85
+Flying Lessons
+80
+
+

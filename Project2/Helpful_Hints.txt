@@ -1,0 +1,114 @@
+If you would like, you can use the following in your test
+driver function to read data from a file to create the lists.
+This may save you a lot of typing. The data file "students.txt"
+must be in the same directory as your executable if you are
+running from the command line or in your project directory
+if you are running from within the Visual Studio environment.
+
+1. Include the following code in your test file above main()
+
+//=========================================================
+#include <iostream>
+#include <fstream>
+#include <stdlib.h>
+#include "HogwartsSWW.h"
+#include "Student.h"
+
+using namespace std;
+
+// Prototype functions to read lines from the file and build the houses
+bool getNextLine(char *line, int lineLen);
+void buildStudentLists(HogwartsSWW *h);
+
+ifstream	inFile;	// File to read from
+
+// Define the name of the file to read from
+#define STUDENT_FILE "students.txt"
+
+//========================================================
+
+2. Add the following functions below main()
+
+//========================================================
+void buildStudentLists(HogwartsSWW *h)
+{ 	
+	char line[128];// Declare a character array to hold lines read from file
+	Student *s;
+	char fname[32];
+	char lname[32];
+	int numClasses;
+
+	// Open the data file
+	inFile.open(STUDENT_FILE, ifstream::in); 
+	if(!inFile.is_open())
+	{
+		cout << "Failed to open file: " << STUDENT_FILE << " application terminating.\n";
+		exit(0);
+    	}
+	while(getNextLine(line, 128))
+	{
+		s = new Student();		// Create a new student
+		s->setStudentID(atoi(line));	// Set the ID
+
+		// Read and parse student name
+		getNextLine(line, 128);
+		sscanf(line, "%s %s", fname, lname);
+		s->setName(fname, lname);
+
+		// Read and parse house name
+		getNextLine(line, 128);
+		s->setHouse(line);
+
+		// Read all classes
+		getNextLine(line, 128);	// Read and parse number of classes
+		numClasses = atoi(line);
+		for(int i=0; i<numClasses; i++)
+		{
+			getNextLine(line, 128); // Get name of class
+			s->setClass(i, line);
+			getNextLine(line, 128); // Get grade
+			s->setGrade(i, atoi(line));
+		}
+
+		// Add this student to the school
+		h->AddStudent(s);
+	}
+}
+
+//-------------------------------------------
+// GetNextLine()
+// Read the next line from the file.
+//-------------------------------------------
+bool getNextLine(char *line, int lineLen)
+{
+    int    done = false;
+
+    while(!done)
+    {
+        inFile.getline(line, lineLen);
+        
+        if(inFile.good())    // If a line was successfully read
+        {
+           if(strlen(line) == 0)  // Skip any blank lines
+                continue;
+            else if(line[0] == '#')  // Skip any comment lines
+                continue;
+            else done = true;    // Got a valid data line so return 
+                                 // with this line
+        }
+        else
+        {
+            strcpy(line, "");
+            return false;
+        }
+    } // end while
+    return true;
+}
+//=====================================================================
+
+3. Inside of main() do the following:
+	a. Create an instance of HogwartsSWW
+	b. Call the build function like this...
+		buildStudentLists(hptr);  // This assumes your pointer to HogwartsSWW is called hptr
+	c. Add the needed code to test everything in House
+

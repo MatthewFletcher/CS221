@@ -1,0 +1,474 @@
+*****************************************
+Demonstration of Programming Assignment 2
+*****************************************
+
+Adding student Harry Potter to Gryffindor house.
+Adding student Hermione Granger to Gryffindor house.
+Adding student Ron Weasley to Gryffindor house.
+Adding student Ginny Weasley to Gryffindor house.
+Adding student Fred Weasley to Gryffindor house.
+Adding student George Weasley to Gryffindor house.
+Adding student Percy Weasley to Gryffindor house.
+Adding student Nevill Longbottom to Gryffindor house.
+Adding student Dean Thomas to Gryffindor house.
+Adding student Seamus Finnigan to Gryffindor house.
+Adding student Pavarti Patil to Gryffindor house.
+Adding student Oliver Wood to Gryffindor house.
+Adding student Angelina Johnson to Gryffindor house.
+Adding student Lee Jordan to Gryffindor house.
+Adding student Alicia Spinnet to Gryffindor house.
+Adding student Katie Bell to Gryffindor house.
+Adding student Colin Creevey to Gryffindor house.
+Adding student Terry Boot to Ravenclaw house.
+Adding student Mandy Brocklehurst to Ravenclaw house.
+Adding student Penelope Clearwater to Ravenclaw house.
+Adding student Cho Chang to Ravenclaw house.
+Adding student Luna Lovegood to Ravenclaw house.
+Adding student Stewart Ackerley to Ravenclaw house.
+Adding student Eddie Carmichael to Ravenclaw house.
+Adding student Michael Corner to Ravenclaw house.
+Adding student Roger Davies to Ravenclaw house.
+Adding student Marietta Edgecombe to Ravenclaw house.
+Adding student Anthony Golstein to Ravenclaw house.
+Adding student Padma Patil to Ravenclaw house.
+Adding student Orla Quirke to Ravenclaw house.
+Adding student Lisa Turpin to Ravenclaw house.
+Adding student Hanna Abbott to Hufflepuff house.
+Adding student Susan Bones to Hufflepuff house.
+Adding student Cedric Diggery to Hufflepuff house.
+Adding student Justin Finch-Fletchley to Hufflepuff house.
+Adding student Ernie Macmillan to Hufflepuff house.
+Adding student Zacharias Smith to Hufflepuff house.
+Adding student Draco Malfoy to Slytherin house.
+Adding student Gregory Goyl to Slytherin house.
+Adding student Vincent Crabb to Slytherin house.
+Adding student Millicent Bulstrode to Slytherin house.
+Adding student Blaise Zabini to Slytherin house.
+Adding student Marcus Flint to Slytherin house.
+Adding student Terence Higgs to Slytherin house.
+Adding student Adrian Pucey to Slytherin house.
+*****************************************
+
+Done adding students.
+
+Press any key to continue...Testing the search function. This also tests for deep copies.
+
+Successfully searched for and found a student 
+	in the middle of the list by student ID.
+Successfully searched for and found a student 
+	in the middle of the list by name.
+Successfully searched for and found a student 
+	at the end of the list by student ID.
+Successfully searched for and found a student 
+	at the end of the list  by name.
+Successfully searched for and found a student 
+	at the head of the list by student ID.
+Successfully searched for and found a student 
+	at the head of the list by name.
+Successfully did not find a non-existing student when searching by student ID.
+Successfully did not find a non-existing student when searching by name.
+
+Done testing search.  All searches successful.
+
+Press any key to see a listing of all students by house...Students at Hogwarts
+
+================================================================
+Gryffindor House Students
+
+11134	Bell, Katie
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Arithmancy                                        85
+	Astronomy                                         70
+	Charms                                            80
+	History of Magic                                  95
+
+11135	Weasley, Percy
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Charms                                            80
+	Herbology                                         70
+	Ancient Runes                                     85
+	Astronomy                                         80
+
+11143	Weasley, George
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 201                               80
+	Potions 201                                       70
+	Care of Magical Creatures                         85
+	History of Magic                                  80
+
+11144	Weasley, Fred
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 201                               80
+	Potions 201                                       70
+	Care of Magical Creatures                         85
+	History of Magic                                  80
+
+11145	Spinnet, Alicia
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Arithmancy                                        85
+	Astronomy                                         80
+	Charms                                            80
+	History of Magic                                  95
+
+11146	Jordan, Lee
+		Classes					Grade
+	Defense Against the Dark Arts                     90
+	Transfiguration 102                               85
+	Potions 102                                       80
+	Care of Magical Creatures                         80
+	Flying Lessons                                    85
+
+11147	Johnson, Angelina
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Arithmancy                                        85
+	Astronomy                                         70
+	Charms                                            80
+	History of Magic                                  95
+
+11148	Wood, Oliver
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Arithmancy                                        85
+	Astronomy                                         70
+	Charms                                            80
+	History of Magic                                  95
+
+11149	Patil, Pavarti
+		Classes					Grade
+	Defense Against the Dark Arts                     99
+	Transfiguration 102                               85
+	Potions 102                                       70
+	Care of Magical Creatures                         80
+	Divination                                        95
+
+11150	Potter, Harry
+		Classes					Grade
+	Defense Against the Dark Arts                     99
+	Transfiguration 102                               85
+	Potions 102                                       70
+	Care of Magical Creatures                         80
+	Flying Lessons                                    95
+
+11151	Granger, Hermione
+		Classes					Grade
+	Defense Against the Dark Arts                     99
+	Transfiguration 102                               95
+	Potions 102                                       80
+	Care of Magical Creatures                         99
+	Arithmancy                                        95
+
+11152	Weasley, Ron
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 102                               80
+	Potions 102                                       75
+	Care of Magical Creatures                         85
+	Flying Lessons                                    80
+
+11156	Longbottom, Nevill
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 101                               80
+	Potions 101                                       75
+	Care of Magical Creatures                         85
+	Herbology                                         95
+
+11157	Thomas, Dean
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 102                               85
+	Potions 102                                       80
+	Care of Magical Creatures                         85
+	Herbology                                         90
+
+11158	Finnigan, Seamus
+		Classes					Grade
+	Defense Against the Dark Arts                     80
+	Transfiguration 102                               75
+	Potions 102                                       80
+	Care of Magical Creatures                         85
+	Herbology                                         95
+
+11163	Weasley, Ginny
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 101                               80
+	Potions 101                                       75
+	Care of Magical Creatures                         85
+	Flying Lessons                                    80
+
+11165	Creevey, Colin
+		Classes					Grade
+	Defense Against the Dark Arts                     80
+	Transfiguration 101                               85
+	Potions 101                                       70
+	Care of Magical Creatures                         80
+	History of Magic                                  95
+
+
+================================================================
+
+Press any key to see the next house listing...
+
+================================================================
+Ravenclaw House Students
+
+22210	Boot, Terry
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 102                               80
+	Potions 102                                       75
+	Care of Magical Creatures                         85
+	Flying Lessons                                    80
+
+22215	Clearwater, Penelope
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Charms                                            80
+	Herbology                                         70
+	Ancient Runes                                     85
+	Astronomy                                         80
+
+22219	Brocklehurst, Mandy
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 101                               80
+	Potions 101                                       75
+	Care of Magical Creatures                         85
+	Flying Lessons                                    80
+
+22220	Chang, Cho
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 101                               80
+	Potions 101                                       75
+	Care of Magical Creatures                         85
+	Flying Lessons                                    80
+
+22223	Ackerley, Stewart
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Charms                                            80
+	Herbology                                         70
+	Ancient Runes                                     85
+	Astronomy                                         80
+
+22225	Lovegood, Luna
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 102                               80
+	Potions 102                                       75
+	Care of Magical Creatures                         85
+	Flying Lessons                                    80
+
+22228	Carmichael, Eddie
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 101                               80
+	Potions 101                                       75
+	Care of Magical Creatures                         85
+	Flying Lessons                                    80
+
+22231	Golstein, Anthony
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 101                               80
+	Potions 101                                       75
+	Care of Magical Creatures                         85
+	Flying Lessons                                    80
+
+22232	Patil, Padma
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Charms                                            80
+	Herbology                                         70
+	Ancient Runes                                     85
+	Astronomy                                         80
+
+22233	Quirke, Orla
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 102                               80
+	Potions 102                                       75
+	Care of Magical Creatures                         85
+	Flying Lessons                                    80
+
+22234	Turpin, Lisa
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 101                               80
+	Potions 101                                       75
+	Care of Magical Creatures                         85
+	Flying Lessons                                    80
+
+22236	Edgecombe, Marietta
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 101                               80
+	Potions 101                                       75
+	Care of Magical Creatures                         85
+	Herbology                                         95
+
+22237	Davies, Roger
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 102                               80
+	Potions 102                                       75
+	Care of Magical Creatures                         85
+	Flying Lessons                                    80
+
+22238	Corner, Michael
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 101                               80
+	Potions 101                                       75
+	Care of Magical Creatures                         85
+	Herbology                                         95
+
+
+================================================================
+
+Press any key to see the next house listing...
+
+================================================================
+Hufflepuff House Students
+
+33311	Abbott, Hanna
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 101                               80
+	Potions 101                                       75
+	Care of Magical Creatures                         85
+	Herbology                                         95
+
+33313	Diggery, Cedric
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 102                               80
+	Potions 102                                       75
+	Care of Magical Creatures                         85
+	Flying Lessons                                    80
+
+33314	Smith, Zacharias
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 102                               80
+	Potions 102                                       75
+	Care of Magical Creatures                         85
+	Flying Lessons                                    80
+
+33315	Macmillan, Ernie
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 101                               80
+	Potions 101                                       75
+	Care of Magical Creatures                         85
+	Flying Lessons                                    80
+
+33317	Finch-Fletchley, Justin
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Charms                                            80
+	Herbology                                         70
+	Ancient Runes                                     85
+	Astronomy                                         80
+
+33319	Bones, Susan
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 101                               80
+	Potions 101                                       75
+	Care of Magical Creatures                         85
+	Flying Lessons                                    80
+
+
+================================================================
+
+Press any key to see the next house listing...
+
+================================================================
+Slytherin House Students
+
+44411	Goyl, Gregory
+		Classes					Grade
+	Defense Against the Dark Arts                     75
+	Transfiguration 101                               70
+	Potions 101                                       85
+	Care of Magical Creatures                         75
+	Flying Lessons                                    70
+
+44413	Bulstrode, Millicent
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 102                               80
+	Potions 102                                       75
+	Care of Magical Creatures                         85
+	Flying Lessons                                    80
+
+44415	Zabini, Blaise
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 101                               80
+	Potions 101                                       75
+	Care of Magical Creatures                         85
+	Flying Lessons                                    80
+
+44417	Crabb, Vincent
+		Classes					Grade
+	Defense Against the Dark Arts                     75
+	Transfiguration 101                               70
+	Potions 101                                       85
+	Care of Magical Creatures                         75
+	Herbology                                         75
+
+44419	Malfoy, Draco
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 101                               80
+	Potions 101                                       75
+	Care of Magical Creatures                         85
+	Herbology                                         95
+
+44451	Flint, Marcus
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Charms                                            80
+	Herbology                                         70
+	Ancient Runes                                     85
+	Astronomy                                         80
+
+44453	Higgs, Terence
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 102                               80
+	Potions 102                                       75
+	Care of Magical Creatures                         85
+	Flying Lessons                                    80
+
+44455	Pucey, Adrian
+		Classes					Grade
+	Defense Against the Dark Arts                     85
+	Transfiguration 101                               80
+	Potions 101                                       75
+	Care of Magical Creatures                         85
+	Flying Lessons                                    80
+
+
+================================================================
+
+Testing delete function. 
+
+Successfully removed student from the middle of the list.
+Successfully removed student from the head of the list.
+Successfully removed student from the end of the list.
+Successfully did not remove a non-existing student from the list.
+======================================================================
+       Demonstration of programming assignment 2 completed.
+======================================================================
+Press any key to continue...
