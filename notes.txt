@@ -1,0 +1,831 @@
+Data Types:
+char: 1 byte, holds 0..255 unsigned or -128.127 signed
+short (don't bother with this)
+int: 3 bytes
+long: same as int, don't bother with because longer to type 
+long long: 8 bytes, holds a stupidly large number
+float: don't bother with, use a double
+double: 8 bytes, holds +/- 10^308
+long double: 8 bytes w 15 precision digits on PC, 16 bytes with 32 digits of precision on macs
+
+
+Conditional statements, using operators
+
+Switch statements, switch on ints only, don't forget break, add default statement if needed
+
+
+Loop statements: for, while, do, do while
+
+
+C IO
+scanf("format specs", var_list)
+gets(char *buffer)
+printf("format specs", var_list)
+
+#include <stdio.h>
+
+REVIEW C IO BECAUSE I DON'T REMEMBER IT 
+
+
+C++
+>> extraction operator
+<< insertion operator
+
+
+#include <iostream>
+
+
+Arrays
+Declaring array:
+int nums[5]; //declares array
+nums[0] = 1l //defines variable
+
+int nums[] = {1,2,3,4}; //initializes array with length of list in braces
+
+function prototypes:
+return_value function_name(data_type arg_name, etc); //names of functions will be given on programming assignments
+
+Have return value for every possible path out of a function 
+
+New Project> C++ >Win32 Console Application
+Enter Name
+Click application settings, create empty project (checkbox)
+
+
+DO NOT USE STRING OBJECTS, USE CHAR ARRAYS
+Right click project in tree, properties>C++>advanced> enter 4996 for disable specific warnings
+
+Use 2012 only for Visual Studio 
+
+
+Developing more complex programs in Cpp is a major aspect of this course
+Using abstract data types in programs (ADT is a collection of data)
+Using good software engineering technques to build programs 
+
+Computer Science: Scientific approach to computation and applications
+Software engineering: discplined approach to design and maintainence of programs managing size and complexity 
+
+
+More to software engineering than just hacking out code
+
+
+
+Characteristics of good code
+--it works
+--it can be modified without extensive time and effort
+--it is reusable
+--it is completed on time and within budget 
+
+
+Steps in Software Engineering
+1. Requirements Specification
+2. Analysis
+3. Design
+4. Implementation
+5. Testing: Verification and Validation
+Not required on test, but some engineers add it V 
+6. Delivery
+7. Maintenance
+8. Retirement
+
+
+Steps in Software Development
+1. Requirements specification
+	Determine what the software must do to satisfy the customers needs. Coleman is the customer. Make him happy. 
+	Understand the problem clearly
+	Take the customers statement of work and synthesize from it a list of requirements
+	Verify the requirements with the customer
+	Each step has its own specific related document
+	Written for the customer in terms the customer will understand 
+2. Analysis
+	Study the requirements to be sure you fully understand what the software must do
+	restate the requirements in more detailed, technical terms. 
+	1. Make sure the req's are fully understood
+	2. Identify the required IO and constraints
+	3. Specify form of input
+	4. Specify form of output 
+	5. Begin working on a test plan 
+	
+	Depending on company, you may have to write a more technical requirements document 
+
+3. Design
+	Development of a plan detailing how the software will be implemented
+	What objects needed in the application
+	How will you define the states of each object
+	What member functions will be needed to implement the behaviors of each object
+	How will the objects be interconnected together and work together to produce the solution
+
+	Top Down = Procedural programming (focuses on processes). Underline the verbs in software specs
+	Bottom Up= Object Oriented Programming (focus on data objects) underline the nouns in software specs 
+
+
+Software Design:
+	Modularity: organizing a program into logical units
+	Module: A unit of organization in a software system 
+		Groups together related data and functions
+		Has a clean UI
+		Hides details of how it works
+		Can be compiled separately
+		No one else needs to know how it works 
+		Easier to change bc UI does not change 
+		Easier to divide work on large software project
+	Software Design document contains all details of how the SW will be implemented
+	Design must be documented physically
+4. Implementation
+	Write the source code in the chosen language
+	Using the SDD as a guide code the algorithms using the chosen computer language
+	Perform code inspections
+	Add debugging statements in the code to aid in testing if needed
+	Write the final test plan 
+	Construct special testing functions as needed
+5. Testing
+	Does the program work the way it's supposed to work 
+	Testing: The process of executing a program with data sets desgined to discover errors
+	Verification: Did we build the software right
+	Validation: process of determinign the degree to which software does, in fact, produce results that satisfy the original requirements. 
+	
+6. Software Delivery:
+		Each programming assignment source code has a delivery date
+		Each programming assignment has a drop dead date (DDD) MIDNIGHT OF THAT DATE
+7. Software Maintenance
+	Bug Fixes, Upgrades
+
+
+Software life cycle (the classical approach to software dev)
+	Requirements
+	Design
+	Implementation
+	Integration
+	Testing
+	Deployment
+	Maintenance
+	
+	Problem with this method is BDUF (big design up front)
+
+
+12 Principles of Agile Software Dev
+1. Highest priority is to satisfy the customer through early and continuous delivery of software
+2. Welcome changing requirements even late in dev.
+3. Deliver working software frequently from a couple of weeks to a couple of months with a preference to the shorter timescale
+4. Buseiness people and dev must work together daily throughout the project
+5. Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done
+6. Promote sustainable development, aka keeping a constant pace indefinitely. 
+7. Working software is the primary measure of progress.
+8. The most efficient method of conveying info is face to face convo
+9. Continuous attention to technical excellence enhances agility
+10. Simplicity is essential. 
+11. The best architectures emerge from self organizing teams 
+12. At regular intervals, the team reflects on how to become more effective, then tunes and adjusts behaviour
+
+
+Kanban Method similar to trello. 
+Online application called Trello, free for use. Software management tool, lets you create digital bulletin boards. Use in CS499
+
+
+
+
+POINTERS
+A pointer is a variable that holods the address in memory of another variable 
+Memory in computer is divided into BYTES. Numbered from 0 to amount of memory in machine
+
+After declaring a variable (without assigning a value), memory location is allocated for each variable
+
+strcpy(c_array, "test"); //ONLY CORRECT WAY TO USE STRING COPY
+c_array="test"; //THIS IS A SYNTAX ERROR AND WILL BE COUNTED WRONG
+
+Use an asterisk to declare a pointer
+
+int i_var; //variable name
+int *i_ptr; //pointer for variable
+
+double d_var; //variable name
+double *d_ptr; //pointer for variable
+
+variable types for variable and pointer must be the same size
+
+When a pointer is initialized, IT IS NOT SET TO NULL in VS2012
+
+i_ptr = &i_var;  //store address of i_var in i_ptr
+d_ptr = &d_var; //store address of d_var in d_ptr
+
+c_ptr = c_array; //Because c_array represents the starting address of the array
+
+*i_ptr = 32; //Change the value in i_var to 32 (i_ptr is address of i_var)
+
+ 
+Always initialize your variables to null. Don't assume. 
+
+Create a pointer inside a function: initialize it to null right then and there
+Create a pointer in a class: initialize to null in the constructor function 
+
+Do not initialize in the header file. 
+
+
+parameters are the variables defined in the fn header, arguments are the actual values passed in the call to the function 
+
+&i_var passes address, i_ptr passes pointer
+
+
+Address operator & should be appended to data type in the function arguments
+
+Unless specified in assignment, it's up to you which type of function you want to write 
+
+
+
+Stack vs heap 
+Stack: Variables you defin e are here, local variables created here, deallocated by the OS
+
+Heap: Holds dynamically created varibles
+	holds global variables
+	You manage allocating/deallocating
+	Memory could become fragmented with use
+
+
+Using the "ptr_var = new <datatype>" creates a new variable of that type and stores it in a pointer
+
+
+Pointer to an array is identical to the name of an array
+
+
+You must deallocate the memory block whose address is stored in a pointer when you have finished using that memroy block 
+
+delete i_ptr; //Results in an address of unallocated memory
+
+
+//Pointer arithmetic
+int tab[5] {1,4,5,6,7};
+int *ptr; //Create an int pointer
+ptr = tab; //set it pointing to the first element in the array
+
+//This does the same thing
+ptr = &tab[0]; //sets pointing to the first element in the array
+
+ptr + 1 ==== &tab[1]
+*ptr ==== tab[0] ==== ptr[0]
+*(ptr+1) ==== tab[1] ==== ptr[1] //PARENTHESES REQUIRED
+
+for(int i=0; i<5; i++)
+{
+	cout  << *ptr << endl;
+	ptr++; //Increments address in pointer by the number of bytes in the size of the data type in the array
+}
+
+
+
+
+PASSING ARRAYS INTO FUNCTION 
+void Sort(int *array, int length){};
+
+OR 
+
+void Sort(int array[], int length) {}; //No number needed inside brackets, it will be ignored 
+
+
+
+STUDY POINTERS
+
+
+
+OOP
+
+Structure is the most basic of objects
+
+struct simple
+{
+	int x;
+	char ch;
+};
+
+This is creating a new data type
+DO NOT FORGET THE GOD DAMN SEMICOLON 
+
+This creates a static instance of struct simple 
+
+Access values using dot notation 
+
+Create structure and initialize in one step:
+
+simple sim1 = {comma separated values};
+
+Create an array of struct simples
+
+simple sims[5];
+
+
+
+Putting an array in a struct is NOT dynamic memory allocation  TEST
+
+ -> is pointer notation. 
+
+Google strcpy 
+
+You must use strcpy to assign a string to a char array 
+
+
+simple *sptr;
+sptr = new simple; //create a dynamic isntance of simple using the new operator
+
+delete sptr; //delete sptr to avoid memory leaks
+
+Delete pointers when you are finished with them
+
+
+
+
+
+struct complex
+{
+double d;
+char cr;
+simple *sptr; //This struct contains a pointer to an instance of simple. 
+}; 
+
+
+
+Deleting complex does not delete the struct pointed to by the pointer
+
+C or C++ syntax for freeing memory allocation will be accepted on tests 
+
+
+A Class is a block of code defining a type of object. It is a blueprint for constructing an object. 
+A Class is like a structure containing functions as well as the variables that the functions work on 
+
+
+A class definition consists of A header file, defining the interface to the class function;
+				as well as a source file defining the implementation of all the class functions. 
+
+Instantiation: creating an instance of the class
+
+
+//////////////////////////////////////////
+///SAMPLE HEADER AND Implementation FILE//
+//////////////////////////////////////////
+
+Sample Header file
+//Instead of the preprocessor directives, you can also use #pragma once
+#ifndef MYSTRING_H
+#define MYSTRING_H
+class MyString
+{
+	private: //Cannot be accessed from outside the class. Always make all variables in a class private 
+		char *theString;
+	public:
+		//Prototypes for all functions in class
+		MyString(); //Default constructor, cannot call constructor even though it is public
+			    //This is executed as soon as the class is instantiated, initializes all of the variables.
+			    //You can have as many constructors as you want, as long as they have different arguments
+			    //
+		MyString(char *str); //Overloaded constructor
+				     //
+		~MyString(); //When memory is cleared after call to class, this cleans stuff up 
+
+		void clearString();
+		void setString(char *str); //Setter
+		char *getString(); //Getter
+		int StringLength();
+		void PrintString();
+		bool StringEqual(MyString *otherString);
+		bool operator == (MyString otherString);
+		
+};
+#endif
+
+
+
+Sample Implementation file 
+
+#include "MyString.h"
+#include <string>
+#include <iostream>
+using namespace std;
+
+//Default Class Constructor
+MyString::MyString() //Every function name is the .cpp file must have this of the function is not considered as being defined as part of the class
+{
+	theString = NULL; 
+}
+
+//Class Constructor
+//Initialize String to the str argument
+MyString::MyString(char *str)
+
+{
+//Allocate memory for new string
+theString = new char[strlen(str) + 1];
+strcpy(theString, str); //Copy string argument into new memory space 
+}
+
+//Class Destructor
+MyString::~MyString
+
+{
+	delete[] theString;
+}
+
+
+//TODO REST OF FILE
+
+bool MyString::StringEqual(MyString *otherString)
+{
+	char *str = otherString->getString();
+	bool retVal = false;
+	if(strcmp(theString, str) == 0)
+		retVal = true;
+	else retVal = false; 
+	
+	//TODO FINISH
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ClassA *A = new ClassA; //Set poitner A to the instance
+ClassA A; //Create static instance of ClassA
+
+
+TEST QUESTION
+Define header file for a class. You WILL need to put in a constructor and destructor
+
+//TODO figure out wtf protected means
+
+
+
+Polymorphism: the ability of a subclass to override a function inherited 
+
+
+Unified modeling language
+Back in the days of old, software was modeled using a flowchart. This works for smaller pieces of code 
+
+3 parts of UML
+THIS WILL BE ON THE TEST
+1. Basic Building Blocks
+	1. Things
+		1. Structural things (represents conceptual or physical elements)
+			Class, an object with defined attributes and operations
+			Interface, defines a set of functions that a class must execute (how you can use a piece of code) 
+			Collaboration, a larger pattern of behaviors and actions. 
+			Use case, a sequence of actions that a system performs that yields an observable result
+			Active class, like a class but it represents where the behavior must occur with other threads
+			Component, represents all types of elements that pertain to the piecing together of software applications
+			Node, represents a physical element existing at run time and represents a resource such as a server, hard drive, etc 
+			
+		2. Behavorial things (represents behavior over time and space)
+			Interaction, used to represent messages passed from 1 object to another
+			State machine, Specifies the sequences of states an object goes through during its lifetime 
+			
+		3. Grouping things   (organizational parts of UML)
+			A general purpose mechanism for organizing elements into groups 
+		4. Annotational things(used to describe, illuminate, and remark on an element of a model)
+			Note, aka a comment
+	2. Relationships
+		Dependency: Dashed line, solid arrowhead. One object is dependent on another to provide data 
+		Association/Aggregation: Line between 2 objects, describes links between objects
+		Generalization: Line with open arrowhead. How to show that one or more classes are subclasses of a parent class
+		Realization: Dashed line, open arrowhead. Defines a relationship in which one class specifies something that another class will perform 
+		
+	3. Diagrams
+		Class diagram, A set of classes, interfaces, collaborations, and their relationships 
+		Object diagram, a set of objects and their relationships. Represents static instances of things found in class diagrams 
+		Use case diagram: A set of use cases and actors representing a visible behavior of the system 
+		Sequence Diagram: An interactive diagram emphasizing the time-ordering of messeages 
+		Collaboration Diagram
+		Statechart diagram: shows a state machine with stats, events, transitions, and activities
+		Activity Diagram: Special type of statechart that shows the flow from activity to activity within a system 
+		Component diagram: shows the orgasnization and dependencies among a set of components
+		Deployment diagram: Shows the config of the physical layout of a system (hardware)
+		
+2. Rules ocntrolling how the blocks are put together
+
+3. Common mechanisms that apply throughout the language. 
+
+
+
+
+In default constructor, you are supposed to intialize all the variables to some default value.
+NOT AT ASSIGNMENT OF VARIABLE
+
+
+Software testing:
+Verification: Did we build the software right?
+Validation: Did we build the right software?
+
+
+Testing: verifying the correctness of a program 
+Debugging: The process of tracking the execution of a program and discovering the errors in it 
+
+Design for correctness
+Write test plans as you write the design
+Perform design inspections and code walkthroughs
+
+
+
+Two approaches to testing (ON TEST)
+Top down: Start from main. Mimic the actions of functions which are called by upper level functions
+Bottom up: Mimic the action of functions which are calling lower level functions
+
+Stub: Returns known outputs ("print "HEY FUCKER") to check if the function is being called
+Driver: Passes known values to selected function, reports returned values. Used to test lower level functions
+
+
+
+Five types of testing (ON TEST)
+Statement (Test lines of code as you add them)
+Unit (Test the whole function. Account for each possible path, including switches )
+Integration (Test how functions work together)
+Acceptance (Check if the function interfaces with the external requirements)
+Regression (Check you didn't break everything else)
+
+
+
+Testing process:
+What is the goal of the test?
+What inpuyts will demonstarate the goal fo the test case and the expected output?
+Modify the code as needed to runt he specific test case 
+Run the program and record the results 
+Compare the results to the expected results 
+
+
+
+Good idea for debugging
+#define DEBUG_1
+
+#ifdef DEBUG_1
+//code to be run during debug only
+#endif
+
+cout.flush() (forces output to screen, empties buffer)
+
+String class is part of the standard template library
+
+
+The name of an array is syntactically the same as its starting address in memory 
+
+
+
+//Create a char array 
+char str[16];
+
+//Copy a value into the array
+strcpy(str, "Foobar");
+
+//Concatenate value onto end of char array
+strcat(str, "is a word");
+DO NOT DO str = "Foobar"
+you MUST do strcpy(str, "Testing");
+IF YOU DO THE str = "Foobar" thingy, 
+
+
+
+int strcmp(char *str1, char *str2)
+
+If the 2 strings are equal, return value is 0
+If first string is alphabetically after the second string, positive number returned
+If first string is alphabetically before the second string, negative number returned
+
+Other K&R String functions
+char str1[32] = "This is a test string";
+Find first occurance of a char in a string: char *cptr = strchr(str1, 's'); //cptr now holds the address of "s"
+Find first occurance of string in a string: char *cptr = strstr(str1, "is"); //returns pointer of string in a string, cptr now holds the address of "i" in the is of this 
+Find length of string:                      int //TODO
+
+
+//TODO look up strtok K&R function
+
+Abstract Data Types
+Lists
+Stacks
+Queues
+Trees
+Sets
+Graphs
+
+
+ADT fis a data type whos properties are specified indepndently of any particular implementation
+Domain: Set or range of data that the ADT acts on 
+Operations: All of the functions that act on the data
+Types of operations: Constructors, Transformers, observers, iterators
+
+
+
+
+What are templates
+Templates are a block of code using specific syntax that allows the compiler to generate specific code for user w different data types 
+Attempts to simplify the process of fn overloading 
+
+
+
+VECTORS
+One of the ordered containers in the STL 
+provides a dynamic array of objects
+Allows random access to members 
+Insert/remove time at the end is rapid 
+Insert/Remove at beginning or middle is proportional to vector size 
+Autoatmically resizes as needed
+
+Must use #include <vector>, and using std namespace 
+
+
+To create: vector<datatype>vIdentifier
+
+To add an item to a vector (at the end): dVec.push_back(value);
+To remove an item (from the end) dVec.pop();
+
+int dVec.size(); //Number of items in vector
+int dVec.capacity(); //Capacity before auto resizing 
+int dVec.max_size(); //Max possible size 
+bool dVec.empty(); //Returns true if vector is empty
+
+
+dVec.front() and .back() return pointers to first and last terms. 
+THIS IS CALLED AN ITERATOR
+
+vector<double>::iterator itr = dVec.begin();
+cout << *itr; //This prints the first item in the vector 
+itr++; //Increments to next item in vector 
+itr+=3; //Moves over 3 (from index 0 to index 3)
+
+
+insert(iterator, item); //Adds an item in another place other than front or back 
+erase //TODO google syntax 
+
+Swapping item locations: swap(iterator1, iterator2);
+
+
+
+
+
+Linked List 
+End of list is signified by index that will raise exception (-1, \0, etc)
+
+Advantages of linked structures:
+	More flexible 
+	Linked structures are dynamic, Arrays are static 
+	Arrays may waste memory 
+	Nodes can be rearranged in a linked structure 
+	Memory usage in linked structures is more efficient 
+Disadvantages:
+	Sequential access only 
+	Can be less efficient due to how memory is shifted around 
+
+
+Foot Shot Warnings 
+Creating dangling pointers 
+
+simple *S1, *S2; 
+S1 = new simple();
+S2 = new simple();
+S1->next = S2;
+delete S2; //Now S1 points to deallocated memory 
+
+Creating garbage w no way to do garbage collection 
+simple *S1, *S2; 
+S1 = new simple();
+S2 = new simple();
+S1 = S2; //Results in both pointers pointing at S2, no way to access the memory for S1 
+
+
+
+Dereferencing the null pointer
+simple *S1, *S2; 
+S1->next = NULL;
+S2 = S1->next;
+S2->x = 6; //S2 is now null
+
+4. Forgetting to mark the end of a list 
+simple *S1l 
+
+
+
+
+
+LISTS
+List implies a linear relationship between componenets 
+Item i has a successor and predecessor except for first and last items 
+Implementing a list as  a linked set of structs or classes 
+
+
+Lists can be sorted or unsorted. 
+Unsorted implies no particular order. 
+
+Operations on a list 
+Create a new list 
+Empty an existing list 
+Add item to the list (sorted or unsorted)
+Delete item from list 
+Find item in the list 
+Find how long the list is 
+Determine if the list is empty 
+Determine if the list is full . 
+Iterate through each item in the list. 
+
+List algorithms 
+
+
+Searching a list:
+	1. List is empty, nothing to search 
+	2. Search key is found
+	3. Search key is not found (ON PROGRAMMING ASSIGNMENT)
+
+Initialize head to null in constructor (ON PROGRAMMING ASSIGNMENT)
+
+SEARCH ALGORITHM WILL BE ON TEST 
+
+Test for temp not equal to null FIRST, then check for key matching SECOND (ON TEST, ON PROGRAMMING ASSIGNMENT)
+while((temp != NULL) && 
+
+Check to see if item was NOT found. Otherwise you will try to access a null pointer 
+See lists_09
+
+2 nodes cannot have the same key 
+
+
+On tests, the function isemtpy does not exist, use if head==null ON TEST 
+
+
+
+Psuedocode for deleting from a sorted or unsorted list 
+
+Init pointers:
+Set temp to head, set back to null //head is a ptr to the first item in the list
+
+Search for node to delete:
+Loop while temp is not null and temp.key not equal to search key
+	Set back to temp 
+	Set temp to temp.next 
+end loop 
+
+If temp==null, node not found
+If back==null, Removing node at head of list
+	Set head = head.next
+
+Else:
+	Removing node in middle or end of list
+	set back.next = temp.next
+
+
+Delete function for Unordered or ordered list (ON TEST)
+
+
+
+
+Inserting into an ordered list  //(ON PROGRAMMING ASSIGNMENT)
+
+Cases:
+1. Insert new node into empty list 
+2. Insert node into head of list 
+3. Insert node at tail of list
+4. Insert node somewhere in the middle of the list 
+
+Modify both constructors of student class to set m_pNext = null; (ON PROGRAMMING ASSIGNMENT)
+
+Difference between Ordered insert and unordered insert (ON TEST)
+
+ALWAYS SET HEAD TO NULL (ON PROGRAMMING ASSIGNMENT)
+
+
+
+DO NOT DELETE m_pNext;, otherwise program will break (ON PROGRAMMING ASSIGNMENT)
+
+isEmpty(); DOES NOT EXIST ON A TEST (ON TEST)
+
+
+
+Possible cases for inserting int o double linked list are the same as single linked list 
+Technique is different 
+
+Inserting into double linked list 
+NO BACK POINTER 
+TODO Compare psueodcode for single and double linked list 
+
+Draw pictures when writing code, helps during test 
+
+INITIALIZE POINTERS TO NULL 
+
+
+
+
+Stacks and queues
+
+Stack: An abstract data type in which elements are added and removed from only 1 end 
+AKA a LIFO (Last in, first out)
+Like cafeteria plate stacks 
+
+Push: add item to head of list
+Pop: remove an item from the head of the list
+
