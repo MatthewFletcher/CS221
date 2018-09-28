@@ -1,0 +1,19 @@
+Create a class called House (.h, .cpp files)
+Using SWW class (provided by instructor)
+
+Maintain linked list of Student class from Programming assignment 1 
+
+Private pointer to Student class instant, points to first student in list 
+Private char array capable of holding a 64 character string (size = 65)
+
+List is sorted by student ID 
+
+Add student will insert student at the correct index
+
+FindStudent returns pointer to duplicate of studeent class given student id
+
+Overloaded findstudent uses first and last name, with stringcompare, to search 
+
+PrintStudentInfo-- make printing more compact 
+
+
