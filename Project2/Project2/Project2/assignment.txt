@@ -1,0 +1,139 @@
+             
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+                           Programming Assignment 2
+
+                           Posted: Monday, Sept. 24
+                          Sprint 1: Sept. 24 - Oct. 1
+                          Sprint 2: Oct. 1 - Oct. 15
+                         Due Date: Monday, October 15
+                            DDD: Monday, October 22
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+                               Statement of Work
+                           Programming Assignment 2
+
+1.0 Overview
+   Professor Albus Dumbledore, headmaster of Hogwarts School of Witchcraft and
+   Wizardry would like to continue his introduction of Computational Magic to the
+   faculty by having a program developed which will maintain lists of all students
+   assigned to each house by the sorting hat.
+2.0 Requirements
+   The student shall define, develop, document, prototype, test, and modify as
+   required the software system.
+   2.1 This software system shall define two classes, called House (file names
+   shall be House.h and House.cpp) and HogwartsSWW (file names shall be
+   HogwartsSWW.h and HogwartsSWW.cpp). Details of these classes are given below.
+      2.1.1 The House class shall implement a linked list of instances of a class of
+      type Student (see section 2.2).
+         2.1.1.1 The House class shall contain the following member variables.
+            2.1.1.1.1 A private pointer called m_pHead to a Student class instance which
+            shall point to the first student in the list.
+            2.1.1.1.2 A private character array called m_sHouseName capable of holding
+            strings of up to 64 characters which shall store the name of the house.
+         2.1.1.2 The House class shall contain the following public functions.
+            2.1.1.2.1 House() and ~House() - A default constructor and destructor. The
+            constructor should set the head pointer to NULL and the house name to an empty
+            string.
+            2.1.1.2.2 bool AddStudent(Student *stu) - this function shall take a pointer to
+            an instance of the Student class as the only argument. This instance of Student
+            shall already have all data inserted into it. The function shall insert the
+            student into the list of students in order by student number and return true if
+            it successfully added the student.
+            2.1.1.2.3 Student *RemoveStudent(int studentID) - this function shall take an
+            integer giving a student ID number as the only argument. It shall search the
+            list for the student and remove the student from the list. If the student was
+            found it shall return that instance of Student removed from the list, otherwise
+            it shall return NULL.
+            2.1.1.2.4 Student *FindStudent(int studentID) - this function shall take an
+            integer giving a student ID number as the only argument. It shall search the
+            list for the student and if found return a pointer to a duplicate of the
+            Student class instance that was found. If the student was not found the
+            function shall return NULL.
+            2.1.1.2.5 Student *FindStudent(char *fname, char *lname) - this function shall
+            take, as arguments, character arrays giving the first and last name of a
+            student. It shall search the list for the student and if found return a pointer
+            to a duplicate instance of the Student class instance that was found, i.e. if
+            found the function will create a duplicate of that instance of Student with all
+            data identical to the one found in the list, except for the "next" pointer. It
+            shall then return a pointer to this duplicate instance. If the student was not
+            found the function shall return NULL.
+            2.1.1.2.6 void PrintHouseList() - this function shall print all information on
+            all students in the list by calling the printStudentInfo() function in each
+            Student found in the list.
+            2.1.1.2.7 void SetHouseName(char *name) and char *GetHouseName() which shall be
+            used to Set and Get the name of the house.
+      2.1.2 The HogwartsSWW class shall maintain pointers to four instances of the
+      House class. It shall dynamically allocate memory for these four instances in
+      the constructor and set the names of the houses to "Gryffindor", "Ravenclaw",
+      "Hufflepuff", and "Slytherin" respectively.
+         2.1.2.1 The HogwartsSWW class shall contain the following public functions.
+            2.1.2.1.1 HogwartsSWW() and ~HogwartsSWW() - A default constructor and
+            destructor. The constructor should set all the pointers to instances of House
+            and assign each House a name.
+            2.1.2.1.2 bool AddStudent(Student *stu) - this function shall take one argument
+            which shall be a pointer to an instance of the Student class in which all data
+            has already been set. This function shall locate the appropriate instance of
+            the House class and pass the student class instance to its' AddStudent()
+            function. It shall return TRUE if the correct house was located and the student
+            inserted or FALSE otherwise.
+            2.1.2.1.3 Student *RemoveStudent(char *house, int studentID) - this function
+            shall take two arguments. The first shall be a character array giving the name
+            of one of the four houses. The second argument shall be an integer giving a
+            student ID number. This function shall locate the appropriate instance of the
+            House class and pass the student ID to its' RemoveStudent() function. It shall
+            return the pointer to Student returned by this call.
+            2.1.2.1.4 Student *FindStudent(char *house, int studentID) - this function
+            shall take two arguments. The first shall be a character array giving the name
+            of one of the four houses. The second argument shall be an integer giving a
+            student ID number. This function shall locate the appropriate instance of the
+            House class and pass the student ID to its' FindStudent() function. It shall
+            return the pointer to Student returned by this call.
+            2.1.2.1.5 Student *FindStudent(char *house, char *fname, char *lname) - this
+            function shall take three arguments. The first shall be a character array
+            giving the name of one of the four houses. The second and third arguments shall
+            give the first and last name of a student. This function shall locate the
+            appropriate instance of the House class and pass the student name arguments to
+            its' FindStudent() function. It shall return the pointer to Student returned by
+            this call.
+            2.1.2.1.6 void PrintHouses() - this function shall call the PrintHouseList()
+            function in each of the instances of House.
+           ===== The HogwartsSWW class will be provided by the instructor =====
+   2.2 This software system shall modify the Student class created in programming
+   assignment 1 in the following way.
+      2.2.1 The Student class shall have added a public pointer, called m_pNext
+      capable of holding the address of a Student object so that a linked list of
+      Student objects can be constructed. This pointer should be set to NULL in both
+      constructors.
+      2.2.2 The Student class shall have added a public function, Student *Clone()
+      which shall create a deep copy of itself and return a pointer to the copy.
+   2.3 The source files for the three classes (Student, House and HogwartsSWW) and
+   their associated header files must be capable of being compiled and linked in
+   with a driver program (main() in a separate file) for testing.
+3.0 Deliverables
+   These products shall be delivered to the instructor electronically via e-mail
+   as specified below.
+   3.1 Sprint Report -- The student shall provide filled out Sprint Report form
+   for instructor approval NLT (Not Later Than) Monday, Sept. 24.
+   3.2 Program source files -- The student shall provide fully tested electronic
+   copies of the .cpp and .h files. These files must be submitted to the
+   instructor via e-mail. The files shall be delivered NLT Monday, Sept. 24.
+4.0 Period of Performance
+   The period of performance of this assignment is 14 days from the date of
+   assignment. Files that will not compile will not be accepted. If an error is
+   found during testing the instructor will report the error and give you a chance
+   to correct the error and resubmit the files as long as the files are turned in
+   before the DDD.
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    We will discuss this programming assignment in class. At that time some
+                             suggestions and hints
+           will be presented as to how to implement the assignment.
+
+    A copy of the HogwartsSWW files, some helpful hints for testing, and a
+                           demonstration executable
+                      can be found on the Downloads page.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
