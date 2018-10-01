@@ -7,7 +7,14 @@
 using namespace std;
 int main()
 {
-	Student *s = new Student;
+	Student *s1 = new Student;
+
+	s1->setStudentID(12345);
+
+	delete s1;
+
+	cout << s1->getStudentID() << endl;
+
 
 	return 0;
 }

@@ -12,9 +12,6 @@
 
 using namespace std;
 
-#pragma once
-
-
 House::House()
 	{
 	
