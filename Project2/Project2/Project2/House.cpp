@@ -24,15 +24,15 @@ bool House::AddStudent(Student *stu)
 	{
 		return 0;
 	}
-Student House::*RemoveStudent(int studentID)
+Student* House::RemoveStudent(int studentID)
 	{
 		return 0;
 	}
-Student House::*FindStudent(int studentID)
+Student*  House::FindStudent(int studentID)
 	{
 		return  0;
 	}
-Student House::*FindStudent(char *fname, char *lname)
+Student* House::FindStudent(char *fname, char *lname)
 	{
 		return 0;
 	}
