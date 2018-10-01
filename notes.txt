@@ -829,3 +829,61 @@ Like cafeteria plate stacks
 Push: add item to head of list
 Pop: remove an item from the head of the list
 
+
+
+
+(ON TEST) Stack Implementation File
+
+
+Calculators use a stack:
+2+2 is an infix operator
+
+Prefix operator: + 2 2
+Postfix operator: 2 2 +
+
+
+
+
+Queue: First In First Out
+Elements are added to the end and removed from the front. 
+This is like a printer queue. 
+
+Priority queue: insert into the list by priority. 
+
+
+
+QUEUE HEADER FILE (ON TEST) Slide 15 01Oct
+
+
+
+
+
+Binary Trees  //HOLD ON TO YOUR BUTTS, BECAUSE BINARY TREES CAN CAUSE SOME PROBLEMS 
+
+Multiple types of trees
+
+
+Tree terms
+
+Node: Class/Struct whatever you build the tree out of. Each has 2 pointers, named left and right
+	//FOLLOW WHERE FINGER POINTS, NOT WHAT MOUTH SAYS
+Root Pointer: Points to first node in tree
+Internal Nodes: Nodes that are not leaf or root
+Leaves: Nodes at the end that do not have pointers coming off the end
+
+Parent Node, has 2 child nodes (left and right child)
+Levels in a tree are how many pointers down from the root is a certain node
+
+
+
+Every node in the left subtree of a node has a key less than parent
+Every node in the right subtree of a node has a key greater than parent
+
+Full binary tree: every node except leaves have 2 nodes
+Complete binary tree: Every node on lowest level is as far left as possible, //TODO get full definition
+
+
+
+Tree Algorithms
+Search, Insert, Delete, Traverse
+
