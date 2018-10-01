@@ -7,6 +7,7 @@
 using namespace std;
 int main()
 {
+	Student *s = new Student;
 
 	return 0;
 }
