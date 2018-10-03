@@ -1,0 +1,134 @@
+# Hogwarts Library Books for Programming Assignment 3
+#
+# The books listed below are all those mentioned in Harry Potter books
+#   by J.K.Rowling.  Many of the authors were also created by Ms Rowling
+#   others were made up by Dr. Coleman.  Any resemblance to real or
+#   imagined people is purely a coincidence. 
+#
+# Note: the books are listed by their book number in an order that will
+#       ensure that a binary tree using the book number as the key will
+#       be as close to balanced as possible.
+#
+12500
+The Standard Book of Spells
+Miranda Goshawk
+#
+12425
+A History of Magic
+Bathilda Bagshot
+#
+12625
+Magical Theory
+Adalbert Waffling
+#
+12385
+A Beginners' Guide to Transfiguration
+Emeric Switch
+#
+12465
+One Thousand Magical Herbs and Fungi
+Phyllidia Spore
+#
+12545
+Magical Drafts and Potions
+Arsenius Jigger
+#
+12705
+Fantastic Beasts and Where to Find Them
+Newt Scamander
+#
+12365
+The Dark Forces: A Guide to Self-Protection
+Quentin Trimble
+#
+12405
+Curses and Countercurses
+Vindictus Viridian
+#
+12445
+Great Wizards of the Twentieth Century
+Horatio Twillbee
+#
+12485
+Quidditch Through the Ages
+Kennilworthy Whisp
+#
+12525
+Dragon Breeding for Pleasure and Profit
+Draco Wyvrn
+#
+12605
+Break with a Banshee
+Gilderoy Lockhart
+#
+12685
+Gadding with Ghouls
+Gilderoy Lockhart
+#
+12785
+Travels with Trolls
+Gilderoy Lockhart
+#
+12355
+Voyages with Vampires
+Gilderoy Lockhart
+#
+12375
+Wanderings with WereWolves
+Gilderoy Lockhart
+#
+12395
+Year with the Yeti
+Gilderoy Lockhart
+#
+12415
+Magical Me
+Gilderoy Lockhart
+#
+12435
+Most Potent Potions
+Chelone Glabra
+#
+12455
+Prefects Who Gained Power
+Maria Leach
+#
+12475
+Flying with the Canons
+Jason Calibre
+#
+12495
+The Monster Book of Monsters
+Krecher Krowley
+#
+12515
+The Invisible Book of Invisibility
+Veronica Void
+#
+12535
+Unfogging the Future
+Cassandra Vablatsky
+#
+12555
+Broken Balls: When Fortunes Turn Foul
+Cassandra Vablatsky
+#
+12615
+Death Omens: What to Do When You Know the Worst Is Coming
+Cassandra Vablatsky
+#
+12665
+Hogwarts, A History
+Armando Dippet
+#
+12695
+The Life and Lies of Albus Dumbledore
+Rita Skeeter
+#
+12775
+The Tales of Beedle the Bard
+Gladys Patron
+#
+12795
+Armando Dippet: Master or Moron
+Rita Skeeter
