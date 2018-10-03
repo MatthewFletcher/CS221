@@ -887,3 +887,17 @@ Complete binary tree: Every node on lowest level is as far left as possible, //T
 Tree Algorithms
 Search, Insert, Delete, Traverse
 
+
+Search algorithm in a nutshell
+
+Start at the root and keep doing this till you find it or fall out of the tree. 
+
+Is this it? If yes, end search. If no, is search key less than this key? If yes, move left, otherwise, move right. 
+
+
+Possible Search cases:
+Nothing in tree, aka nothing to search
+Search key found
+Search key not found
+
+
