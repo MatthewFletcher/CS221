@@ -13,6 +13,9 @@ int main()
 
 
 	House *h = new House();
+	h->SetHouseName("Gryffindor");
+
+	
 
 	return 0;
 }
