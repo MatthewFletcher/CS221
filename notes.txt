@@ -901,3 +901,106 @@ Search key found
 Search key not found
 
 
+
+
+Delete function 
+Do a search of the tree to fidn the delete key 
+
+If found, cases:
+	Handle case of no children
+	Handle case of 1 child on left
+	Handle case of 1 child on right 
+	Handle case of 2 children 
+
+Possible cases:
+	1. Tree is empty, root is null Nothing to delete
+	2. Delete key not found
+	3. Node to delete has noc hildren or has only one child on the left 
+		a) node to delete is the root
+		b) node to delete is not the root
+	4. Node to delete has only 1 child on the right
+		a) node to delete is the root
+		b) node to delete is not the root
+
+
+
+
+Delete psuedocode
+
+Find the node to delete if it is there
+Set temp to root, and set back to NULL
+Findpos of node to be delteed. 
+	Loop while temp isnlt null and serach key is not temp->key
+		back = temp
+		if search key is less than temp=>key,  set temp to temp->left
+		oterhwise set temp to temp->right
+	end loop
+	if temp == null, the search key was NOT FOUND
+	Else
+		Set delNode = temp
+		set delParent = back
+
+If temp is null or the tree is empty, then you did not find the key that youw ere searching for 
+
+Handle cases of no children or only one child on the left. 
+if delNode->right == null //either 1 child on left, or no children
+	if delParent == NULL //delete the root
+		set root = delNode->left //Node is found and removed from the tree
+	else //see which side of delparent delNode is on, see image on Trees_18
+		if delParent ->left == delNode //see which side of delParent is delNode attached
+			set delparent->left = delNode->left
+		else
+			set delParent-> right = delNode -> left
+If the node to remove or delete is found, return it or delete it and return true, as is appropriate
+ON PROGRAMMING ASSIGNMENT ^^^
+
+
+
+Check fi delNode left is null
+Else if delNode -> left == null
+	if delParent == Null //deletes root
+		set root = delNode->right //Node has been found and removed from the tree
+	else
+		//TODO FROM TREES_19
+
+
+ON TEST
+Draw pictures on back of test to help you 
+In a binary tree, there is NO POINTER CALLED NEXT
+
+
+
+Handle case of 2 children
+//On Trees_20
+
+
+Alternate Deletion algorithm
+See trees_24
+My brain has melted
+
+
+Traverse Algorithms  (ON TEST)
+If you know the traverse when you see it, it should be easy to answer the question
+
+Traverse visits every node in the tree
+It uses recursion.
+
+Pre-order: do somethign with node first, then recursively call left and right nodes
+	Not used very often
+
+In-order: PrintTree function for PA3 uses an in order traversal (ON PROGRAMMING ASSIGNMENT)
+	Most useful
+Post-order: Do everything on left, everything on right, then . node
+
+READ QUESTION ON TEST
+Name of function WILL NOT BE TRAVERSE
+
+traverse(treenode *root)
+	if root is NOT null
+		traverse(root->left)
+		//do something with root
+		traverse(root->right)
+
+How do you call this function when root is a private member variable??
+
+
