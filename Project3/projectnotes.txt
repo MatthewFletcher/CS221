@@ -1,0 +1,14 @@
+Define Library Class maintaining a binary tree of structures called Book.
+
+In library, have a single private member m_pRoot that points to the first isntance of book in the tree
+
+
+//Goes in library.cpp
+buildLibrary code is GIVEN, copy and paste it in 
+getNextLine: copy and paste into code 
+?/Take a little time to look through the code because there are some parts of the code that may be useful
+
+
+getbookbytitle is a recursive function
+
+
