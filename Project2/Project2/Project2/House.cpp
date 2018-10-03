@@ -14,6 +14,7 @@ using namespace std;
 
 House::House()
 	{
+		cout << "Creating instance of house class from default constructor"
 	
 	}
 House::~House()

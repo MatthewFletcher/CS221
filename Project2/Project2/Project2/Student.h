@@ -6,6 +6,11 @@
 *   This program is entirely my own work
 *******************************************************************/
 
+
+//////////////////////////////////////////
+//////////// TODO CHANGE CLONE NAME///////
+//////////////////////////////////////////
+
 #include <iostream>
 #include <string.h>
 
@@ -60,19 +65,7 @@ public:
 
 
 	//Clone function
-	Student* Student::Clone()
-	{
-
-		Student *stu1;
-
-		return stu1;
-		//See slide Testing_Program 2_9
-
-		//When testing this function, where stu2 is the deep copy of stu1,
-		//delete stu1 before printing stu2 info to ensure a deep copy has been properly made 
-
-
-	}
+	Student* Clone();
 
 
 

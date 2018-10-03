@@ -169,4 +169,15 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 	
 	}
 
+	void Clone()
+	{
 
+		Student *stu1;
+
+		//See slide Testing_Program 2_9
+
+		//When testing this function, where stu2 is the deep copy of stu1,
+		//delete stu1 before printing stu2 info to ensure a deep copy has been properly made 
+
+
+	}

@@ -15,6 +15,11 @@ int main()
 
 	cout << s1->getStudentID() << endl;
 
+	Student *s2 = new Student;
+	s1->m_pNext = s2;
+
+	s1->Clone();
+
 
 	return 0;
 }
