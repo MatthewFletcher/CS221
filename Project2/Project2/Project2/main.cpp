@@ -7,19 +7,12 @@
 using namespace std;
 int main()
 {
-	Student *s1 = new Student;
+	Student *stu1 = new Student;
 
-	s1->setStudentID(12345);
+	stu1->setStudentID(12345);
 
-	delete s1;
 
-	cout << s1->getStudentID() << endl;
-
-	Student *s2 = new Student;
-	s1->m_pNext = s2;
-
-	s1->Clone();
-
+	House *h = new House();
 
 	return 0;
 }

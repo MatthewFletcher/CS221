@@ -25,6 +25,7 @@ public:
 
 	int foo;
 
+	//Declaring Pointer to next
 	Student* m_pNext;
 
 	//Default Constructor

@@ -14,19 +14,21 @@ using namespace std;
 
 House::House()
 	{
-		cout << "Creating instance of house class from default constructor"
+		cout << "Creating instance of house class from default constructor" << endl;
 	
 	}
 House::~House()
 	{
-	
+		cout << "Creating instance of house class from overloaded constructor" << endl;	
 	}
 bool House::AddStudent(Student *stu)
 	{
-		return 0;
+			return 0;
 	}
 Student* House::RemoveStudent(int studentID)
 	{
+
+
 		return 0;
 	}
 Student*  House::FindStudent(int studentID)

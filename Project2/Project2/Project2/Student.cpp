@@ -149,7 +149,16 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
  //Pointer function that returns a letter and numer grbade
 	void Student::getGrade(int idx, int *iGrade, char *cGrade)
 		{
-			cout << "getGrade with reference is running " << endl;
+			*iGrade = m_iGrades[idx];
+
+			if (*iGrade < 60)*cGrade = 'T';
+			else if (*iGrade <=69)*cGrade = 'D';
+			else if (*iGrade <=79)*cGrade = 'P';
+			else if (*iGrade <=89)*cGrade = 'A';
+			else if (*iGrade <=94)*cGrade = 'E';
+			else if (*iGrade <=100)*cGrade = 'O';
+
+			cout << "Letter grade: "<<*iGrade <<" is a " << *cGrade << endl;
 		}
 
 
@@ -169,10 +178,24 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 	
 	}
 
-	void Clone()
+	Student* Clone()
 	{
 
-		Student *stu1;
+		// Student *theClone = new Student();
+		// theClone->setStudentID(m_iStudentID);
+		// theClone->setName(m_sMagicalName, m_sWizardFamilyName);
+		// //Do the same thing for the house name 
+
+		// for (int i = 0; i < 8; i++)
+		// {
+		// 	//If the class name at this index is not null
+		// 	if (0)
+		// 	{
+		// 		theClone->setClass(i,m_sClasses[i]);
+		// 		//Tell the new instance of student to set its class grade at index i to this class grade 
+		// 	}
+		// }
+		return 0;
 
 		//See slide Testing_Program 2_9
 
