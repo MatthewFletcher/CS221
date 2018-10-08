@@ -1004,3 +1004,26 @@ traverse(treenode *root)
 How do you call this function when root is a private member variable??
 
 
+
+
+AVL tree: for any node int eh tree the height of its left subree is the same as the height of its right subtree, or differs by at most 1
+
+2. Height of an emtpy tree is defined as -1
+
+
+Types of AVL Rotation:
+Single Left Rotation
+Single Right rotation
+Double Left Rotation
+Double Right rotation
+
+
+
+
+Heap: A complete binary tree with values stored so that no child has a key value greater than its parent
+AKA Item at the head always has the highest value
+
+
+Constructor for a heap: create a dynamic allocation of memory for an array of the desired size 
+ 
+Reheaping is a recursive function 
