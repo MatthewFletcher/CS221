@@ -1027,3 +1027,8 @@ AKA Item at the head always has the highest value
 Constructor for a heap: create a dynamic allocation of memory for an array of the desired size 
  
 Reheaping is a recursive function 
+
+
+Removing a node with 2 children is the hardest one to implement (ON PROGRAMMING ASSIGNMENT(
+
+If program crashes you have a bad pointer somewhere. 
