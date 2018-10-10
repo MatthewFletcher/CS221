@@ -22,6 +22,8 @@ Student::Student()
 		strcpy(m_sClasses[i], "");  //Sets all elements of array to empty
 		m_iGrades[i] = 0;	//Sets all grades to 0 for initialization
 	}
+
+	m_pNext = NULL;
 	
 
 }
@@ -29,6 +31,7 @@ Student::Student()
 //Define overloaded constructor
 Student::Student(int iID, char *mName, char *wName, char *hName)
 {
+	m_pNext = NULL;
 	cout << "overloaded constructor" << endl;
 
 	for (int i = 0; i < 8; ++i)
@@ -188,7 +191,7 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 
 		// for (int i = 0; i < 8; i++)
 		// {
-		// 	//If the class name at this index is not null
+		// 	//If the class name at this index is not NULL
 		// 	if (0)
 		// 	{
 		// 		theClone->setClass(i,m_sClasses[i]);
