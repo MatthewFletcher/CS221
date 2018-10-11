@@ -17,6 +17,10 @@ int main()
 
 	Student *stu2 = new Student(2, "Hermione", "Granger", "Gryffindor");
 
+	Student *stu3 = new Student(3, "Ron", "Weasley", "Gryffindor");
+
+	Student *stu4 = new Student(4, "Ginny", "Weasley", "Gryffindor");
+
 	Student *head = stu1->m_pNext;
 
 	House *h1 = new House();
@@ -28,6 +32,13 @@ int main()
 	h1->AddStudent(stu1);
 
 	h1->AddStudent(stu2);
+
+	h1->AddStudent(stu3);
+
+	h1->AddStudent(stu4);
+
+	h1->RemoveStudent(3);
+	h1->RemoveStudent(4);
 
 
 

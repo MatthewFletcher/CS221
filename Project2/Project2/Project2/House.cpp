@@ -48,12 +48,18 @@ bool House::AddStudent(Student *stu)
 	}
 Student* House::RemoveStudent(int studentID)
 	{
+
+		cout << "Removing student with ID " << studentID << endl;
 		Student *temp, *back;
 
 		//Check for an empty list
-		if(m_pHead == NULL) return NULL; //TODO CHECK FOR EMPTY LIST
+		if(m_pHead == NULL) 
+			{
+				cout << "List is empty" << endl;
+				return NULL;
+			} 
 
-		temp = m_pHead; //TODO SET TO HEAD
+		temp = m_pHead;
 		back = NULL;
 		while((temp != NULL) && (studentID != temp->getStudentID()))
 		{
@@ -63,17 +69,20 @@ Student* House::RemoveStudent(int studentID)
 
 		if (temp==NULL)
 		{
+			cout << "Student not found" << endl;
 			return NULL;
-		}
+		} //This means the student was not found
 
 		else if(back == NULL)
 		{
+			cout << "Back is null, student removed from head of list" << endl;
 			m_pHead = m_pHead->m_pNext;
 			return temp;
 		}
 
 		else
 		{
+			cout << "Deleted from somewhere in list" << endl;
 			back->m_pNext = temp->m_pNext;
 			return temp;
 		}
