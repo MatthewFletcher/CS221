@@ -22,15 +22,35 @@ House::~House()
 	{
 
 		cout << "Destructor" << endl;	
+
+		Student *temp;
+
+		if(m_pHead != NULL)
+		{
+			temp = m_pHead;
+
+			while(m_pHead != NULL)
+			{
+				temp = m_pHead;
+				m_pHead=m_pHead->m_pNext;
+				delete temp;
+			}
+		}
 	}
 bool House::AddStudent(Student *stu)
 	{
 		Student *back = NULL;
 		Student *temp = m_pHead;
 
+		while ((temp != NULL) && (stu->getStudentID() < temp->getStudentID()))
+		{
+			cout << "Looping through list" << endl;
+			back = temp;
+			temp = temp->m_pNext;
+		}
 		if (back==NULL)
 		{
-			cout << "Inserting student at head of list" << endl;
+			cout << "Inserting student "<< stu->getStudentID()<<" at head of list" << endl;
 			stu->m_pNext = m_pHead; //insert at head of list
 			m_pHead = stu;
 			return true;
@@ -39,11 +59,12 @@ bool House::AddStudent(Student *stu)
 		else
 		{
 			//Inserting 
+			cout <<"Inserting student "<< stu->getStudentID()<<" somewhere in list" << endl;
 			back->m_pNext = stu;
 			stu->m_pNext = temp;
 		}
 
-		cout << "If you are seeing this, then I screwed up." << endl;
+		cout << "You should not be seeing this error message." << endl;
 		return false;
 	}
 Student* House::RemoveStudent(int studentID)
@@ -91,15 +112,20 @@ Student* House::RemoveStudent(int studentID)
 	}
 Student*  House::FindStudent(int studentID)
 	{
+		//TODO, function not working (main does not find student)
 		Student *temp;
 		temp = m_pHead; //initialize pointer to point ot head of list 
 
+
+		cout << "temp is >> " << temp << endl;
 		while((temp != NULL) && (studentID != temp->getStudentID()))
 		{
+			cout << "Checking for student" << endl;
+			cout << temp->getStudentID();
 			temp = temp->m_pNext;
 		}
 
-		if (temp==NULL)
+		if (temp==NULL)  //TODO fix issue where temp is always null
 		{
 			cout << "Student not found" << endl;
 			return NULL;
@@ -127,6 +153,23 @@ Student* House::FindStudent(char *fname, char *lname)
 	}
 void House::PrintHouseList()
 	{
+
+		Student *temp;
+
+		if (m_pHead==NULL)
+		{
+			cout << "List is empty" << endl;
+		}
+
+		else
+		{
+			temp = m_pHead;
+			while (temp!=NULL)
+			{
+				temp->printStudentInfo();
+				temp = temp->m_pNext;
+			}
+		}
 		
 	}
 void House::SetHouseName(char *name)
