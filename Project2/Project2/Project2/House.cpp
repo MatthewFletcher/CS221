@@ -15,24 +15,45 @@ using namespace std;
 House::House()
 	{
 		cout << "Creating instance of house class from default constructor" << endl;
-	
+		strcpy(m_sHouseName, ""); //Set house name to empty
+		m_pHead = NULL; //setting m_pHead equal to null
 	}
 House::~House()
 	{
-		cout << "Creating instance of house class from overloaded constructor" << endl;	
+
+		cout << "Destructor" << endl;	
 	}
 bool House::AddStudent(Student *stu)
 	{
-			return 0;
+		Student *back = NULL;
+		Student *temp = m_pHead;
+
+		if (back==NULL)
+		{
+			cout << "Inserting student at head of list" << endl;
+			stu->m_pNext = m_pHead; //insert at head of list
+			m_pHead = stu;
+			return true;
+		}
+
+		else
+		{
+			//Inserting 
+			back->m_pNext = stu;
+			stu->m_pNext = temp;
+		}
+
+		cout << "If you are seeing this, then I screwed up." << endl;
+		return false;
 	}
 Student* House::RemoveStudent(int studentID)
 	{
 		Student *temp, *back;
 
 		//Check for an empty list
-		if(0) return NULL; //TODO CHECK FOR EMPTY LIST
+		if(m_pHead == NULL) return NULL; //TODO CHECK FOR EMPTY LIST
 
-		temp = head; //TODO SET TO HEAD
+		temp = m_pHead; //TODO SET TO HEAD
 		back = NULL;
 		while((temp != NULL) && (studentID != temp->getStudentID()))
 		{
@@ -47,7 +68,7 @@ Student* House::RemoveStudent(int studentID)
 
 		else if(back == NULL)
 		{
-			head = head->m_pNext;
+			m_pHead = m_pHead->m_pNext;
 			return temp;
 		}
 
@@ -62,7 +83,7 @@ Student* House::RemoveStudent(int studentID)
 Student*  House::FindStudent(int studentID)
 	{
 		Student *temp;
-		//temp = head; //initialize pointer to point ot head of list 
+		temp = m_pHead; //initialize pointer to point ot head of list 
 
 		while((temp != NULL) && (studentID != temp->getStudentID()))
 		{
@@ -71,6 +92,7 @@ Student*  House::FindStudent(int studentID)
 
 		if (temp==NULL)
 		{
+			cout << "Student not found" << endl;
 			return NULL;
 		}
 
@@ -85,17 +107,27 @@ Student*  House::FindStudent(int studentID)
 	}
 Student* House::FindStudent(char *fname, char *lname)
 	{
+		Student *temp;
+		temp = m_pHead;
+
+		while((temp != NULL))
+		{
+			break;
+		}
 		return 0;
 	}
 void House::PrintHouseList()
 	{
-	
+		
 	}
 void House::SetHouseName(char *name)
 	{
-	
+		strcpy(m_sHouseName, name);
+		cout << "SetHouseName is running" << endl;
+		cout << "House name set to " << name << endl;
 	}
 char House::*GetHouseName()
 	{
+
 		return 0;
 	}

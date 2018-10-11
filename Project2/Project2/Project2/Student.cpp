@@ -184,8 +184,8 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 	Student* Clone()
 	{
 
-		// Student *theClone = new Student();
-		// theClone->setStudentID(m_iStudentID);
+		Student *theClone = new Student();
+		 theClone->setStudentID();
 		// theClone->setName(m_sMagicalName, m_sWizardFamilyName);
 		// //Do the same thing for the house name 
 

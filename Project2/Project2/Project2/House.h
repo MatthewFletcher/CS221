@@ -13,18 +13,18 @@
 #ifndef HOUSE_H
 #define HOUSE_H
 
-using namespace std;
-
 class House
 {
 
 
 private:
+	Student *m_pHead;
+	char m_sHouseName[65]; //Has to store a name up to 64 characters in length
 
 
 public:
-	House();
-	~House();
+	House(); //Default constructor
+	~House(); //Default destructor
 	bool AddStudent(Student *stu);
 	Student *RemoveStudent(int studentID);
 	Student *FindStudent(int studentID);

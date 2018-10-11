@@ -3,7 +3,7 @@
 
 #Create output file named output
 output: main.o Student.o HogwartsSWW.o House.o
-	g++ main.o Student.o -o output
+	g++ main.o Student.o HogwartsSWW.o House.o -o output
 
 
 main.o: main.cpp

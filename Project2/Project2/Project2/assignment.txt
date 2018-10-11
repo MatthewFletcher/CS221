@@ -36,11 +36,7 @@
             2.1.1.2.1 House() and ~House() - A default constructor and destructor. The
             constructor should set the head pointer to NULL and the house name to an empty
             string.
-            2.1.1.2.2 bool AddStudent(Student *stu) - this function shall take a pointer to
-            an instance of the Student class as the only argument. This instance of Student
-            shall already have all data inserted into it. The function shall insert the
-            student into the list of students in order by student number and return true if
-            it successfully added the student.
+            2.1.1.2.2 bool AddStudent(Student *stu) - this function shall take a pointer to an instance of the Student class as the only argument. This instance of Student shall already have all data inserted into it. The function shall insert the student into the list of students in order by student number and return true if it successfully added the student.
             2.1.1.2.3 Student *RemoveStudent(int studentID) - this function shall take an
             integer giving a student ID number as the only argument. It shall search the
             list for the student and remove the student from the list. If the student was
