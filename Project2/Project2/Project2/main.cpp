@@ -4,58 +4,43 @@
 #include "House.h"
 #include "HogwartsSWW.h"
 
+
+#include <fstream>
 using namespace std;
+
+// Prototype functions to read lines from the file and build the houses
+bool getNextLine(char *line, int lineLen);
+void buildStudentLists(HogwartsSWW *h);
+
+ifstream	inFile;	// File to read from
+
+// Define the name of the file to read from
+#define STUDENT_FILE "students.txt"
 
 
 int main()
 {
 
 
+	HogwartsSWW *hptr = new HogwartsSWW();
 
-	Student *stu1 = new Student(1, "Harry", "Potter", "Gryffindor");
+	//buildStudentLists(hptr);
+
+	Student *stu1 = new Student(2312323, "CLONEME", "HARDERDADDY", "FUCKME");
+
+	stu1->printStudentInfo();
+
+	Student *stu2 = new Student();
+
 	
+	cout << "Running clone function" << endl;
+	stu2 = stu1->Clone();
 
-	Student *stu2 = new Student(2, "Hermione", "Granger", "Gryffindor");
-
-	Student *stu3 = new Student(3, "Ron", "Weasley", "Gryffindor");
-
-	Student *stu4 = new Student(4, "Ginny", "Weasley", "Gryffindor");
-
-	Student *stu5 = new Student(5, "Ginny1", "Weasley1", "Gryffindor");
-
-	Student *stu6 = new Student(6, "Ginny2", "Weasley2", "Gryffindor");
-
-	Student *stu7 = new Student(7, "Ginny3", "Weasley3", "Gryffindor");
-
-	Student *head = stu1->m_pNext;
-
-	House *h1 = new House();
-	h1->SetHouseName("Gryffindor");
-
-	cout << "Finding student with id 1" << endl;
-	h1->FindStudent(1);
+	delete stu1;
 
 
+	stu2->printStudentInfo();
 
-
-
-
-
-
-	h1->AddStudent(stu7);
-	h1->AddStudent(stu6);
-	h1->AddStudent(stu5);
-	h1->AddStudent(stu4);
-	h1->AddStudent(stu3);
-	h1->AddStudent(stu2);
-	h1->AddStudent(stu1);
-
-
-
-	h1->PrintHouseList();
-
-	h1->RemoveStudent(3);
-	h1->RemoveStudent(4);
 
 
 
@@ -63,4 +48,87 @@ int main()
 
 
 	return 0;
+}
+
+
+
+
+void buildStudentLists(HogwartsSWW *h)
+{ 	
+	char line[128];// Declare a character array to hold lines read from file
+	Student *s;
+	char fname[32];
+	char lname[32];
+	int numClasses;
+
+	// Open the data file
+	inFile.open(STUDENT_FILE, ifstream::in); 
+	if(!inFile.is_open())
+	{
+		cout << "Failed to open file: " << STUDENT_FILE << " application terminating.\n";
+		exit(0);
+    }
+
+    cout << "File opened successfully" << endl;
+
+
+	while(getNextLine(line, 128))
+	{
+		s = new Student();		// Create a new student
+		s->setStudentID(atoi(line));	// Set the ID
+
+		// Read and parse student name
+		getNextLine(line, 128);
+		sscanf(line, "%s %s", fname, lname);
+		s->setName(fname, lname);
+
+		// Read and parse house name
+		getNextLine(line, 128);
+		s->setHouse(line);
+
+		// Read all classes
+		getNextLine(line, 128);	// Read and parse number of classes
+		numClasses = atoi(line);
+		for(int i=0; i<numClasses; i++)
+		{
+			getNextLine(line, 128); // Get name of class
+			s->setClass(i, line);
+			getNextLine(line, 128); // Get grade
+			s->setGrade(i, atoi(line));
+		}
+
+		// Add this student to the school
+		h->AddStudent(s);
+		cout << "Adding student ID: "<< s->getStudentID() << endl;
+	}
+}
+
+//-------------------------------------------
+// GetNextLine()
+// Read the next line from the file.
+//-------------------------------------------
+bool getNextLine(char *line, int lineLen)
+{
+    int    done = false;
+
+    while(!done)
+    {
+        inFile.getline(line, lineLen);
+        
+        if(inFile.good())    // If a line was successfully read
+        {
+           if(strlen(line) == 0)  // Skip any blank lines
+                continue;
+            else if(line[0] == '#')  // Skip any comment lines
+                continue;
+            else done = true;    // Got a valid data line so return 
+                                 // with this line
+        }
+        else
+        {
+            strcpy(line, "");
+            return false;
+        }
+    } // end while
+    return true;
 }

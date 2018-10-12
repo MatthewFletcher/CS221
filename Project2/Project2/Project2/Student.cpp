@@ -77,7 +77,7 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 		{	
 			strcpy(m_sMagicalName, mName);
 			strcpy(m_sWizardFamilyName, wName);
-			cout << "setName is running" << endl;
+			//cout << "setName is running" << endl;
 		}
 
 	void Student::getName(char *mName, char *wName)
@@ -85,7 +85,7 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 			strcpy(mName, m_sMagicalName);
 			strcpy(wName, m_sWizardFamilyName);
 
-			cout << "getName is running" << endl;
+			//cout << "getName is running" << endl;
 
 		}
 
@@ -93,13 +93,13 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 	void Student::setHouse(char *hName)
 		{
 			strcpy(m_sHouse, hName);
-			cout <<  "setHouse is running " << endl;
+			//cout <<  "setHouse is running " << endl;
 	
 		}
 
 	void Student::getHouse(char *hName)
 		{
-			cout << "getHouse is running " << endl;
+			//cout << "getHouse is running " << endl;
 
 			strcpy(hName, m_sHouse);
 	
@@ -108,12 +108,12 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 	//Get and set a class name
 	void Student::setClass(int idx, char *className)
 		{
-			cout << "setClass is running" << endl;
+			//cout << "setClass is running" << endl;
 			strcpy(m_sClasses[idx], className);
 		}
 	void Student::getClass(int idx, char *className)
 		{
-			cout << "getClass is running " << endl;
+			//cout << "getClass is running " << endl;
 			strcpy(className, m_sClasses[idx]);			
 		}
 
@@ -122,7 +122,7 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 	//Get and Set a grade
 	void Student::setGrade(int idx, int grade)
 		{
-			cout << "setGrade is running"  << endl;
+			//cout << "setGrade is running"  << endl;
 			m_iGrades[idx] = grade;
 
 	
@@ -181,23 +181,25 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 	
 	}
 
-	Student* Clone()
+	Student* Student::Clone()
 	{
 
 		Student *theClone = new Student();
-		// theClone->setName(m_sMagicalName, m_sWizardFamilyName);
+		theClone->setStudentID(m_iStudentID);
+		theClone->setName(m_sMagicalName, m_sWizardFamilyName);
+		theClone->setHouse(m_sHouse);
 		// //Do the same thing for the house name 
 
-		// for (int i = 0; i < 8; i++)
-		// {
-		// 	//If the class name at this index is not NULL
-		// 	if (0)
-		// 	{
-		// 		theClone->setClass(i,m_sClasses[i]);
-		// 		//Tell the new instance of student to set its class grade at index i to this class grade 
-		// 	}
-		// }
-		return 0;
+		for (int i = 0; i < 8; i++)
+		{
+			//If the class name at this index is not NULL
+			if (m_sClasses[i] != NULL)
+			{
+				theClone->setClass(i,m_sClasses[i]);
+				//Tell the new instance of student to set its class grade at index i to this class grade 
+			}
+		}
+		return theClone;
 
 		//See slide Testing_Program 2_9
 
