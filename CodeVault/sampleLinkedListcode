@@ -1,0 +1,403 @@
+//---------------------------------------------------------------
+// File: Code117_List.h
+// Purpose: Header file for a demonstration of a sorted list 
+//		implemented as a linked structure.
+// Programming Language: C++
+// Author: Dr. Rick Coleman
+//---------------------------------------------------------------
+#pragma once;
+
+#include <iostream>
+using namespace std;
+
+// Define a structure to use as the list item
+struct ListItem
+{
+     int      key;		
+     float    theData;
+	 ListItem *next;
+};
+
+class Code117_List
+{
+	private:
+		ListItem *head;               // Pointer to head of the list
+
+	public:
+		Code117_List();               // Class constructor
+		~Code117_List();              // Class destuctor
+		void ClearList();             // Remove all items from the list
+		bool Insert(int key, float f);// Add an item to the list
+		ListItem *Delete(int key);   // Remove and return an item from the list
+		ListItem *Search(int key); // Search for an item in the list
+		int ListLength();             // Return number of items in list
+		bool isEmpty();               // Return true if list is empty
+		bool isFull();                // Return true if list is full
+		void PrintList();             // Print all items in the list
+};
+
+Implementation (.cpp) file for a list class
+
+//---------------------------------------------------------------
+// File: Code117_List.cpp
+// Purpose: Implementation file for a demonstration of a sorted  
+//		list implemented as a linked structure.
+// Programming Language: C++
+// Author: Dr. Rick Coleman
+//---------------------------------------------------------------
+#include "Code117_List.h"
+
+//--------------------------------------------
+// Function: Code117_List()
+// Purpose: Class constructor
+// Returns: void
+//--------------------------------------------
+Code117_List::Code117_List()
+{
+	head = NULL;
+}
+
+//--------------------------------------------
+// Function: Code117_List()
+// Purpose: Class destructor
+// Returns: void
+//--------------------------------------------
+Code117_List::~Code117_List()
+{
+	// Clear the list to free any memory being used
+	ClearList();
+}
+
+//--------------------------------------------
+// Function: ClearList()
+// Purpose: Remove all items from the list
+// Returns: void
+//--------------------------------------------
+void Code117_List::ClearList()
+{
+	ListItem *temp;
+
+	if(!isEmpty())
+	{
+		temp = head;
+
+		// Scan list and free all nodes
+		while(head != NULL)
+		{
+			temp = head;
+			head = head->next;
+			delete temp;
+		}
+	}
+}
+
+//--------------------------------------------
+// Function: Insert()
+// Purpose: Insert an item into the list at
+//		the end of the list.  See alternate
+//		code below for insert at the beginning
+//		of the list.
+// Returns: true if insertion was successful
+//		or false if the insertion failed.
+//--------------------------------------------
+bool Code117_List::Insert(int key, float f)
+{
+	ListItem *temp, *back, *newNode;
+
+	// Create a new node and insert the data
+	newNode = new ListItem();
+	// Check to see if memory allocation failed
+	if(newNode == NULL) return false;
+	// If all OK then insert the data
+	newNode->key = key;
+	newNode->theData = f;
+	newNode->next = NULL; // Very import to init this to NULL
+
+	// Check to see if the list is empty
+	if(isEmpty())
+	{
+		// Insert new node as first in the list
+		head = newNode;
+	}
+	else
+	{
+		// Find location for new node in the list
+		temp = head;
+		back = NULL;
+		while((temp != NULL) && (temp->key < key))
+		{
+			back = temp;
+			temp = temp->next;
+		}
+
+		// Check to see if adding at head of list
+		if(back == NULL)
+		{
+			newNode->next = head;
+			head = newNode;
+		}
+		else // Insert somewhere else in list
+		{
+			back->next = newNode;
+			newNode->next = temp;
+		}
+
+	}
+	return true; // Signal successful insertion
+}
+
+//--------------------------------------------
+// Function: Delete()
+// Purpose: Delete an item from the list.
+// Returns: Pointer to the item if found or
+//			NULL if not found.
+//--------------------------------------------
+ListItem *Code117_List::Delete(int key)
+{
+	ListItem *temp, *back;
+
+	// Check for empty list
+	if(isEmpty()) return NULL;
+
+	// Search the list for the item to delete
+	temp = head;
+	back = NULL;
+	// The order of the two conditionals in the while()
+	// look is VERY important.  You want to check first
+	// to see if temp is NULL before trying to reference
+	// the memory temp is pointing to.  If temp is NULL
+	// then, because this is a && (AND) condition the
+	// second condition will never be tested.  Testing
+	// the second condition when temp==NULL will result
+	// in a crash and burn.
+	while((temp != NULL) && (key != temp->key))
+	{
+		back = temp;
+		temp = temp->next;
+	}
+
+	// Check to see if the item was found
+	if(temp == NULL) return NULL;  // Not found so return NULL
+	else if(back == NULL) // Check to see if item is first in list
+	{
+		head = head->next;
+		return temp; // Return the node removed from the list
+	}
+	else // Delete node elsewhere in the list
+	{
+		back->next = temp->next;
+		return temp; // Return the node removed from the list
+	}
+	return NULL;	// Should never get here but his is to keep the compiler from giving a warning
+}
+
+
+//--------------------------------------------
+// Function: Search()
+// Purpose: Search for an item by key and 
+//			return a copy of the item if found.
+// Returns: Pointer to a copy of the item if
+//			successful or NULL if failed.
+//--------------------------------------------
+ListItem *Code117_List::Search(int key)
+{
+	ListItem *temp;
+
+	temp = head;
+	// See note on the order of the conditional in this
+	// while() loop in Delete() function above.
+	while((temp != NULL) && (key != temp->key))
+	{
+		temp = temp->next;
+	}
+
+	// If item not found or list is empty return false
+	if(temp == NULL) return NULL;
+	else
+	{
+		ListItem *retItem = new ListItem;
+		*retItem = *temp;	// Block copy the entire structure
+		retItem->next = NULL; // Clear this pointer
+		return retItem;	// Return the copy
+	}
+}
+
+//--------------------------------------------
+// Function: ListLength()
+// Purpose: Return the number of items in the 
+//		list.
+// Returns: Number of items in list.
+//--------------------------------------------
+int Code117_List::ListLength()
+{
+	ListItem *temp;
+	int count = 0;
+
+	temp = head;
+	while(temp != NULL)
+	{
+		temp = temp->next;
+		count++;
+	}
+	return count;
+	// An alternate way to do this is to maintain
+	// a static variable at the top of this source
+	// code, e.g. int count.  This can be incremented
+	// each time a node is added and decremented each
+	// time a node is deleted.
+}
+
+//--------------------------------------------
+// Function: isEmpty()
+// Purpose: Return true if the list is empty
+// Returns: true if empty, otherwise false
+//--------------------------------------------
+bool Code117_List::isEmpty()
+{
+	return (head == NULL);
+}
+
+//--------------------------------------------
+// Function: isFull()
+// Purpose: Return true if the list is full
+// Returns: true if full, otherwise false
+// Note: In theory a linked list cannot be
+//  full (unless you run out of memory) so
+//	this function defaults to returning false.
+//--------------------------------------------
+bool Code117_List::isFull()
+{
+	return false;
+}
+
+
+//--------------------------------------------
+// Function: PrintList()
+// Purpose: Print all items in the list with
+//	their priority.
+// Returns: void
+//--------------------------------------------
+void Code117_List::PrintList()
+{
+	ListItem *temp;
+
+	cout << "\n\nItems in the List\n";
+	cout << "-----------------------------------------------------------\n";
+	cout << "Key\t\tData\n";
+	cout << "-----------------------------------------------------------\n";
+
+	if(head == NULL)	// Report no items in the list
+	{
+		cout << "\t List is currently empty.\n";
+	}
+	else
+	{
+		temp = head;
+		while(temp != NULL)
+		{
+			cout << temp->key << "\t\t" << temp->theData << "\n";
+			temp=temp->next;
+		}
+	}
+	cout << "-----------------------------------------------------------\n\n";
+}
+
+Main file used to test the list
+
+//---------------------------------------------------------------
+// File: ListMain.cpp
+// Purpose: Main file with tests for a demonstration of an unsorted  
+//		list implemented as a linked structure.
+// Programming Language: C++
+// Author: Dr. Rick Coleman
+// Date: January 8, 2002
+//---------------------------------------------------------------
+#include "Code117_List.h"
+
+int main(int argc, char **argv)
+{
+	Code117_List *theList;
+	ListItem *theItem;
+
+     cout << "Simple List Demonstration\n";
+     cout << "(Sorted list implemented as a linked structure.)\n\n";
+     cout << "Create a list and add a few items to the list";
+
+	theList = new Code117_List(); // Instantiate a list object
+
+	theList->Insert(5, 3.1f); // Note: The argument to the funtion should be a float
+	theList->Insert(1, 5.6f); // A constant real number like 3.1 is interpreted as
+	theList->Insert(3, 8.3f); // a double unless it is explicitly defined as a float
+	theList->Insert(2, 7.4f); // by adding an 'f' to the end of the number.
+	theList->Insert(4, 2.5f);
+
+	// Show what is in the list
+	theList->PrintList();
+
+	// Test the list length function
+	cout << "\nList now contains " << theList->ListLength() << " items.\n\n";
+
+ // Test delete function
+     cout << "Testing delete of last item in list.\n";
+     theItem = theList->Delete(5);
+	 if((theItem != NULL) && (theItem->key == 5))
+	 {
+		 cout << "\tSuccessfully removed the last item in the list.\n";
+		 delete theItem;	// It is now our responsibility to delete it.
+	 }
+     theList->PrintList();
+
+     // Test delete function
+     cout << "Testing delete of first item in list.\n";
+     theItem = theList->Delete(1);
+	 if((theItem != NULL) && (theItem->key == 1))
+	 {
+		 cout << "\tSuccessfully removed the first item in the list.\n";
+		 delete theItem;	// It is now our responsibility to delete it.
+	 }
+    theList->PrintList();
+
+     // Test delete function
+     cout << "Testing delete of a middle item in list.\n";
+     theItem = theList->Delete(3);
+	 if((theItem != NULL) && (theItem->key == 3))
+	 {
+		 cout << "\tSuccessfully removed a middle item from the list.\n";
+		 delete theItem;	// It is now our responsibility to delete it.
+	 }
+     theList->PrintList();
+
+     // Test delete function with a known failure argument
+     cout << "Testing failure to find item (key = 6) in delete function.\n";
+     if(theList->Delete(6) != NULL)		
+          cout << "\tOops! Should not have been able to delete.\n";
+     else
+          cout << "\tUnable to locate item to delete.\n\n";
+
+     // Test search (known failure)
+     cout << "Testing Search function. Search for key 3 (not in the list).\n";
+	 theItem = theList->Search(3);
+     if((theItem != NULL) && (theItem->key == 3))
+	 {
+         cout << "\tSearch result for key 3: theData = %f\n\n", theItem->theData;
+		 delete theItem;	// It is now our responsibility to delete the duplicate returned.
+	 }
+     else
+          cout << "\tSearch result for key 3: Unable to locate item in list\n\n";
+
+     // Test search (known success)
+     cout << "Testing Search function. Search for key 2 (in the list).\n";
+	 theItem = theList->Search(2);
+     if((theItem != NULL) && (theItem->key == 2))
+	 {
+         cout << "\tSearch result for key 2: theData = " << theItem->theData << endl << endl;
+		 delete theItem;	// It is now our responsibility to delete the duplicate returned.
+	 }
+     else
+          cout << "\tSearch result for key 2: Unable to locate item in list\n\n";
+
+     cout << "\n\nEnd list demonstration...\n\n";
+
+
+	return 0;
+}
