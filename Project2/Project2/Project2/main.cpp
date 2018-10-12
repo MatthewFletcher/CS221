@@ -27,21 +27,75 @@ int main()
 
 
 
-//TESTING CLONE FUNCTION
-	Student *stu1 = new Student(2312323, "CLONEME", "PLZ", "MyHouse");
+	Student *stu1 = new Student(100, "CLONEME", "PLZ", "MyHouse");
+	cout << endl;
+
+	Student *stu2 = new Student(101, "CLONEME1", "PLZ1", "MyHouse1");
+
+	Student *stu3 = new Student(102, "CLONEME2", "PLZ2", "MyHouse2");
+	
+	Student *stu4 = new Student(103, "CLONEME3", "PLZ3", "MyHouse");
 
 	stu1->printStudentInfo();
 
-	Student *stu2 = new Student();
+	House *h1 = new House();
 
-	
-	cout << "Running clone function" << endl;
-	stu2 = stu1->Clone();
-
-	delete stu1;
+	h1->SetHouseName("TestingHouse");
 
 
-	stu2->printStudentInfo();
+	h1->AddStudent(stu2);
+	h1->AddStudent(stu1);
+	h1->AddStudent(stu3);
+	h1->AddStudent(stu4);
+
+
+	//Student *fstu = h1->FindStudent("CLONEME", "PLZ");
+	//fstu->printStudentInfo();
+
+	Student *s;
+	int idToRemove;
+
+	idToRemove = 101;
+	s = h1->RemoveStudent(idToRemove);
+	if((s!=NULL) && (stu1->getStudentID() == idToRemove))
+	{
+		cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
+		delete s;
+	}
+
+	s = NULL;
+
+	idToRemove = 100;
+	s = h1->RemoveStudent(idToRemove);
+	if((s!=NULL) && (stu1->getStudentID() == idToRemove))
+	{
+		cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
+		delete s;
+	}
+
+	s = NULL;
+	idToRemove = 103;
+	s = h1->RemoveStudent(idToRemove);
+	if((s!=NULL) && (stu1->getStudentID() == idToRemove))
+	{
+		cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
+		delete s;
+	}
+	idToRemove = 102;
+	s = h1->RemoveStudent(idToRemove);
+	if((s!=NULL) && (stu1->getStudentID() == idToRemove))
+	{
+		cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
+		delete s;
+	}
+
+
+//TESTING CLONE FUNCTION
+	// Student *stu2 = new Student();
+	// cout << "Running clone function" << endl;
+	// stu2 = stu1->Clone();
+	// delete stu1;
+	// stu2->printStudentInfo();
 
 
 

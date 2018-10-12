@@ -39,10 +39,11 @@ House::~House()
 	}
 bool House::AddStudent(Student *stu)
 	{
+		cout << endl << "Add student function called" << endl;
 		Student *back = NULL;
 		Student *temp = m_pHead;
 
-		while ((temp != NULL) && (stu->getStudentID() < temp->getStudentID()))
+		while ((temp != NULL) && (stu->getStudentID() > temp->getStudentID()))
 		{
 			cout << "Looping through list" << endl;
 			back = temp;
@@ -62,6 +63,8 @@ bool House::AddStudent(Student *stu)
 			cout <<"Inserting student "<< stu->getStudentID()<<" somewhere in list" << endl;
 			back->m_pNext = stu;
 			stu->m_pNext = temp;
+
+			return true;
 		}
 
 		cout << "You should not be seeing this error message." << endl;
@@ -142,10 +145,22 @@ Student*  House::FindStudent(int studentID)
 	}
 Student* House::FindStudent(char *fname, char *lname)
 	{
-		Student *temp;
-		temp = m_pHead;
+		cout << endl << "set temp to m_pHead" << endl;
+		Student *temp = m_pHead;
 
-		while((temp != NULL))
+		cout << "temp->getname" << endl;
+		temp->getName(fname, lname);
+
+
+
+		char tempfirst[64];
+		char templast[64];
+
+		cout << "strcpy" << endl;
+		strcpy(fname, tempfirst);
+		strcpy(lname, templast);
+
+		while((temp != NULL) && strcmp(fname, tempfirst)!=0)
 		{
 			break;
 		}
