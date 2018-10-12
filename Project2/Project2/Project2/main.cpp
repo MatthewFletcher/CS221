@@ -22,11 +22,13 @@ int main()
 {
 
 
-	HogwartsSWW *hptr = new HogwartsSWW();
+	// HogwartsSWW *hptr = new HogwartsSWW();
+	// buildStudentLists(hptr);
 
-	//buildStudentLists(hptr);
 
-	Student *stu1 = new Student(2312323, "CLONEME", "HARDERDADDY", "FUCKME");
+
+//TESTING CLONE FUNCTION
+	Student *stu1 = new Student(2312323, "CLONEME", "PLZ", "MyHouse");
 
 	stu1->printStudentInfo();
 
