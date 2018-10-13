@@ -22,80 +22,89 @@ int main()
 {
 
 
-	// HogwartsSWW *hptr = new HogwartsSWW();
-	// buildStudentLists(hptr);
+	HogwartsSWW *hptr = new HogwartsSWW();
+	buildStudentLists(hptr);
+
+	Student *s1 = new Student(11, "Foo1", "McFoo1", "Gryffindor");
+	Student *s2 = new Student(13, "Foo2", "McFoo2", "Slytherin");
+	Student *s3 = new Student(17, "Foo3", "McFoo3", "Hufflepuff");
+	Student *s4 = new Student(19, "Foo4", "McFoo4", "Ravenclaw");
 
 
+	hptr->AddStudent(s1);
+	hptr->AddStudent(s2);
+	hptr->AddStudent(s3);
+	hptr->AddStudent(s4);
 
-	Student *stu1 = new Student(100, "CLONEME", "PLZ", "MyHouse");
-	cout << endl;
+	hptr->PrintHouses();
 
-	Student *stu2 = new Student(101, "CLONEME1", "PLZ1", "MyHouse1");
 
-	Student *stu3 = new Student(102, "CLONEME2", "PLZ2", "MyHouse2");
+// 	Student *stu1 = new Student(100, "CLONEME", "PLZ", "MyHouse");
+// 	cout << endl;
+
+// 	Student *stu2 = new Student(101, "CLONEME1", "PLZ1", "MyHouse1");
+
+// 	Student *stu3 = new Student(102, "CLONEME2", "PLZ2", "MyHouse2");
 	
-	Student *stu4 = new Student(103, "CLONEME3", "PLZ3", "MyHouse");
+// 	Student *stu4 = new Student(103, "CLONEME3", "PLZ3", "MyHouse");
 
-	stu1->printStudentInfo();
-
-	House *h1 = new House();
-
-	h1->SetHouseName("TestingHouse");
+// 	stu1->printStudentInfo();
 
 
-	h1->AddStudent(stu2);
-	h1->AddStudent(stu1);
-	h1->AddStudent(stu3);
-	h1->AddStudent(stu4);
+
+// 	h1->AddStudent(stu2);
+// 	h1->AddStudent(stu1);
+// 	h1->AddStudent(stu3);
+// 	h1->AddStudent(stu4);
 
 
-	//Student *fstu = h1->FindStudent("CLONEME", "PLZ");
-	//fstu->printStudentInfo();
+// 	//Student *fstu = h1->FindStudent("CLONEME", "PLZ");
+// 	//fstu->printStudentInfo();
 
-	Student *s;
-	int idToRemove;
+// 	Student *s;
+// 	int idToRemove;
 
-	idToRemove = 101;
-	s = h1->RemoveStudent(idToRemove);
-	if((s!=NULL) && (stu1->getStudentID() == idToRemove))
-	{
-		cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
-		delete s;
-	}
+// 	idToRemove = 101;
+// 	s = h1->RemoveStudent(idToRemove);
+// 	if((s!=NULL) && (stu1->getStudentID() == idToRemove))
+// 	{
+// 		cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
+// 		delete s;
+// 	}
 
-	s = NULL;
+// 	s = NULL;
 
-	idToRemove = 100;
-	s = h1->RemoveStudent(idToRemove);
-	if((s!=NULL) && (stu1->getStudentID() == idToRemove))
-	{
-		cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
-		delete s;
-	}
+// 	idToRemove = 100;
+// 	s = h1->RemoveStudent(idToRemove);
+// 	if((s!=NULL) && (stu1->getStudentID() == idToRemove))
+// 	{
+// 		cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
+// 		delete s;
+// 	}
 
-	s = NULL;
-	idToRemove = 103;
-	s = h1->RemoveStudent(idToRemove);
-	if((s!=NULL) && (stu1->getStudentID() == idToRemove))
-	{
-		cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
-		delete s;
-	}
-	idToRemove = 102;
-	s = h1->RemoveStudent(idToRemove);
-	if((s!=NULL) && (stu1->getStudentID() == idToRemove))
-	{
-		cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
-		delete s;
-	}
+// 	s = NULL;
+// 	idToRemove = 103;
+// 	s = h1->RemoveStudent(idToRemove);
+// 	if((s!=NULL) && (stu1->getStudentID() == idToRemove))
+// 	{
+// 		cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
+// 		delete s;
+// 	}
+// 	idToRemove = 102;
+// 	s = h1->RemoveStudent(idToRemove);
+// 	if((s!=NULL) && (stu1->getStudentID() == idToRemove))
+// 	{
+// 		cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
+// 		delete s;
+// 	}
 
 
-//TESTING CLONE FUNCTION
-	// Student *stu2 = new Student();
-	// cout << "Running clone function" << endl;
-	// stu2 = stu1->Clone();
-	// delete stu1;
-	// stu2->printStudentInfo();
+// //TESTING CLONE FUNCTION
+// 	// Student *stu2 = new Student();
+// 	// cout << "Running clone function" << endl;
+// 	// stu2 = stu1->Clone();
+// 	// delete stu1;
+// 	// stu2->printStudentInfo();
 
 
 

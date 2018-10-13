@@ -169,13 +169,12 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 	void Student::printStudentInfo()
 	{
 		cout << "Printing Student Information" << endl << endl;
-		cout << " ID\tName\tHouse" << endl;
-		cout << getStudentID() <<   "\t" <<  m_sMagicalName << " " << m_sWizardFamilyName << "\t" << m_sHouse << endl;
+		cout << " ID\tName\t\tHouse" << endl;
+		cout << getStudentID() <<   "\t" <<  m_sMagicalName << "\t" << m_sWizardFamilyName << "\t" << m_sHouse << endl;
 
 		for (int i = 0; i < 8; ++i)
 		{
-			if(strlen(m_sClasses[i]) != 0) cout << m_sClasses[i]<< "\t " << m_iGrades[i] 
-				<< endl;
+			if(strlen(m_sClasses[i]) != 0) cout << m_sClasses[i]<< "\t " << m_iGrades[i] << endl;
 		}
  
 	
