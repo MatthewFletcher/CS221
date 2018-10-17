@@ -1032,3 +1032,83 @@ Reheaping is a recursive function
 Removing a node with 2 children is the hardest one to implement (ON PROGRAMMING ASSIGNMENT(
 
 If program crashes you have a bad pointer somewhere. 
+
+
+
+
+Analysis of algorithms: steps you have to go through to do something 
+Analysis of algorithms: measuring the efficiency/speed that a particular algorithm runs in 
+
+
+Analysis:
+1. Implement algorithm on selected platofrm in the selected programming language
+2. Determine the time required for each basic operation. 
+3. Identify possible unknown quantities that can beused to describe the frequency of execution of the basic operations. 
+4. Develop a relaistic model for the input to the program
+5. Calculate the total run time for each operation and add up the results 
+
+
+Big O notation: A notation that expresses computing time as the term in a function that increases most rapidly relagtive to the size of a problem 
+
+From fastest to slowest:
+O(1): Constant>> keep dreaming
+O(log n) logarithmic >> pretty good
+O(n) Linear >> acceptable
+O( n log n) n log n >> not too bad, but time starts increasing noticeably
+O(n^2) quadratic >> If N starts getting too large, this starts getting bad
+O(n^3) cubic
+O(2^n) exponential
+O(10^n) Exponential
+
+Sequential search: 
+Best case: First item in list: O(1)
+Worst case: last item in list
+
+Average case: sum of times to find item i, divided by n. 
+Comes out to O(n)
+
+
+Binary search tree: O(log n)
+
+
+
+
+Recursion: Ability of a function to call itself 
+Eat an elephant by eating a bite then eating the rest. 
+
+Can be multiple recursive solutions to a problem 
+
+
+ON TEST: 
+Base case: Case for which the solution can be stated non-recursively
+General case: The case for which the solution is expressed int erms of a smaller version of itself
+
+Verify a recursive solution by 3 questions:
+1. Is there a base case? Is there a non-recursive way out oof the function?
+2. Does each recursive call to the fucntion involve a smaller case of the original problem, leading invariably to the base case?
+3. Assuming the recursive calls work correctly, does the whol function work?
+
+
+Reversing the order of nodes in a linked list:
+1. Remove the first node from the list
+2. Reverse the order of the rest of the list
+3. Concatenate the first node to the end of the reversed rest of the list
+
+
+Towers of Hanoi can be solved recursively
+
+
+
+When to use recursion
+1. Get an Exact definition of the problem so you can detrermine if the solution can be recursive
+2. Determine the size (make sure you have enough memroy)
+3. Identify the base base
+4. Identify the general case
+
+
+Danger:
+Infinite regression: When there is no base case or no allowance for one
+Ranges out of bounds
+Trying to call a recursive function in a class when a required argument is a private class member
+
+
