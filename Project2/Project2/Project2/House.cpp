@@ -39,12 +39,13 @@ House::~House()
 	}
 bool House::AddStudent(Student *stu)
 	{
-		cout << endl << "Add student function called" << endl;
+		cout << endl << "Add student function called in House.cpp" << endl;
 		Student *back = NULL;
 		Student *temp = m_pHead;
 
-		while ((temp != NULL) && (stu->getStudentID() > temp->getStudentID()))
+		while ((temp != NULL) && (stu->getStudentID() < temp->getStudentID()))
 		{
+			cout << "." << stu->getStudentID() << "." << ">" << "." << temp->getStudentID() << "." << endl;
 			cout << "Looping through list" << endl;
 			back = temp;
 			temp = temp->m_pNext;
@@ -72,6 +73,7 @@ bool House::AddStudent(Student *stu)
 	}
 Student* House::RemoveStudent(int studentID)
 	{
+		cout << "Remove student called from House.cpp" << endl;
 
 		cout << "Removing student with ID " << studentID << endl;
 		Student *temp, *back;
@@ -87,8 +89,10 @@ Student* House::RemoveStudent(int studentID)
 		back = NULL;
 		while((temp != NULL) && (studentID != temp->getStudentID()))
 		{
+			cout << "Temp ID: " << temp->getStudentID() << endl;
 			back = temp;
 			temp = temp->m_pNext;
+			getchar();
 		}
 
 		if (temp==NULL)
@@ -178,6 +182,7 @@ void House::PrintHouseList()
 
 		else
 		{
+			cout << "Printing House List" << endl;
 			temp = m_pHead;
 			while (temp!=NULL)
 			{

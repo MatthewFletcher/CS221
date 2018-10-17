@@ -12,7 +12,7 @@ using namespace std;
 bool getNextLine(char *line, int lineLen);
 void buildStudentLists(HogwartsSWW *h);
 
-ifstream	inFile;	// File to read from
+ifstream inFile;	// File to read from
 
 // Define the name of the file to read from
 #define STUDENT_FILE "students.txt"
@@ -22,89 +22,72 @@ int main()
 {
 
 
-	HogwartsSWW *hptr = new HogwartsSWW();
-	buildStudentLists(hptr);
+	 HogwartsSWW *hptr = new HogwartsSWW();
+	// buildStudentLists(hptr);
 
-	Student *s1 = new Student(11, "Foo1", "McFoo1", "Gryffindor");
-	Student *s2 = new Student(13, "Foo2", "McFoo2", "Slytherin");
-	Student *s3 = new Student(17, "Foo3", "McFoo3", "Hufflepuff");
-	Student *s4 = new Student(19, "Foo4", "McFoo4", "Ravenclaw");
-
-
-	hptr->AddStudent(s1);
-	hptr->AddStudent(s2);
-	hptr->AddStudent(s3);
-	hptr->AddStudent(s4);
-
-	hptr->PrintHouses();
+	Student *stu1 = new Student(11, "Foo1", "McFoo1", "Gryffindor");
+	Student *stu2 = new Student(13, "Foo2", "McFoo2", "Gryffindor");
+	Student *stu3 = new Student(17, "Foo3", "McFoo3", "Gryffindor");
+	Student *stu4 = new Student(19, "Foo4", "McFoo4", "Gryffindor");
 
 
-// 	Student *stu1 = new Student(100, "CLONEME", "PLZ", "MyHouse");
-// 	cout << endl;
+	hptr->AddStudent(stu1);
 
-// 	Student *stu2 = new Student(101, "CLONEME1", "PLZ1", "MyHouse1");
-
-// 	Student *stu3 = new Student(102, "CLONEME2", "PLZ2", "MyHouse2");
-	
-// 	Student *stu4 = new Student(103, "CLONEME3", "PLZ3", "MyHouse");
-
-// 	stu1->printStudentInfo();
+	cout << "Printing student information" << endl;
+	//stu1->printStudentInfo();
+	hptr->AddStudent(stu1);
+	hptr->AddStudent(stu2);
+	hptr->AddStudent(stu3);
+	hptr->AddStudent(stu4);
 
 
+	Student *s;
+	int idToRemove;
+	idToRemove = 19;
+	char housename[64];
 
-// 	h1->AddStudent(stu2);
-// 	h1->AddStudent(stu1);
-// 	h1->AddStudent(stu3);
-// 	h1->AddStudent(stu4);
-
-
-// 	//Student *fstu = h1->FindStudent("CLONEME", "PLZ");
-// 	//fstu->printStudentInfo();
-
-// 	Student *s;
-// 	int idToRemove;
-
-// 	idToRemove = 101;
-// 	s = h1->RemoveStudent(idToRemove);
-// 	if((s!=NULL) && (stu1->getStudentID() == idToRemove))
-// 	{
-// 		cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
-// 		delete s;
-// 	}
-
-// 	s = NULL;
-
-// 	idToRemove = 100;
-// 	s = h1->RemoveStudent(idToRemove);
-// 	if((s!=NULL) && (stu1->getStudentID() == idToRemove))
-// 	{
-// 		cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
-// 		delete s;
-// 	}
-
-// 	s = NULL;
-// 	idToRemove = 103;
-// 	s = h1->RemoveStudent(idToRemove);
-// 	if((s!=NULL) && (stu1->getStudentID() == idToRemove))
-// 	{
-// 		cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
-// 		delete s;
-// 	}
-// 	idToRemove = 102;
-// 	s = h1->RemoveStudent(idToRemove);
-// 	if((s!=NULL) && (stu1->getStudentID() == idToRemove))
-// 	{
-// 		cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
-// 		delete s;
-// 	}
+	strcpy(housename, "Gryffindor");
 
 
-// //TESTING CLONE FUNCTION
-// 	// Student *stu2 = new Student();
-// 	// cout << "Running clone function" << endl;
-// 	// stu2 = stu1->Clone();
-// 	// delete stu1;
-// 	// stu2->printStudentInfo();
+	// s = hptr->RemoveStudent(housename,idToRemove);
+	// if((s!=NULL) && (stu1->getStudentID() == idToRemove))
+	// {
+	// 	cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
+	// 	delete s;
+	// }
+
+	// idToRemove = 5;
+	// s = hptr->RemoveStudent(housename, idToRemove);
+	// if((s!=NULL) && (stu2->getStudentID() == idToRemove))
+	// {
+	// 	cout << "Student " << stu2->getStudentID() << " Removed successfully" << endl;
+	// 	delete s;
+	// }
+	// cout << "Got to here" << endl;
+
+	// s = NULL;
+	// idToRemove = 103;
+	// s = hptr->RemoveStudent(idToRemove);
+	// if((s!=NULL) && (stu1->getStudentID() == idToRemove))
+	// {
+	// 	cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
+	// 	delete s;
+	// }
+	// idToRemove = 102;
+	// s = hptr->RemoveStudent(idToRemove);
+	// if((s!=NULL) && (stu1->getStudentID() == idToRemove))
+	// {
+	// 	cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
+	// 	delete s;
+	// }
+
+
+//TESTING CLONE FUNCTION
+	// Student *stu2 = new Student();
+	// cout << "Running clone function" << endl;
+	// stu2 = stu1->Clone();
+	// delete stu1;
+	// stu2->printStudentInfo();
 
 
 
