@@ -21,32 +21,44 @@ ifstream inFile;	// File to read from
 int main()
 {
 
+	House *h = new House();
+	h->SetHouseName("Gryffindor");
+	char tempName[64];
+	strcpy(tempName, h->GetHouseName());
+	if (strcmp(tempName, "Gryffindor") == 0)
+	{
+		cout << "Test successful" << endl;
+	}
 
-	 HogwartsSWW *hptr = new HogwartsSWW();
+	delete(h);
+
+
+
+	 // HogwartsSWW *hptr = new HogwartsSWW();
 	// buildStudentLists(hptr);
 
-	Student *stu1 = new Student(11, "Foo1", "McFoo1", "Gryffindor");
-	Student *stu2 = new Student(13, "Foo2", "McFoo2", "Gryffindor");
-	Student *stu3 = new Student(17, "Foo3", "McFoo3", "Gryffindor");
-	Student *stu4 = new Student(19, "Foo4", "McFoo4", "Gryffindor");
+	// Student *stu1 = new Student(11, "Foo1", "McFoo1", "Gryffindor");
+	// Student *stu2 = new Student(13, "Foo2", "McFoo2", "Gryffindor");
+	// Student *stu3 = new Student(17, "Foo3", "McFoo3", "Gryffindor");
+	// Student *stu4 = new Student(19, "Foo4", "McFoo4", "Gryffindor");
 
 
-	hptr->AddStudent(stu1);
+	// hptr->AddStudent(stu1);
 
-	cout << "Printing student information" << endl;
-	//stu1->printStudentInfo();
-	hptr->AddStudent(stu1);
-	hptr->AddStudent(stu2);
-	hptr->AddStudent(stu3);
-	hptr->AddStudent(stu4);
+	// cout << "Printing student information" << endl;
+	// //stu1->printStudentInfo();
+	// hptr->AddStudent(stu1);
+	// hptr->AddStudent(stu2);
+	// hptr->AddStudent(stu3);
+	// hptr->AddStudent(stu4);
 
 
-	Student *s;
-	int idToRemove;
-	idToRemove = 19;
-	char housename[64];
+	// Student *s;
+	// int idToRemove;
+	// idToRemove = 19;
+	// char housename[64];
 
-	strcpy(housename, "Gryffindor");
+	// strcpy(housename, "Gryffindor");
 
 
 	// s = hptr->RemoveStudent(housename,idToRemove);
@@ -83,6 +95,8 @@ int main()
 
 
 //TESTING CLONE FUNCTION
+	// Student *stu1 = new Student (9999, "Plz", "CloneMe", "Gryffindor");
+	
 	// Student *stu2 = new Student();
 	// cout << "Running clone function" << endl;
 	// stu2 = stu1->Clone();
