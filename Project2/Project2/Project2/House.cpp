@@ -196,10 +196,11 @@ void House::SetHouseName(char *name)
 	{
 		strcpy(m_sHouseName, name);
 		cout << "SetHouseName is running" << endl;
-		cout << "House name set to " << name << endl;
+		cout << "House name set to >>> " << m_sHouseName << endl;
+		cout << "Exit SetHouseName" << endl;
 	}
-char House::*GetHouseName()
+char *House::GetHouseName()
 	{
-
-		return 0;
+		cout << "GetHouseName" << endl;
+		return m_sHouseName;
 	}
