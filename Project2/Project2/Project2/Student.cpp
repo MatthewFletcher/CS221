@@ -28,6 +28,11 @@ Student::Student()
 
 }
 
+Student::~Student()
+{
+	cout << "Student destructor" << endl;
+}
+
 //Define overloaded constructor
 Student::Student(int iID, char *mName, char *wName, char *hName)
 {
@@ -84,9 +89,6 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 		{
 			strcpy(mName, m_sMagicalName);
 			strcpy(wName, m_sWizardFamilyName);
-
-			//cout << "getName is running" << endl;
-
 		}
 
 	//- Get and set the student's house name. 
@@ -168,7 +170,7 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 
 	void Student::printStudentInfo()
 	{
-		cout << "Printing Student Information" << endl << endl;
+		//cout << "Printing Student Information" << endl << endl;
 		cout << " ID\tName\t\tHouse" << endl;
 		cout << getStudentID() <<   "\t" <<  m_sMagicalName << "\t" << m_sWizardFamilyName << "\t" << m_sHouse << endl;
 
