@@ -21,87 +21,88 @@ ifstream inFile;	// File to read from
 int main()
 {
 
-	House *h = new House();
-	h->SetHouseName("Gryffindor");
-	char tempName[64];
-	strcpy(tempName, h->GetHouseName());
-	if (strcmp(tempName, "Gryffindor") == 0)
-	{
-		cout << "Test successful" << endl;
-	}
+	// House *hptr = new House();
+	// h->SetHouseName("Gryffindor");
+	// char tempName[64];
+	// strcpy(tempName, h->GetHouseName());
+	// if (strcmp(tempName, "Gryffindor") == 0)
+	// {
+	// 	cout << "Test successful" << endl;
+	// }
 
-	delete(h);
-
-
-
-	 // HogwartsSWW *hptr = new HogwartsSWW();
-	// buildStudentLists(hptr);
-
-	// Student *stu1 = new Student(11, "Foo1", "McFoo1", "Gryffindor");
-	// Student *stu2 = new Student(13, "Foo2", "McFoo2", "Gryffindor");
-	// Student *stu3 = new Student(17, "Foo3", "McFoo3", "Gryffindor");
-	// Student *stu4 = new Student(19, "Foo4", "McFoo4", "Gryffindor");
+	// delete(h);
 
 
-	// hptr->AddStudent(stu1);
 
-	// cout << "Printing student information" << endl;
-	// //stu1->printStudentInfo();
+	 HogwartsSWW *hptr = new HogwartsSWW();
+	buildStudentLists(hptr);
+
+
+	hptr->PrintHouses();
+
+	// Student *stu1 = new Student(1, "Foo1", "McFoo1", "Gryffindor");
+	// Student *stu2 = new Student(2, "Foo2", "McFoo2", "Gryffindor");
+	// Student *stu3 = new Student(3, "Foo3", "McFoo3", "Gryffindor");
+	// Student *stu4 = new Student(4, "Foo4", "McFoo4", "Gryffindor");
+
+
 	// hptr->AddStudent(stu1);
 	// hptr->AddStudent(stu2);
 	// hptr->AddStudent(stu3);
 	// hptr->AddStudent(stu4);
 
 
+
 	// Student *s;
-	// int idToRemove;
-	// idToRemove = 19;
-	// char housename[64];
 
-	// strcpy(housename, "Gryffindor");
-
-
-	// s = hptr->RemoveStudent(housename,idToRemove);
-	// if((s!=NULL) && (stu1->getStudentID() == idToRemove))
+	// cout << "FIND BY ID" << endl;
+	// for (int i = 1; i <= 5; ++i)
 	// {
-	// 	cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
-	// 	delete s;
-	// }
-
-	// idToRemove = 5;
-	// s = hptr->RemoveStudent(housename, idToRemove);
-	// if((s!=NULL) && (stu2->getStudentID() == idToRemove))
-	// {
-	// 	cout << "Student " << stu2->getStudentID() << " Removed successfully" << endl;
-	// 	delete s;
-	// }
-	// cout << "Got to here" << endl;
-
-	// s = NULL;
-	// idToRemove = 103;
-	// s = hptr->RemoveStudent(idToRemove);
-	// if((s!=NULL) && (stu1->getStudentID() == idToRemove))
-	// {
-	// 	cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
-	// 	delete s;
-	// }
-	// idToRemove = 102;
-	// s = hptr->RemoveStudent(idToRemove);
-	// if((s!=NULL) && (stu1->getStudentID() == idToRemove))
-	// {
-	// 	cout << "Student " << stu1->getStudentID() << " Removed successfully" << endl;
-	// 	delete s;
-	// }
-
-
-//TESTING CLONE FUNCTION
-	// Student *stu1 = new Student (9999, "Plz", "CloneMe", "Gryffindor");
+		
+	// 	if (i == 5)
+	// 	{
+	// 		cout << "Testing out of range" << endl;
+	// 	}
 	
-	// Student *stu2 = new Student();
+	//  	s = hptr->FindStudent(i);
+
+	// 	if ((s!=NULL) && (s->getStudentID() == i))
+	// 	{
+	// 		cout << "Findstudent for id " << i << " worked" << endl;
+	// 	}
+	//  }
+
+
+
+	// cout << "FIND BY NAME" << endl;
+	// char mName[32], wName[32];
+	// s = hptr->FindStudent("Foo1", "McFoo1");
+	// if(s!=NULL)
+	// {
+	// 	s->getName(mName, wName);
+	// 	if((strcmp(mName, "Foo1") == 0) && (strcmp(wName, "McFoo1") == 0))
+	// 	{
+	// 		cout << "Name find successful" << endl;
+	// 	}
+	// 	else cout << "FAILED  " << endl;
+	// }
+	// else
+	// {
+	// 	cout << "Name find failed" << endl;
+	// }
+
+
+
+
+
+	// //TESTING CLONE FUNCTION
+	// Student *stu10 = new Student (9999, "Plz", "CloneMe", "Gryffindor");
+	// stu10->printStudentInfo();
+	// Student *stuclone = new Student();
 	// cout << "Running clone function" << endl;
-	// stu2 = stu1->Clone();
-	// delete stu1;
-	// stu2->printStudentInfo();
+	// stuclone = stu10->Clone();
+	// delete stu10;
+	// stuclone->printStudentInfo();
 
 
 
@@ -161,7 +162,7 @@ void buildStudentLists(HogwartsSWW *h)
 
 		// Add this student to the school
 		h->AddStudent(s);
-		cout << "Adding student ID: "<< s->getStudentID() << endl;
+		//cout << "Adding student ID: "<< s->getStudentID() << endl;
 	}
 }
 

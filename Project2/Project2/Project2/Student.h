@@ -23,6 +23,9 @@ public:
 	//Default Constructor
 	Student();
 
+	//Default Destructor
+	~Student();
+
 	//Second constructor
 	Student(int iID, char *mName, char *wName, char *hName);
 

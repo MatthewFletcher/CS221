@@ -15,7 +15,7 @@ using namespace std;
 //Define Default Constructor
 Student::Student()
 {
-	cout << "Creating student class instance using default constructor" << endl;
+	//cout << "Creating student class instance using default constructor" << endl;
 
 	for (int i = 0; i < 8; ++i)
 	{
@@ -30,14 +30,15 @@ Student::Student()
 
 Student::~Student()
 {
-	cout << "Student destructor" << endl;
+	
 }
+
 
 //Define overloaded constructor
 Student::Student(int iID, char *mName, char *wName, char *hName)
 {
 	m_pNext = NULL;
-	cout << "overloaded constructor" << endl;
+	//cout << "overloaded constructor" << endl;
 
 	for (int i = 0; i < 8; ++i)
 	{
@@ -50,10 +51,10 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 	strcpy(m_sWizardFamilyName, wName);
 	strcpy(m_sHouse, hName);
 
-	cout << "ID set to " << iID << endl;
-	cout << "First name set to " << m_sMagicalName << endl;
-	cout << "Last name set to " << m_sWizardFamilyName << endl;
-	cout << "House set to " << m_sHouse << endl;
+	// cout << "ID set to " << iID << endl;
+	// cout << "First name set to " << m_sMagicalName << endl;
+	// cout << "Last name set to " << m_sWizardFamilyName << endl;
+	// cout << "House set to " << m_sHouse << endl;
 		
 
 }
@@ -65,14 +66,14 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 	//Get and set the student ID
 	void Student::setStudentID(int iID)
 	{	
-		cout << "ID set to " << iID << endl;
+		// cout << "ID set to " << iID << endl;
 
 		m_iStudentID = iID;
 	}
 	int Student::getStudentID()
 	{
 		return m_iStudentID;
-		cout << "getter runs" << endl;
+		// cout << "getter runs" << endl;
 	}
 
 
@@ -135,7 +136,7 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
  //Reference function that returns a letter and number grade
 	void Student::getGrade(int idx, int &iGrade, char &cGrade)
 		{
-			cout << "getGrade with pointers is running " << endl;
+			//cout << "getGrade with pointers is running " << endl;
 			iGrade = m_iGrades[idx];
 
 			if (iGrade < 60)cGrade = 'T';
@@ -145,7 +146,7 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 			else if (iGrade <=94)cGrade = 'E';
 			else if (iGrade <=100)cGrade = 'O';
 
-			cout << "Letter grade: "<<iGrade <<" is a " << cGrade << endl;
+			//cout << "Letter grade: "<<iGrade <<" is a " << cGrade << endl;
 
 
 		}
@@ -163,7 +164,7 @@ Student::Student(int iID, char *mName, char *wName, char *hName)
 			else if (*iGrade <=94)*cGrade = 'E';
 			else if (*iGrade <=100)*cGrade = 'O';
 
-			cout << "Letter grade: "<<*iGrade <<" is a " << *cGrade << endl;
+			//cout << "Letter grade: "<<*iGrade <<" is a " << *cGrade << endl;
 		}
 
 
