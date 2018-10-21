@@ -266,16 +266,14 @@ Book *Library::getBookByTitle(const char *title)
 Book *Library::getBookByTitle(const char *title, Book *rt)
 	{
 
-	
-
 	}
 
 void Library::printLibrary()
 {
-    cout << "\n============================================================\n";
-    cout << "               NODES CONTAINED IN THE TREE\n";
-    cout << "============================================================\n";
-    cout << setw(8)  << "Book #" << setw(28) << "Title" << setw(28) << "Author" << endl;
+    cout << "\n=====================================================================\n";
+    cout << "                      NODES CONTAINED IN THE TREE\n";
+    cout << "=======================================================================\n";
+    cout << right << setw(6)  << "Book #"<< left << setw(64) << "\tTitle" << setw(28) << "Author" << endl;
 
     printAll(m_pRoot);
     cout << "============================================================\n";
@@ -284,7 +282,7 @@ void Library::printLibrary()
 void Library::printOne(Book *book)
 	{
 
-		cout << setw(5) << book->bookNumber << setw(1)  << "\t" << book->Title << endl;
+		cout << setw(5) << book->bookNumber << "\t" << setw(64) << book->Title << book->Author <<  endl;
 	}
 
 
