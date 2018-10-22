@@ -9,12 +9,12 @@ output: main.o Book.o Library.o
 main.o: main.cpp
 	g++ -c main.cpp
 
+Library.o: Library.cpp Library.h
+	g++ -c Library.cpp
 
 Book.o: Book.cpp Book.h
 	g++ -c Book.cpp
 
-Library.o: Library.cpp Library.h
-	g++ -c Library.cpp
 
 clean:
 	rm *.o
