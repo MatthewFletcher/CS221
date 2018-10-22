@@ -286,30 +286,34 @@ Return null
 Book *Library::getBookByTitle(const char *title, Book *rt)
     {
 
+		if (rt == NULL)
+		{
+			cout << "Returned null" << endl;
+			return NULL;
+		}
         cout << "Searching for book, looking at book " 
         << rt->Title << endl;
 
         Book *n = rt;
-
-        if (strcmp(title, rt->Title) == 0)
+        
+		if (n->left!=NULL)
+        {
+        	n = getBookByTitle(title, rt->left);
+        }
+        
+		if (strcmp(title, rt->Title) == 0)
         {
             cout << "Book found" << endl;
             n = rt;
         }
 
-        if (n->left!=NULL)
-        {
-        	n = getBookByTitle(title, rt->left);
-        }
+
         if (n==NULL)
         {
         	n = getBookByTitle(title, rt->right);
         }
 
-        return n;
-
-
-        
+        return n;    
 
     }
 

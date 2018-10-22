@@ -31,7 +31,7 @@ int main()
 	// lib->printLibrary();
 
 	char searchTitle[64] = {NULL};
-	strcpy(searchTitle, "One Thousand Magical Herbs and Fungi");
+	strcpy(searchTitle, "Quidditch Through the Ages");
 
 
 	Book *bk = lib->getBookByTitle(searchTitle);
