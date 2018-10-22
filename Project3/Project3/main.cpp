@@ -66,5 +66,9 @@ int main()
 	// }
 
 
+
+	 int foo;
+	 cin >> foo;
+
 	return 0;
 }
