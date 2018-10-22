@@ -11,7 +11,7 @@ int main()
 
 	cout << "1. Test DB" << endl;
 	cout << "2. Full DB" << endl;
-
+	cout << "Enter choice >>> ";
 	cin >> choice;
 
 	if (choice==1)
