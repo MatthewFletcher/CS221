@@ -9,6 +9,7 @@ using namespace std;
 
 
 
+//Code obtained from code vault
 void Library::printAll(Book *rt)
 	{
 		if(rt != NULL)
@@ -19,6 +20,7 @@ void Library::printAll(Book *rt)
 			}
 	}
 
+//Code obtained from code vault
 bool Library::getNextLine(ifstream& inFile, char *line, int lineLen)
 	{
 	int	done = false;
@@ -42,6 +44,7 @@ bool Library::getNextLine(ifstream& inFile, char *line, int lineLen)
 	return true; // Flag successful read
 	}
 
+//Code obtained from code vault
 void Library::destroyTree(Book *rt)
 	{
 		if(rt==NULL) return;  // Nothing to clear
@@ -51,7 +54,7 @@ void Library::destroyTree(Book *rt)
 		return;
 	}
 
-
+//Code obtained from code vault
 bool Library::isEmpty()
 {
 	return (m_pRoot==NULL);
@@ -68,6 +71,7 @@ Library::~Library()
 	{
 		destroyTree(m_pRoot);
 	}
+
 
 bool Library::buildLibrary(const char *fileName)
 	{
@@ -105,6 +109,7 @@ bool Library::buildLibrary(const char *fileName)
 	return true;
 	}
 
+//Code obtained from code vault
 bool Library::addBook(Book *newBook)
 	{
 	Book *temp;
@@ -135,6 +140,7 @@ bool Library::addBook(Book *newBook)
    return(true);
 	}
 
+//Code obtained from code vault
 Book *Library::removeBook(int bookNum)
 	{
 		Book *back;
@@ -236,7 +242,7 @@ Book *Library::removeBook(int bookNum)
 		}
 	
 	}
-
+//Code obtained from code vault
 Book *Library::getBookByNumber(int bookNum)
 	{
 		Book *temp;
@@ -258,26 +264,66 @@ Book *Library::getBookByNumber(int bookNum)
 //Public Function
 Book *Library::getBookByTitle(const char *title)
 	{
+
 		return getBookByTitle(title, m_pRoot);
 	}
 
 
 //Private Function
+//Using an In Order Traversal 
+/*
+if ( rt!= NULL) {
+Left = getBookByTitle(title, rt->left);
+If left is not null
+Return left
+// It should stop here if it found it in left
+Right = the above but with rt->right
+If right is not null
+Return right
+If still couldn't find it 
+Return null
+*/
 Book *Library::getBookByTitle(const char *title, Book *rt)
-	{
+    {
 
-	}
+        cout << "Searching for book, looking at book " 
+        << rt->Title << endl;
+
+        Book *n = rt;
+
+        if (strcmp(title, rt->Title) == 0)
+        {
+            cout << "Book found" << endl;
+            n = rt;
+        }
+
+        if (n->left!=NULL)
+        {
+        	n = getBookByTitle(title, rt->left);
+        }
+        if (n==NULL)
+        {
+        	n = getBookByTitle(title, rt->right);
+        }
+
+        return n;
+
+
+        
+
+    }
 
 void Library::printLibrary()
 {
-    cout << "\n=====================================================================\n";
-    cout << "                      NODES CONTAINED IN THE TREE\n";
-    cout << "=======================================================================\n";
-    cout << right << setw(6)  << "Book #"<< left << setw(64) << "\tTitle" << setw(28) << "Author" << endl;
+	cout << "\n=====================================================================\n";
+	cout << "					  NODES CONTAINED IN THE TREE\n";
+	cout << "=======================================================================\n";
+	cout << right << setw(6)  << "Book #"<< left << setw(64) << "\tTitle" << setw(28) << "Author" << endl;
 
-    printAll(m_pRoot);
-    cout << "============================================================\n";
+	printAll(m_pRoot);
+	cout << "============================================================\n";
 }
+
 
 void Library::printOne(Book *book)
 	{
@@ -286,7 +332,7 @@ void Library::printOne(Book *book)
 	}
 
 
-
+//Code obtained from code vault
 Book *Library::DupNode(Book * T)
 {
 	Book *dupNode;

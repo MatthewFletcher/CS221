@@ -28,7 +28,20 @@ int main()
 	else return 0;
 	
 	// // TESTING Print Library
-	lib->printLibrary();
+	// lib->printLibrary();
+
+	char searchTitle[64] = {NULL};
+	strcpy(searchTitle, "One Thousand Magical Herbs and Fungi");
+
+
+	Book *bk = lib->getBookByTitle(searchTitle);
+	if (bk != NULL)
+	{
+		cout << endl;
+		cout << "Searching for: " << searchTitle << endl;
+		cout << "Function returns: " << bk->Title << endl;
+	}
+	 else cout << "Fn returned NULL" << endl;
 
 	// //Testing Getbookbynumber
 	// Book *bk;
