@@ -1,7 +1,7 @@
 /*******************************************************************
 *   File name: Student.cpp
 *   Author's name: Matt Fletcher
-*   Programming Assignment 1:  //TODO Program Name
+*   Programming Assignment 2
 *   
 *   This program is entirely my own work
 *******************************************************************/
