@@ -1112,3 +1112,99 @@ Ranges out of bounds
 Trying to call a recursive function in a class when a required argument is a private class member
 
 
+Set: An unordered colection of distinct values chosen from the possivle values of a domain 
+Component/base type: the data type of the components
+Subset: a set x is a subset of y if each item in x is also in y 
+Universal set: the set containing all the values of the component type 
+Empty set: the set with no members
+Cardinality: the number of items in a set 
+
+
+
+Set of numbers could be implemented as an array, or as a linked list.
+
+
+Building a set of structures
+Type1Str, Type2Str, Type3Str... Type5Str
+
+struct SetNode
+{
+	int nodeType;
+	SetNode *next;
+	void *setMember;
+};
+
+
+SetNode *s = new SetNode();
+s->nodeType = 3;
+s->next = NULL;
+
+
+Type3Str *t3 = new Type3Str;
+//fill in t3
+
+s->setNode = (void*) t3;
+(type3struct *)(s->_____)
+
+
+
+//How to use the this keyword
+
+void setStudentid(int m_iStudentID)
+{
+
+this->m_iStudent = m_iStudentID;
+
+}
+
+
+STL includes a set #include <set>
+
+names.insert(item);
+names.erase(item);
+
+names::iterator itr = names.find(item);
+if(itr != names.end()) cout << "Found it" << endl;
+
+
+
+
+GRAPHS (yay)
+LOOK AT GRAPHS_2
+Vertex Edge: Line between nodes
+Weighted graph: There is a value associated with each edge 
+Directed graph/Digraph: Direction associated with each edge. Use an arrow to indicate direction
+Length of a path: if unweighted, number of edges passed through. If weighted, total weight passed through. 
+Adjacent vertices: two vertices that connect via an edge 
+Connected vertices: Vertices that can be connected via edges
+Connected components: A subset of all connected vertices (one set of connected vertices, another set of connected vertices, but the two are not connected)
+Cycle: You start and end on the same vertex
+Simple cycle: cycle where you never hit any vertex more than once except for first vertex
+In degree: number of edges going into a vertex
+Out degree: number of edges going out of a vertex
+Predecessor: comes before: connected on the other end of incoming vertices
+Successor: comes after: connected on the other end of outgoing vertices
+
+
+
+
+Question will be asked about implementing a graph. 
+Probably will ask how to implement a graph as an adjacency matrix or an adjacency set. DON'T MIX THEM UP 
+ON TEST
+
+
+Adjacency matrix: Array or struct or class that represents the vertices (static)
+Essentially a truth table. Row # is node # of source, Column # is node # of destination. If the nodes are adjacent, true, else false. 
+
+1D array of classes that represent the vertices, 2D array of edges
+TODO check slide Graphs_4
+
+
+Adjacency set is a linke list of structures or classes that represent each of the vertices
+Each struct has connected to it a linked list of another struct that represents the edges
+
+
+
+
+
+Adjacency set uses a forward declaration (essentially function prototype for variable type)
