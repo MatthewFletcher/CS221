@@ -16,7 +16,7 @@ private:
 	bool getNextLine(ifstream& inFile, char *line, int lineLen);
 	void destroyTree(Book *rt);
 	Book *DupNode(Book *T);
-	
+	Book *getBookByTitle(const char *title, Book *rt);
 public:
 	Library();
 	~Library();
@@ -26,7 +26,7 @@ public:
 	Book *removeBook(int bookNum);
 	Book *getBookByNumber(int bookNum);
 	Book *getBookByTitle(const char *title);
-	Book *getBookByTitle(const char *title, Book *rt);
+
 	void printLibrary();
 	void printOne(Book *book);
 
