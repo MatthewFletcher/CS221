@@ -12,8 +12,8 @@ main.o: main.cpp
 Library.o: Library.cpp Library.h
 	g++ -c Library.cpp
 
-Book.o: Book.cpp Book.h
-	g++ -c Book.cpp
+Book.o: Book.h
+	g++ -c Book.h
 
 
 clean:
