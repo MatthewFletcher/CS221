@@ -1,7 +1,7 @@
 /*******************************************************************
 *   File name: House.h
 *   Author's name: Matt Fletcher
-*   Programming Assignment 2:  //TODO Program Name
+*   Programming Assignment 2
 *   
 *   This program is entirely my own work
 *******************************************************************/
@@ -123,7 +123,7 @@ Student* House::RemoveStudent(int studentID)
 	}
 Student*  House::FindStudent(int studentID)
 	{
-		//TODO, function not working (main does not find student)
+		
 		Student *temp;
 		temp = m_pHead; //initialize pointer to point ot head of list 
 
@@ -136,7 +136,7 @@ Student*  House::FindStudent(int studentID)
 			temp = temp->m_pNext;
 		}
 
-		if (temp==NULL)  //TODO fix issue where temp is always null
+		if (temp==NULL)
 		{
 			//cout << "Student not found" << endl;
 			return NULL;

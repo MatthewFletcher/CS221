@@ -1,7 +1,7 @@
 /*******************************************************************
 *   File name: Student.h
 *   Author's name: Matt Fletcher
-*   Programming Assignment 2:  //TODO Program Name
+*   Programming Assignment 2
 *   
 *   This program is entirely my own work
 *******************************************************************/
@@ -29,8 +29,6 @@ public:
 	//Second constructor
 	Student(int iID, char *mName, char *wName, char *hName);
 
-	//TODO Destructor function
-
 //////////////////////////
 	//Getters and Setters
 
@@ -52,7 +50,7 @@ public:
 
 	//Get and Set a grade
 	void setGrade(int idx, int grade);
-	void getGrade(int idx, int &iGrade, char &cGrade); //Reference function that returns a letter and number grade TODO use hogwarts grading scale
+	void getGrade(int idx, int &iGrade, char &cGrade); //Reference function that returns a letter and number grade
 	void getGrade(int idx, int *iGrade, char *cGrade); //Pointer function that returns a letter and umber grade
 
 	//Print All student information

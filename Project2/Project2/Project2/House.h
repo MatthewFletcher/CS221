@@ -1,7 +1,7 @@
 /*******************************************************************
 *   File name: House.h
 *   Author's name: Matt Fletcher
-*   Programming Assignment 2:  //TODO Program Name
+*   Programming Assignment 2
 *   
 *   This program is entirely my own work
 *******************************************************************/

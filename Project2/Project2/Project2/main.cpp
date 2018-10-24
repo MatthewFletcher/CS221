@@ -15,7 +15,7 @@ void buildStudentLists(HogwartsSWW *h);
 ifstream inFile;	// File to read from
 
 // Define the name of the file to read from
-#define STUDENT_FILE "students.txt"
+#define STUDENT_FILE "mystudents.txt"
 
 
 int main()
@@ -34,35 +34,35 @@ int main()
 
 
 	 HogwartsSWW *hptr = new HogwartsSWW();
-	// buildStudentLists(hptr);
+	 buildStudentLists(hptr);
 
 
 
-	Student *stu1 = new Student(1, "Foo1", "McFoo1", "Gryffindor");
-	Student *stu2 = new Student(2, "Foo2", "McFoo2", "Gryffindor");
-	Student *stu3 = new Student(3, "Foo3", "McFoo3", "Gryffindor");
-	Student *stu4 = new Student(4, "Foo4", "McFoo4", "Gryffindor");
-	Student *stu5 = new Student(5, "Foo11", "McFoo134", "Hufflepuff");
-	Student *stu6 = new Student(6, "Foo21", "McFoo245", "Hufflepuff");
-	Student *stu7 = new Student(7, "Foo31", "McFoo33", "Hufflepuff");
-	Student *stu8 = new Student(8, "Foo41", "McFoo478", "Hufflepuff");
-	Student *stu9 = new Student(9, "Foo11", "McFoo18", "Ravenclaw");
-	Student *stu10 = new Student(10, "Foo21", "McFoo32", "Ravenclaw");
-	Student *stu11 = new Student(11, "Foo31", "McFoo83", "Slytherin");
-	Student *stu12 = new Student(12, "Foo41", "McFoo34", "Slytherin");
+	// Student *stu1 = new Student(1, "Foo1", "McFoo1", "Gryffindor");
+	// Student *stu2 = new Student(2, "Foo2", "McFoo2", "Gryffindor");
+	// Student *stu3 = new Student(3, "Foo3", "McFoo3", "Gryffindor");
+	// Student *stu4 = new Student(4, "Foo4", "McFoo4", "Gryffindor");
+	// Student *stu5 = new Student(5, "Foo11", "McFoo134", "Hufflepuff");
+	// Student *stu6 = new Student(6, "Foo21", "McFoo245", "Hufflepuff");
+	// Student *stu7 = new Student(7, "Foo31", "McFoo33", "Hufflepuff");
+	// Student *stu8 = new Student(8, "Foo41", "McFoo478", "Hufflepuff");
+	// Student *stu9 = new Student(9, "Foo11", "McFoo18", "Ravenclaw");
+	// Student *stu10 = new Student(10, "Foo21", "McFoo32", "Ravenclaw");
+	// Student *stu11 = new Student(11, "Foo31", "McFoo83", "Slytherin");
+	// Student *stu12 = new Student(12, "Foo41", "McFoo34", "Slytherin");
 
-	hptr->AddStudent(stu1);
-	hptr->AddStudent(stu2);
-	hptr->AddStudent(stu3);
-	hptr->AddStudent(stu4);
-	hptr->AddStudent(stu5);
-	hptr->AddStudent(stu6);
-	hptr->AddStudent(stu7);
-	hptr->AddStudent(stu8);
-	hptr->AddStudent(stu9);
-	hptr->AddStudent(stu10);
-	hptr->AddStudent(stu11);
-	hptr->AddStudent(stu12);
+	// hptr->AddStudent(stu1);
+	// hptr->AddStudent(stu2);
+	// hptr->AddStudent(stu3);
+	// hptr->AddStudent(stu4);
+	// hptr->AddStudent(stu5);
+	// hptr->AddStudent(stu6);
+	// hptr->AddStudent(stu7);
+	// hptr->AddStudent(stu8);
+	// hptr->AddStudent(stu9);
+	// hptr->AddStudent(stu10);
+	// hptr->AddStudent(stu11);
+	// hptr->AddStudent(stu12);
 
 
 
