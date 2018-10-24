@@ -1208,3 +1208,132 @@ Each struct has connected to it a linked list of another struct that represents 
 
 
 Adjacency set uses a forward declaration (essentially function prototype for variable type)
+
+
+
+Algorithm for graph traversal 
+Set a flag in all vertices to false, meaning not visited. 
+Pick a starting vertex, v
+	Mark v as visited
+	Make a list of all vertcies adjacent to vertex v
+	Loop
+		Select vertex w from the list, remove it from the list and visit 
+		Mark as visited
+		Add any vertices to the list which are adjacent to w and which have not been visited
+	Until list is empty. 
+
+
+Implementing stack 
+See sample graph on Graphs_13
+
+As stack: 1 4 9 8 3 7 2 6 5
+As Queue: 1 2 3 4 5 6 7 8 9 
+THIS WILL BE ON TEST
+
+Dijkstra's Shortest Path Algorithm 
+Mark all nodes as unseen
+Select starting node from unseen and mark it as INTREE
+Mark all nodes adjacent to start node as fringe 
+Loop while there are nodes in the graph not INTREE
+	Find node in the fringe, at the min distance from start
+	Add node to tree, mark as intree
+	For each node adjacent to this node
+		Set status of adjacent node to FRINGE
+		Calculate distance from start to node
+		Set shortest distance to each node in fringe
+end loop
+Return shortest distance
+
+In english, calculates every possible path from starting node to every other vertex in the graph,
+	This includes all possible paths to destinations. 
+	Algorithm then looks at all lengths and determines shortest length
+Dijkstra's runs in O(n^2)  time. 
+
+
+
+
+Prim's minimal spanning tree
+THIS WILL BE ON TEST 
+
+Visit all verticies in graph, i want to do it in the shortest distance that I can 
+At each node, go to the closest node that hasn't been visited yet. 
+Runs in O(n log n) time. 
+
+
+Prim's algorithm is a greedy algorithm. Use the best guess at each node. 
+
+
+
+
+Hashing algorithms
+
+Hash table: Allows for searching in O(1) time
+
+Create array of structs/classes
+Create a hash function
+Takes the key of the struct/class and converts it to index in table. 
+
+Defs:
+Hash Function: fn used to convert key to index. Always converts to an integer index
+Load factor: must be less than 50%. You need to have half of your array unused/empty
+Collisions: same keys map to same index. 
+Collision resolution: if collision occurs, find an alternate location.
+Clustering: a bunch of indexes close together (bad hash algorithm)
+Perfect hash function: every key maps to unique index, no collisions, all evenly spread. 
+
+
+
+
+Collision resolution: (for character keys)
+Open addressing with linear probing (WHOLE THING IS NAME)
+	Hash function: idx = ASC(ch)%TS
+			If collision, increment/decrement (just be consistent)
+	Works, but not very efficient
+
+Double hashing DOES NOT MEAN CALCULATING ANOTHER INDEX
+	IT MEANS CALCULATING A UNIQUE INCREMENT
+	Hash function: ASC(ch)%TS
+	Double hash: ASC(ch)/TS
+	Uniqueness of increment makes double hashing more efficient
+Chaining:
+	When a collision occurs, add a next ptr and link it to the previous. 
+Buckets:
+	divide array into buckets (different segments with more than 1 struct)
+	Hash function: idx = ASC(ch)%NumBuckets
+	This will be on the test, and will also be in sorting algorithms
+	One sorting function uses a modification of the bucket algorithm
+
+
+
+Von mises birthday paradox: how many people do you have to have in a room before the chance of 2 of them having the same birthday goes above 50%?
+
+
+
+
+More hash functions (assume using string as a key)
+
+char key[4];
+
+Idx 0 1 2 3
+Val A B C D 
+
+Base 26
+Treat alphabet as base-26 numbering system (A is 1, B is 2, Z is 26)
+hash = key[0]*26^3 + key[1]*26^2 ... + key[3]*26^0   %  tablesize
+
+
+Folding:
+AB+CD
+
+Middle squaring:
+(B+C)^2
+
+Truncation:
+(B*C)
+
+Division Method:
+Pick tablesize that is prime number, but not close to a power of the base. (If base 10, don't pick 997 or 1003)
+Translate key into an integer M
+Divide Key by M, get Q with remainder R. 
+Use R as hash function result 
+Use max(1,Q) as a probe increment (double hash)
