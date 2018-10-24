@@ -28,10 +28,12 @@ int main()
 	else return 0;
 	
 	// // TESTING Print Library
-	// lib->printLibrary();
+	//lib->printLibrary();
 
+
+	cout << "Testing search by title" << endl;
 	char searchTitle[64] = {NULL};
-	strcpy(searchTitle, "Quidditch Through the Ages");
+	strcpy(searchTitle, "Broken Balls: When Fortunes Turn Foul");
 
 
 	Book *bk = lib->getBookByTitle(searchTitle);
@@ -43,32 +45,42 @@ int main()
 	}
 	 else cout << "Fn returned NULL" << endl;
 
-	// //Testing Getbookbynumber
-	// Book *bk;
-	// bk= lib->getBookByNumber(12485);
-	// cout << bk->Title << "\t" << endl;
 
 
 
-	// int bookstoremove[] = {12385, 12365, 12405, 12355,12375,12395,12415, 99999};
+	int booklist[] = {12385, 12365, 12405, 12355,12375,12395,12415, 99999};
+
+	//Testing Getbookbynumber
+	
+
+	cout << "Testing getBookByNumber" << endl;
+	for (int i = 0; i <=7; ++i)
+	{
+
+		cout << "Searching for book #" << booklist[i] << "\t";
+		bk= lib->getBookByNumber(booklist[i]);
+
+		if (bk!=NULL) cout << bk->Title << "\t" << endl;
+		else cout << "Book Not Found" << endl;
+		Book *bk;
+	}
 
 
-	// Book *bk;
-
-	// for (int i = 0; i <=7; ++i)
-	// {
-	// 	bk = lib->removeBook(bookstoremove[i]);
+	cout << "\n Testing remove book by number" << endl;
+	for (int i = 0; i <=7; ++i)
+	{
+		bk = lib->removeBook(booklist[i]);
 		
-	// 	if (bk!= NULL)
-	// 	cout << "Removed Book " << bookstoremove[i] << ": " << bk->Title << endl;
+		if (bk!= NULL)
+		cout << "Removed Book " << booklist[i] << ": " << bk->Title << endl;
 
-	// 	cout << endl;
-	// }
+		else cout << "Book to remove not found" << endl;
+
+		cout << endl;
+	}
 
 
 
-	 int foo;
-	 cin >> foo;
 
 	return 0;
 }
