@@ -163,7 +163,7 @@ Book *Library::removeBook(int bookNum)
 
 		if(temp == NULL) // Didn't find the one to delete 
 		{
-			cout << "Book not found" << endl;
+			//// cout << "Book not found" << endl;
 			return NULL;
 		}
 		else
@@ -180,7 +180,7 @@ Book *Library::removeBook(int bookNum)
 			{
 				m_pRoot = delNode->left;
 
-				cout << "Deleting Root" << endl;
+				// cout << "Deleting Root" << endl;
 				return delNode;
 			}
 			else
@@ -189,7 +189,7 @@ Book *Library::removeBook(int bookNum)
 					delParent->left = delNode->left;
 				else
 					delParent->right = delNode->left;
-				cout << "Deleting node with no children or 1 child" << endl;
+				// cout << "Deleting node with no children or 1 child" << endl;
 				return delNode;
 			}
 		}
@@ -197,13 +197,13 @@ Book *Library::removeBook(int bookNum)
 		{
 			if(delParent == NULL)	// If deleting the m_pRoot	
 			{
-				cout << "Deleting Root with 1 child on right" << endl;
+				// cout << "Deleting Root with 1 child on right" << endl;
 				m_pRoot = delNode->right;
 				return delNode;
 			}
 			else
 			{
-				cout << "Deleting node with 1 child on right" << endl;
+				// cout << "Deleting node with 1 child on right" << endl;
 				if(delParent->left == delNode)
 					delParent->left = delNode->right;
 				else
@@ -213,7 +213,7 @@ Book *Library::removeBook(int bookNum)
 		}
 		else // Case 2: Deleting node with two children 
 		{
-			cout  << "Deleting Node with 2 children" << endl;
+			// cout  << "Deleting Node with 2 children" << endl;
 			// Create a duplicate to return after overwriting the node to remove
 			Book *retNode = this->DupNode(delNode);
 
@@ -287,7 +287,7 @@ Book *Library::getBookByTitle(const char *title, Book *rt)
     {
 
   	if (rt==NULL) return NULL;
-  	cout << "Looking at book " << rt->Title << endl;
+  	// cout << "Looking at book " << rt->Title << endl;
 
 		if(strcmp(title, rt->Title) == 0)
 		{
