@@ -1337,3 +1337,39 @@ Translate key into an integer M
 Divide Key by M, get Q with remainder R. 
 Use R as hash function result 
 Use max(1,Q) as a probe increment (double hash)
+
+
+
+
+
+SORTING
+
+10 types of sorting, depends on how fast you need them sorted
+
+
+Bubble sort: Easy, but slow. Swaps values to make large values go to the end
+
+Insertion sort and selection sort are easy to mess up, approaches are entirely different. Description makes them sound similar. 
+
+Insertion sort: Also in O(n^2), but runs faster than bubble sort 
+
+Tree Sort: Copy data into structures, build a tree. Use an in order traversal to get values back into an array. Runs in O(n log n)
+
+Selection sort: Be careful, seems like insertion sort. 
+		Find largest key, swap with last item 
+		Find next largest key, swap with second to last item
+		etc.
+		Runs in O(n^2). Faster than bubble, selection and insertion sort run in almost the same time
+
+Heap sort: Runs in O(n log n)
+	Build a heap from data, copy the data in the root node of the heap, and place it at end of sorted data
+	Reheap the heap
+	Repeat until the heap is empty 
+
+
+QuickSort: Recursive sorting algorithm.  
+
+
+MergeSort: Recursive sorting algorithm, efficient on memory because large amounts of data are not being read at any given time
+	Runs in n log n time
+
