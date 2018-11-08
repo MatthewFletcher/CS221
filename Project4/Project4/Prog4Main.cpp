@@ -39,6 +39,10 @@ bool CheckData(SortData DataArray[], int count);
 // TODO: Prototype the 5 sort functions you will be testing here
 //---------------------------------------------------------
 
+void BubbleSort();
+void ProxMapSort();
+
+
 int main()
 {
 	SortData	DataArray[NUMRECS];	// Array into which unsorted data will be read
