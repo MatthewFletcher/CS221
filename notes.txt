@@ -1373,3 +1373,16 @@ QuickSort: Recursive sorting algorithm.
 MergeSort: Recursive sorting algorithm, efficient on memory because large amounts of data are not being read at any given time
 	Runs in n log n time
 
+
+
+Shell Sort: Uses an insertion sort 
+	Runs in O(n^1.25) //Slightly worse than O(n), but still really freaking fast 
+	Between O(n) and O(n log n)
+
+
+ProxMap: 2 arrays being used, an unsorted and a sorted list
+
+RadixSort: Again, 2 arrays are used 
+
+
+
