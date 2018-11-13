@@ -39,7 +39,11 @@ bool CheckData(SortData DataArray[], int count);
 // TODO: Prototype the 5 sort functions you will be testing here
 //---------------------------------------------------------
 
-int main()
+void BubbleSort(SortData DataArray[], int count);
+void ProxMapSort(SortData DataArray[], int count);
+
+
+int main() 
 {
 	SortData	DataArray[NUMRECS];	// Array into which unsorted data will be read
 	SortData	DataArray2[NUMRECS]; // Array to hold sorted data if needed
@@ -63,6 +67,9 @@ int main()
 	// For each of 5 runs on this algorithm
 	for(int i=0; i<5; i++)
 	{
+
+
+		//COPY PASTE THIS SECTION OF CODE 5 TIMES, ONE FOR EACH SORT ALGORITHM
 		// Read the data.  You must do this before each sort
 		if(!ReadData(DataArray, NUMRECS))
 		{
@@ -73,6 +80,7 @@ int main()
 		mst->Start();
 
 		// TODO: Call the sort function here
+		BubbleSort(DataArray, NUMRECS);
 
 		// Stop the microsecond timer
 		mst->Stop();
@@ -94,6 +102,7 @@ int main()
 
 	cout << "Finished testing all sorting algorithms.\n";
 	cout.flush();
+	getchar();
 	return 0;
 }
 
@@ -174,3 +183,69 @@ bool CheckData(SortData DataArray[], int count)
 //=======================================================================
 //         TODO: PUT YOUR SORTING ALGORITHM IMPLEMENTATIONS HERE
 //=======================================================================
+
+/***************************************/
+/* BubbleSort()                        */
+/*                                     */
+/* Sort records on integer key using   */
+/*  a bubble sort.                     */
+/***************************************/
+void BubbleSort(SortData DataArray[], int count)
+{
+    int i;
+	int j;
+    SortData temp;
+
+    for(i=0;i++<count;)
+    {
+        for(j=0; j++<(count-i - 1);)
+        {
+            if(DataArray[j].key > DataArray[j+1].key)
+             {
+                 temp = DataArray[j];
+                 DataArray[j] = DataArray[j+1];
+                 DataArray[j+1] = temp;
+             }
+
+        }
+    }
+}
+
+
+
+/***************************************/
+/* InsertSort()                        */
+/*                                     */
+/* Sort records on integer key using   */
+/*  an insertion sort.                 */
+/***************************************/
+void InsertSort(SortData DataArray[], int count)
+{
+    int i, j;
+    SortData temp;
+    int NotDone;
+    int Key;
+	
+    for(i=1; i<count; i++)
+    {
+        Key = DataArray[i].key;
+        j = i;
+        NotDone = (DataArray[j-1].key > Key);
+
+        temp = DataArray[j]; /* Remove and hold the one to be moved */
+
+        while(NotDone)
+        {
+            /* Slide all others to the right */
+            DataArray[j] = DataArray[j-1];
+            j--;
+            if(j > 0)
+                NotDone = (DataArray[j - 1].key > Key);
+            else
+                NotDone = FALSE;
+        }
+
+        /* Put the removed record into it's correct slot */
+        DataArray[j] = temp;
+    }
+}
