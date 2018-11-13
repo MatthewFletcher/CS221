@@ -1,8 +1,8 @@
 Useful Regular Expressions
 
 Convert function declarations to Function definitions
-Find: (;)$
-Replace: \n\t{\n\t\n\t}\n
+Find: \)(;)$
+Replace: \)\n\t{\n\t\n\t}\n
 
 
 
@@ -10,3 +10,10 @@ Add Class declarations to function definitions
 Find: ^([voidboollBook ]+)\s //Letters in brackets should be any function return type
 
 Replace: $1 ClassName::
+
+
+Create Getters and Setters (quasi-working)
+Find: ^\t([double|int|char|bool]+) (\w+);(.*\n)
+
+Replace: \t$3\tvoid set$2();\n\t$1 get$2($1 $2);\n
+
