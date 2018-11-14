@@ -1386,3 +1386,31 @@ RadixSort: Again, 2 arrays are used
 
 
 
+
+
+Function overloading: Using different parameters in the same function name to do different things 
+
+
+virtual FnRetType FnName(); 
+--> forces all subclasses to implement that function
+
+ON FINAL: Write a template for a class
+
+
+
+Namespace is a table of terms that the compiler creates
+
+namespace std is standard namespace 
+
+
+//MyHeader.h
+namespace MyNameSpace
+{
+	strcut Node
+		{int key;
+		char data[32];
+		}
+}
+
+
+
