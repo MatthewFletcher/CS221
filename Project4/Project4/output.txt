@@ -1,0 +1,17 @@
+============================================================
+ PROGRAMMING ASSIGNMENT 4
+ Name: Matt Fletcher
+============================================================
+Starting application
+
+---BUBBLESORT--- took 0.445149 seconds to complete
+
+---PROXMAPSORT--- took 0.00089678 seconds to complete
+
+---INSERTSORT--- took 0.107437 seconds to complete
+
+---QUICKSORT--- took 0.0014731 seconds to complete
+
+---MERGESORT--- took 0.0906901 seconds to complete
+
+Finished testing all sorting algorithms.
