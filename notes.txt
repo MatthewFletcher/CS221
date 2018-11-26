@@ -1414,3 +1414,49 @@ namespace MyNameSpace
 
 
 
+
+
+
+Class definition question
+Function overloading
+function templates 
+Study old tests
+
+
+
+Preprocessor directives
+
+#include
+-Two different syntaxes
+	<header.h>
+	OR
+	"MyHeader.h"
+
+Angle brackets represent a standard header file 
+
+
+#define alias body
+
+
+
+Creating macros with #define
+#define ERROR cout << "\nError\n"
+
+In code":
+if (i<3) ERROR;
+
+
+
+
+Use a macro if the function is a one liner
+
+Be liberal with parentheses for a macro 
+
+Macros used in a loop can make a difference, might be faster than calling a function 
+
+
+
+Look up On the Fast Track comic by Bill Holbrook
+
+
+
